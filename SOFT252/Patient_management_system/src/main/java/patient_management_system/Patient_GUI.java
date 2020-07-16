@@ -39,16 +39,30 @@ public class Patient_GUI extends javax.swing.JFrame {
         btnDeleteAccount = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(430, 300));
 
         btnCreateAccount.setText("Create Account");
+        btnCreateAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateAccountActionPerformed(evt);
+            }
+        });
 
         lbl_patient.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lbl_patient.setText("Patient");
 
         btnLogOff.setText("Log Off");
+        btnLogOff.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogOffActionPerformed(evt);
+            }
+        });
 
         btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
 
         btnDoctorRating.setText("Doctor Rating");
 
@@ -124,6 +138,25 @@ public class Patient_GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        this.setVisible(false);
+        this.dispose();        //closes the appliaction when Exit button is pressed
+    }//GEN-LAST:event_btnExitActionPerformed
+
+    private void btnLogOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOffActionPerformed
+        Login open = new Login();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();             //Logs the user off and takes the user back to the Login screen
+    }//GEN-LAST:event_btnLogOffActionPerformed
+
+    private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAccountActionPerformed
+        RequestAccount_GUI open = new RequestAccount_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose(); 
+    }//GEN-LAST:event_btnCreateAccountActionPerformed
 
     /**
      * @param args the command line arguments

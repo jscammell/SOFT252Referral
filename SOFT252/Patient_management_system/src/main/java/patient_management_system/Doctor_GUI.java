@@ -43,8 +43,18 @@ public class Doctor_GUI extends javax.swing.JFrame {
         jLabel1.setText("Doctor");
 
         btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
 
         btnLogOff.setText("Log Off");
+        btnLogOff.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogOffActionPerformed(evt);
+            }
+        });
 
         btnViewAppointments.setText("View Appointments");
 
@@ -112,6 +122,18 @@ public class Doctor_GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        this.setVisible(false);
+        this.dispose();        //closes the appliaction when Exit button is pressed
+    }//GEN-LAST:event_btnExitActionPerformed
+
+    private void btnLogOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOffActionPerformed
+        Login open = new Login();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();             //Logs the user off and takes the user back to the Login screen
+    }//GEN-LAST:event_btnLogOffActionPerformed
 
     /**
      * @param args the command line arguments

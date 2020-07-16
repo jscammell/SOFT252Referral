@@ -11,6 +11,7 @@ package patient_management_system;
  */
 public class Clinic {    
     public static void main (String[] args) {
-        
+        Login open = new Login();
+        open.setVisible(true);
     }
 }

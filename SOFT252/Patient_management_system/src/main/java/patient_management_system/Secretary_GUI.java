@@ -41,7 +41,6 @@ public class Secretary_GUI extends javax.swing.JFrame {
         btnLogOff = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(430, 300));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Secretary");
@@ -70,8 +69,18 @@ public class Secretary_GUI extends javax.swing.JFrame {
         btnCreateAppointment.setText("Create Appointment");
 
         btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
 
         btnLogOff.setText("Log Off");
+        btnLogOff.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogOffActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -144,6 +153,18 @@ public class Secretary_GUI extends javax.swing.JFrame {
     private void txtDeleteRequestNotificationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDeleteRequestNotificationActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDeleteRequestNotificationActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        this.setVisible(false);
+        this.dispose();        //closes the appliaction when Exit button is pressed
+    }//GEN-LAST:event_btnExitActionPerformed
+
+    private void btnLogOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOffActionPerformed
+        Login open = new Login();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();             //Logs the user off and takes the user back to the Login screen
+    }//GEN-LAST:event_btnLogOffActionPerformed
 
     /**
      * @param args the command line arguments
