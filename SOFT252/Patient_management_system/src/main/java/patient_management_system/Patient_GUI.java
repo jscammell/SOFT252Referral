@@ -75,6 +75,11 @@ public class Patient_GUI extends javax.swing.JFrame {
         btnViewAppointment.setText("View Appointment");
 
         btnDeleteAccount.setText("Delete Account");
+        btnDeleteAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteAccountActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -157,6 +162,13 @@ public class Patient_GUI extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose(); 
     }//GEN-LAST:event_btnCreateAccountActionPerformed
+
+    private void btnDeleteAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteAccountActionPerformed
+        DeleteAccount_GUI open = new DeleteAccount_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_btnDeleteAccountActionPerformed
 
     /**
      * @param args the command line arguments

@@ -16,14 +16,13 @@ public class Patient extends Users{
     public String phone_Number;
     public String address;
     public String postcode;
-    public String date_Of_Birth;
-    public int age;
+    public String date_Of_Birth;    
     public String sex;
     public String nhs_Number;
     
     public Patient(String userId, String password, String first_Name, String last_Name, 
             String phone_Number, String address, String postcode, String date_Of_Birth, 
-            int age, String sex, String nhs_Numnber) {
+            String sex, String nhs_Numnber) {
         this.userId = userId;
         this.password = password;
         this.first_Name = first_Name;
@@ -31,8 +30,7 @@ public class Patient extends Users{
         this.phone_Number = phone_Number;
         this.address = address;
         this.postcode = postcode;
-        this.date_Of_Birth = date_Of_Birth;
-        this.age = age;
+        this.date_Of_Birth = date_Of_Birth;       
         this.sex = sex;
         this.nhs_Number = nhs_Number;
     }
@@ -91,15 +89,7 @@ public class Patient extends Users{
         this.date_Of_Birth = date_Of_Birth;}
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        if(age >= this.age && age >= 0) {
-        this.age = age;}
-    }
-
+   
     public String getSex() {
         return sex;
     }
