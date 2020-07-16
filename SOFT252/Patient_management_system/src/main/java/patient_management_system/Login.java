@@ -66,6 +66,11 @@ public class Login extends javax.swing.JFrame {
         cmbUserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Patient", "Administrator", "Secretary", "Doctor" }));
 
         btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
 
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -148,15 +153,13 @@ public class Login extends javax.swing.JFrame {
         if(txtUsername != null) {
         username = txtUsername.getText();
         }
-        else{
-        clinicClasses.MesssageBox.infoBox("Enter Username Here", "ERROR, No Username Has Been Entered");
+        else{        
         username = null;
         }
         if (txtPassword != null) {
         password = txtPassword.getText();
         }
-        else{
-        clinicClasses.MessageBox.infoBox("Enter Password Here", "ERROR, No Password Has Been Entered");
+        else{        
         password = null;
         }
         //Code above checks if the user has enetered text into the text boxes
@@ -171,16 +174,13 @@ public class Login extends javax.swing.JFrame {
                 String fileUsername;
                 String filePassword;
                 String firstName;
-                String lastName;
-                String homePhoneNumber;
-                String mobilePhoneNumber;
-                String workPhoneNumber;
+                String lastName;                
+                String mobilePhoneNumber;                
                 String houseNumberName;
                 String addressLine;
                 String city;
                 String postcode;
-                String dateOfBirth;
-                int age;
+                String dateOfBirth;                
                 String gender;
                 String NHSNumber;
                 try{
@@ -190,16 +190,13 @@ public class Login extends javax.swing.JFrame {
                 fileUsername = br.readLine();
                 filePassword = br.readLine();
                 firstName = br.readLine();
-                lastName = br.readLine();
-                homePhoneNumber = br.readLine();
-                mobilePhoneNumber = br.readLine();
-                workPhoneNumber = br.readLine();
+                lastName = br.readLine();                
+                mobilePhoneNumber = br.readLine();               
                 houseNumberName = br.readLine();
                 addressLine = br.readLine();
                 city = br.readLine();
                 postcode = br.readLine();
-                dateOfBirth = br.readLine();
-                age = Integer.parseInt(br.readLine());
+                dateOfBirth = br.readLine();                
                 gender = br.readLine();
                 NHSNumber = br.readLine();
                 if (username.equals(fileUsername)){
@@ -208,7 +205,7 @@ public class Login extends javax.swing.JFrame {
                 else {
                 userTrue = false;
                 }
-                if (filePassword.equals(password)){
+                if (password.equals(filePassword)){
                 passwordTrue = true;               
                 }
                 else{
@@ -235,32 +232,32 @@ public class Login extends javax.swing.JFrame {
                 File file = new File("./accounts\\Doctor.txt");
                 BufferedReader br = new BufferedReader (new FileReader (file));
                 while ((br.readLine()) != null) {
-                fileUsername = br.readLine();
-                filePassword = br.readLine();
-                firstName = br.readLine();
-                lastName = br.readLine();
-                int ratingLength = Integer.parseInt(br.readLine());
-                }
-                for (int i = 0; i < ratingLength; i++) {
-                    String description = br.readLine();                    
-                }
-                if (username.equals(fileUsername)) {
-                userTrue = true;
-                }
-                else {
-                userTrue = false;
-                }
-                if (filePassword.equals(password)) {
-                passwordTrue = true;               
-                }
-                else{
-                passwordTrue = false;
-                }
-                if (Boolean.TRUE.equals(passwordTrue) && Boolean.TRUE.equals(userTrue)){
-                Doctor_GUI open= new Doctor_GUI();
-                open.setVisible (true);
-                this.dispose();
-                }
+                    fileUsername = br.readLine();
+                    filePassword = br.readLine();
+                    firstName = br.readLine();
+                    lastName = br.readLine();
+                    int ratingLength = Integer.parseInt(br.readLine());
+                    
+                    for (int i = 0; i < ratingLength; i++) {
+                        String description = br.readLine();                    
+                    }
+                    if (username.equals(fileUsername)) {
+                    userTrue = true;
+                    }
+                    else {
+                    userTrue = false;
+                    }
+                    if (password.equals(filePassword)) {
+                    passwordTrue = true;               
+                    }
+                    else{
+                    passwordTrue = false;
+                    }
+                    if (Boolean.TRUE.equals(passwordTrue) && Boolean.TRUE.equals(userTrue)){
+                    Doctor_GUI open= new Doctor_GUI();
+                    open.setVisible(true);
+                    this.dispose();
+                }}
         }
                 catch(Exception e) {
                 e.printStackTrace();
@@ -285,7 +282,7 @@ public class Login extends javax.swing.JFrame {
                 else {
                 userTrue = false;
                 }
-                if (filePassword.equals(password)){
+                if (password.equals(filePassword)){
                 passwordTrue = true;               
                 }
                 else{
@@ -322,7 +319,7 @@ public class Login extends javax.swing.JFrame {
                 else {
                 userTrue = false;
                 }
-                if (filePassword.equals(password)){
+                if (password.equals(filePassword)){
                 passwordTrue = true;               
                 }
                 else{
@@ -340,8 +337,14 @@ public class Login extends javax.swing.JFrame {
                 e.printStackTrace();
                 }
                 
-                
+        }         
     }//GEN-LAST:event_btnSubmitActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+              
+        this.setVisible(false);
+        this.dispose();        //closes the appliaction when Exit button is pressed
+    }//GEN-LAST:event_btnExitActionPerformed
 
     /**
      * @param args the command line arguments
