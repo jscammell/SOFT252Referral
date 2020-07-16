@@ -22,7 +22,7 @@ public class Patient extends Users{
     
     public Patient(String userId, String password, String first_Name, String last_Name, 
             String phone_Number, String address, String postcode, String date_Of_Birth, 
-            String sex, String nhs_Numnber) {
+            String sex, String nhs_Number) {
         this.userId = userId;
         this.password = password;
         this.first_Name = first_Name;
