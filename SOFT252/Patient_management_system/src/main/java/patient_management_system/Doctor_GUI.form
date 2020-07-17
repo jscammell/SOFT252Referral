@@ -46,7 +46,7 @@
                   <Component id="btnPatientHistory" min="-2" pref="150" max="-2" attributes="0"/>
                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                       <Component id="btnViewAppointments" alignment="0" max="32767" attributes="0"/>
-                      <Component id="btnProposeAppointment" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="btnAppointmentRequest" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                   </Group>
                   <Component id="btnCreatePerscription" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                   <Component id="btnConsultationNotes" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
@@ -63,7 +63,7 @@
               <EmptySpace pref="28" max="32767" attributes="0"/>
               <Component id="btnViewAppointments" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnProposeAppointment" min="-2" max="-2" attributes="0"/>
+              <Component id="btnAppointmentRequest" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnPatientHistory" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -111,11 +111,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="View Appointments"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewAppointmentsActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnProposeAppointment">
+    <Component class="javax.swing.JButton" name="btnAppointmentRequest">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Propose Appointment"/>
+        <Property name="text" type="java.lang.String" value="Appointment Request"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAppointmentRequestActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnConsultationNotes">
       <Properties>
@@ -126,6 +132,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Create Perscription"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreatePerscriptionActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnPatientHistory">
       <Properties>

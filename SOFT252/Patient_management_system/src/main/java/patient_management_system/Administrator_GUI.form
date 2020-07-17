@@ -41,8 +41,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnDoctorRatings" alignment="0" min="-2" pref="240" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="btnAddRemoveSD" pref="240" max="32767" attributes="0"/>
+                              <Component id="btnAddRemoveSecretary" pref="240" max="32767" attributes="0"/>
                               <Component id="btnCreateAdministrator" max="32767" attributes="0"/>
+                              <Component id="btnAddRemoveDoctor" alignment="0" pref="240" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -56,13 +57,15 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Component id="btnCreateAdministrator" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnAddRemoveSD" min="-2" max="-2" attributes="0"/>
+              <Component id="btnAddRemoveSecretary" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnAddRemoveDoctor" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnDoctorRatings" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="73" max="32767" attributes="0"/>
+              <EmptySpace pref="44" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnExit" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnLogOff" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -81,20 +84,26 @@
         <Property name="text" type="java.lang.String" value="Administrator"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAddRemoveSD">
+    <Component class="javax.swing.JButton" name="btnAddRemoveSecretary">
       <Properties>
-        <Property name="text" type="java.lang.String" value="ADD or Remove Secritaries and Doctors"/>
+        <Property name="text" type="java.lang.String" value="Add / Remove Secretary"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnDoctorRatings">
       <Properties>
         <Property name="text" type="java.lang.String" value="View Doctor Ratings"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDoctorRatingsActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCreateAdministrator">
       <Properties>
         <Property name="text" type="java.lang.String" value="Create New Administrator"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreateAdministratorActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnExit">
       <Properties>
@@ -111,6 +120,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLogOffActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAddRemoveDoctor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add / Remove Doctor"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

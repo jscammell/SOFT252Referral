@@ -33,7 +33,7 @@ public class Patient_GUI extends javax.swing.JFrame {
         btnExit = new javax.swing.JButton();
         btnDoctorRating = new javax.swing.JButton();
         btnViewHistory = new javax.swing.JButton();
-        btnRequestAppointment = new javax.swing.JButton();
+        btnAppointmentRequest = new javax.swing.JButton();
         btnViewPerscription = new javax.swing.JButton();
         btnViewAppointment = new javax.swing.JButton();
         btnDeleteAccount = new javax.swing.JButton();
@@ -65,10 +65,15 @@ public class Patient_GUI extends javax.swing.JFrame {
         });
 
         btnDoctorRating.setText("Doctor Rating");
+        btnDoctorRating.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDoctorRatingActionPerformed(evt);
+            }
+        });
 
         btnViewHistory.setText("View History");
 
-        btnRequestAppointment.setText("Request Appointment");
+        btnAppointmentRequest.setText("Appointment Request");
 
         btnViewPerscription.setText("View Perscription");
 
@@ -100,7 +105,7 @@ public class Patient_GUI extends javax.swing.JFrame {
                                     .addComponent(btnCreateAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnRequestAppointment, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnAppointmentRequest, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnDoctorRating, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(173, 173, 173)
@@ -126,13 +131,13 @@ public class Patient_GUI extends javax.swing.JFrame {
                     .addComponent(btnDoctorRating))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnRequestAppointment)
+                    .addComponent(btnAppointmentRequest)
                     .addComponent(btnDeleteAccount))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(btnViewHistory)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnViewPerscription)
-                .addGap(11, 11, 11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnViewAppointment)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -170,6 +175,10 @@ public class Patient_GUI extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnDeleteAccountActionPerformed
 
+    private void btnDoctorRatingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoctorRatingActionPerformed
+        
+    }//GEN-LAST:event_btnDoctorRatingActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -206,12 +215,12 @@ public class Patient_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAppointmentRequest;
     private javax.swing.JButton btnCreateAccount;
     private javax.swing.JButton btnDeleteAccount;
     private javax.swing.JButton btnDoctorRating;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnLogOff;
-    private javax.swing.JButton btnRequestAppointment;
     private javax.swing.JButton btnViewAppointment;
     private javax.swing.JButton btnViewHistory;
     private javax.swing.JButton btnViewPerscription;

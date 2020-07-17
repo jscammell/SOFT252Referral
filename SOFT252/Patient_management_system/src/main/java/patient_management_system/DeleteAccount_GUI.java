@@ -40,7 +40,7 @@ public class DeleteAccount_GUI extends javax.swing.JFrame {
         txtPassword = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        btnExit = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         btnDeleteAccount = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
@@ -53,10 +53,10 @@ public class DeleteAccount_GUI extends javax.swing.JFrame {
 
         jLabel3.setText("Password");
 
-        btnExit.setText("Exit");
-        btnExit.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExitActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
@@ -75,7 +75,7 @@ public class DeleteAccount_GUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnDeleteAccount)
                 .addContainerGap())
@@ -114,23 +114,23 @@ public class DeleteAccount_GUI extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(6, 6, 6)))
+                    .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnDeleteAccount)
-                    .addComponent(btnExit))
+                    .addComponent(btnBack))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        Patient_GUI open = new Patient_GUI();
+        open.setVisible(true);
         this.setVisible(false);
-        this.dispose();        //closes the appliaction when Exit button is pressed
-    }//GEN-LAST:event_btnExitActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnDeleteAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteAccountActionPerformed
     
@@ -210,7 +210,7 @@ public class DeleteAccount_GUI extends javax.swing.JFrame {
         catch(Exception e) {
         e.printStackTrace();
         }
-            
+            k++;
         }
         
     
@@ -257,8 +257,8 @@ public class DeleteAccount_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDeleteAccount;
-    private javax.swing.JButton btnExit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

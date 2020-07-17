@@ -40,7 +40,7 @@
                               </Group>
                               <EmptySpace pref="110" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btnRequestAppointment" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                                  <Component id="btnAppointmentRequest" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                                   <Component id="btnDoctorRating" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -77,14 +77,14 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnRequestAppointment" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAppointmentRequest" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="btnDeleteAccount" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="30" max="32767" attributes="0"/>
+              <EmptySpace pref="35" max="32767" attributes="0"/>
               <Component id="btnViewHistory" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="btnViewPerscription" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="btnViewAppointment" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -133,15 +133,18 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Doctor Rating"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDoctorRatingActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnViewHistory">
       <Properties>
         <Property name="text" type="java.lang.String" value="View History"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnRequestAppointment">
+    <Component class="javax.swing.JButton" name="btnAppointmentRequest">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Request Appointment"/>
+        <Property name="text" type="java.lang.String" value="Appointment Request"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnViewPerscription">
