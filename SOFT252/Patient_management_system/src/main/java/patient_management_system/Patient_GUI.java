@@ -74,6 +74,11 @@ public class Patient_GUI extends javax.swing.JFrame {
         btnViewHistory.setText("View History");
 
         btnAppointmentRequest.setText("Appointment Request");
+        btnAppointmentRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAppointmentRequestActionPerformed(evt);
+            }
+        });
 
         btnViewPerscription.setText("View Perscription");
 
@@ -176,8 +181,18 @@ public class Patient_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDeleteAccountActionPerformed
 
     private void btnDoctorRatingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoctorRatingActionPerformed
-        
+        DoctorRating_GUI open = new DoctorRating_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_btnDoctorRatingActionPerformed
+
+    private void btnAppointmentRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAppointmentRequestActionPerformed
+        AppointmentRequest_GUI open = new AppointmentRequest_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_btnAppointmentRequestActionPerformed
 
     /**
      * @param args the command line arguments

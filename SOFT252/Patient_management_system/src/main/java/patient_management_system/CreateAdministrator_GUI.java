@@ -5,6 +5,8 @@
  */
 package patient_management_system;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 /**
  *
  * @author Josh
@@ -56,6 +58,11 @@ public class CreateAdministrator_GUI extends javax.swing.JFrame {
         });
 
         btnSubmit.setText("Submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -118,6 +125,63 @@ public class CreateAdministrator_GUI extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        
+        boolean isNotEmpty = false;
+        String userId;
+        String password;
+        String first_Name;
+        if(txtAdministratorID != null) {
+        userId = txtAdministratorID.getText();
+        isNotEmpty = true;
+        txtAdministratorID.setText("");        
+        }
+        else{
+        userId = null;
+        isNotEmpty = false;
+        }
+        if(txtPassword != null) {
+        password = txtPassword.getText();
+        isNotEmpty = true;
+        txtPassword.setText("");
+        }
+        else{
+        password = null;
+        isNotEmpty = false;
+        }
+        if(txtFirstName != null){
+        first_Name = txtFirstName.getText();
+        isNotEmpty = true;
+        txtFirstName.setText("");
+        }
+        else{
+        first_Name = null;
+        isNotEmpty = false;
+        }
+        if(Boolean.TRUE.equals(isNotEmpty)){
+        try{
+        BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\Administrator.txt",true));
+        out.newLine();
+        out.write(userId);
+        out.newLine();
+        out.write(password);
+        out.newLine();
+        out.write(first_Name);
+        out.newLine();
+        
+        
+        out.close();      
+
+        }
+        catch(Exception e){
+        e.printStackTrace();
+        }
+        
+        }
+        
+        
+    }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**
      * @param args the command line arguments

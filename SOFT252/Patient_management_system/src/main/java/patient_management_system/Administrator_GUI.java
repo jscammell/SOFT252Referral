@@ -140,7 +140,10 @@ public class Administrator_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCreateAdministratorActionPerformed
 
     private void btnDoctorRatingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoctorRatingsActionPerformed
-        
+        DoctorFeedback_GUI open = new DoctorFeedback_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_btnDoctorRatingsActionPerformed
 
     /**

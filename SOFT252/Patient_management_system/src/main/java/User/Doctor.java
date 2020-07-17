@@ -25,5 +25,62 @@ public class Doctor extends Users{
         this.ratings = ratings;
         this.description = description;
     }
+
+    public String getFirst_Name() {
+        return first_Name;
+    }
+
+    public void setFirst_Name(String first_Name) {
+        this.first_Name = first_Name;
+    }
+
+    public String getLast_Name() {
+        return last_Name;
+    }
+
+    public void setLast_Name(String last_Name) {
+        this.last_Name = last_Name;
+    }
+
+    public int getRatingsLength() {
+        return ratingsLength;
+    }
+
+    public void setRatingsLength(int ratingsLength) {
+        this.ratingsLength = ratingsLength;
+    }
+
+    public int[] getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(int[] ratings) {
+        this.ratings = ratings;
+    }
+
+    public String[] getDescription() {
+        return description;
+    }
+
+    public void setDescription(String[] description) {
+        this.description = description;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
     
 }

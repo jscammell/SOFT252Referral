@@ -352,7 +352,7 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
         
         if (Boolean.TRUE.equals(isNotEmpty)){
         try{
-        BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\PatientRequest.txt"));
+        BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\PatientRequest.txt",true));
         out.newLine();
         out.write(fileUsername);
         out.newLine();

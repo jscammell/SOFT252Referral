@@ -67,7 +67,7 @@ public class DeleteAccount_GUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Please Enter Username And Password Of The Account You Wish To Desire");
+        jLabel4.setText("Please Enter Username And Password Of The Account You Wish To Delete");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

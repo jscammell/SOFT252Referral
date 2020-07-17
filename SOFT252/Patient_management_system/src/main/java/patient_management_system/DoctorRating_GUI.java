@@ -5,6 +5,16 @@
  */
 package patient_management_system;
 
+import User.Users;
+import User.getData;
+import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JPanel;
+import java.awt.FlowLayout;
+import java.awt.event.*;
+import javax.swing.*;
+
+
 /**
  *
  * @author Josh
@@ -16,7 +26,67 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
      */
     public DoctorRating_GUI() {
         initComponents();
+        getData Data = new getData();
+        ArrayList<Users> doctors = new ArrayList<Users>();
+        try{
+        Data.readDoctors(doctors);
+        }
+        catch(Exception e) {
+        e.printStackTrace();
+        }
+        Object[] aDoctors = doctors.toArray();
+        int length;
+        length = aDoctors.length;
+        String[] doctor_Name = new String[length+1];
+        doctor_Name[0] = "Select";
+        java.util.List<String> list = new java.util.ArrayList<String>();
+        for (int i=0; i < length; i++) {
+        String name = ((User.Doctor)aDoctors[i]).getFirst_Name();
+        doctor_Name[i+1] = name;
+        }
+        final DefaultComboBoxModel model = new DefaultComboBoxModel (doctor_Name);
+        final  DefaultComboBoxModel modela = new DefaultComboBoxModel (doctor_Name);
+        JPanel panel = new JPanel();
+
+        cmbViewDoctor.setModel(model);
+        cmbRateDoctor.setModel(model);
+        
+        
+        cmbViewDoctor.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent event) {
+                String cmbDoctors_Name = cmbViewDoctor.getSelectedItem().toString();
+        
+                try{
+                    boolean docTrue = false;
+                    for (int i = 0; i < length; i++) {
+                        int ratingLength = ((User.Doctor)aDoctors[i]).getRatingsLength();
+                        int[] rating = new int[ratingLength];
+                        rating = ((User.Doctor)aDoctors[i]).getRatings();
+        
+                        while(cmbDoctors_Name.equals(((User.Doctor)aDoctors[i]).getFirst_Name())){
+                            int meanRating = 0;
+                            for (int k = 0; k < ratingLength; k++) {
+                                int ratings = rating[k];
+                                meanRating = meanRating + ratings;        
+                            }
+                            meanRating = meanRating / ratingLength;
+                            docTrue = true;
+                            txtViewRating.setText(String.valueOf(meanRating));
+                            break;
+                        }
+                        if(Boolean.TRUE.equals(docTrue)){
+                            break;
+                        }
+                
+                    }
+                }
+                catch(Exception e) {
+                e.printStackTrace();
+                }
+            }
+        });
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -29,7 +99,7 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cmbRateDoctor = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         txtRateDoctor = new javax.swing.JTextField();
         txtDescription = new javax.swing.JTextField();
@@ -38,7 +108,7 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        cmbViewDoctor = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         txtViewRating = new javax.swing.JTextField();
 
@@ -50,7 +120,7 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Rate Doctor");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbRateDoctor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel3.setText("Please Choose A Doctor To Rate");
 
@@ -62,6 +132,11 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
         });
 
         btnSubmit.setText("Submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Rating /10");
 
@@ -70,7 +145,7 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setText("View Doctor Rating");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbViewDoctor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel7.setText("Please Choose A Doctor To View Rating");
 
@@ -89,7 +164,7 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
                                 .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(cmbViewDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 133, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -103,7 +178,7 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbRateDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel2)
                                     .addComponent(jLabel6)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -123,7 +198,7 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbViewDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(txtViewRating, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
@@ -131,7 +206,7 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbRateDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -151,9 +226,16 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        
+        Patient_GUI open = new Patient_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
         
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,8 +275,8 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSubmit;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> cmbRateDoctor;
+    private javax.swing.JComboBox<String> cmbViewDoctor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

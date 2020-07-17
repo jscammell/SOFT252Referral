@@ -128,7 +128,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Please Enter Username And Password Of The Account You Wish To Desire"/>
+        <Property name="text" type="java.lang.String" value="Please Enter Username And Password Of The Account You Wish To Delete"/>
       </Properties>
     </Component>
   </SubComponents>
