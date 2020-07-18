@@ -120,6 +120,39 @@ public class getData {
             //doctors = new ArrayList<Users>();
         } 
     }
+       
+       
+       public void readDoctorFeedback(ArrayList<Users>doctors)throws Exception
+    {
+        File file = new File("./accounts\\DoctorFeedback.txt");
+        
+        BufferedReader br = new BufferedReader(new FileReader(file));
+          
+        String userId;        
+        String first_Name;        
+        int ratingsLength;        
+        
+        
+        while ((br.readLine())!=null) {
+            userId = br.readLine();            
+            first_Name = br.readLine();            
+            ratingsLength = Integer.parseInt(br.readLine());
+            int[] ratings = new int[ratingsLength];
+            String[] description = new String[ratingsLength];          
+            
+            for (int i = 0; i < ratingsLength; i++) {
+                description[i] = br.readLine();
+            }
+            
+            
+            
+            Users newdoctor = new Doctor(userId, first_Name, ratingsLength, description); 
+            
+            adddoctor(newdoctor, doctors);
+            
+            //doctors = new ArrayList<Users>();
+        } 
+    }
     
     public void adddoctor(Users doctor, ArrayList<Users> doctors)
         {

@@ -26,6 +26,15 @@ public class Doctor extends Users{
         this.description = description;
     }
 
+    public Doctor(String userId, String first_Name, int ratingsLength, String[] description) {
+        this.userId = userId;
+        this.first_Name = first_Name;
+        this.ratingsLength = ratingsLength;
+        this.description = description;
+        
+    }
+    
+
     public String getFirst_Name() {
         return first_Name;
     }
