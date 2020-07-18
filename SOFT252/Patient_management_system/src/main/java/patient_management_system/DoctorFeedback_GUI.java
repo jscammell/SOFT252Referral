@@ -78,7 +78,10 @@ public class DoctorFeedback_GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        
+        Administrator_GUI open = new Administrator_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
         
     }//GEN-LAST:event_btnBackActionPerformed
 

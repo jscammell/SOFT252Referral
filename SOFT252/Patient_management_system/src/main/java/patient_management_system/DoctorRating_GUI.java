@@ -7,12 +7,15 @@ package patient_management_system;
 
 import User.Users;
 import User.getData;
+import User.Doctor;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JPanel;
 import java.awt.FlowLayout;
 import java.awt.event.*;
 import javax.swing.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 
 /**
@@ -234,10 +237,124 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-        // TODO add your handling code here:
+        getData Data = new getData();
+        ArrayList<Users> doctors = new ArrayList<Users>();
+        try{
+            Data.readDoctors(doctors);       
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        Object[] aDoctor = doctors.toArray();
+        int length;
+        length = aDoctor.length;
+       
+        String description;
+        int rating;
+        boolean isNotEmpty = false;
+       
+        if(txtRateDoctor != null){
+            rating = Integer.parseInt(txtRateDoctor.getText());
+            isNotEmpty = true;
+        }
+        else{
+            isNotEmpty = false;
+        rating = 0;
+        }
+        if(txtDescription != null){
+            description = txtDescription.getText();
+            isNotEmpty = true;
+        }
+        else{
+            description = null;
+            isNotEmpty = false;
+            rating = 0;
+        }
+        String cmbDoctorName = cmbRateDoctor.getSelectedItem().toString();
+        if(Boolean.TRUE.equals(isNotEmpty)){
+       
+            for (int i = 0; i < length; i++) {
+            int ratingLength = ((User.Doctor)aDoctor[i]).getRatingsLength();
+            while(cmbDoctorName.equals(((User.Doctor)aDoctor[i]).getFirst_Name())){
+                int[] ratings = ((User.Doctor)aDoctor[i]).getRatings();
+                int[] newRatings = new int[ratingLength + 1];
+                String[] descriptions = ((User.Doctor)aDoctor[i]).getDescription();
+                String[] newDescriptions = new String[ratingLength + 1];
+                for (int k = 0; k < ratingLength; k++) {
+                    newRatings[k] = ratings[k];
+                }
+                newRatings[ratingLength] = rating;
+                ((User.Doctor)aDoctor[i]).setRatings(newRatings);
+           
+                for (int j = 0; j < ratingLength; j++) {
+                    newDescriptions[j] = descriptions[j];
+                }
+                newDescriptions[ratingLength] = description;
+                ((User.Doctor)aDoctor[i]).setDescription(newDescriptions);
+                newRatings[ratingLength] = rating;
+                ratingLength = ratingLength + 1;
+                ((User.Doctor)aDoctor[i]).setRatingsLength(ratingLength);
+                break;           
+                }
+            }
+            try{
+                BufferedWriter clear = new BufferedWriter(new FileWriter("./accounts\\Doctor.txt",false));
+                clear.newLine();
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
+           
+            for (int l = 0; l < length; l++) {
+                aDoctor = doctors.toArray();
+                String userId = ((User.Doctor)aDoctor[l]).getUserId();
+                String aPassword = ((User.Doctor)aDoctor[l]).getPassword();
+                String first_Name = ((User.Doctor)aDoctor[l]).getFirst_Name();
+                String last_Name = ((User.Doctor)aDoctor[l]).getLast_Name();
+                int ratingLength = ((User.Doctor)aDoctor[l]).getRatingsLength();
+           
+           
+                try{
+                    BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\Doctor.txt",true));
+                    out.newLine();
+                    out.write(userId);
+                    out.newLine();
+                    out.write(aPassword);
+                    out.newLine();
+                    out.write(first_Name);
+                    out.newLine();
+                    out.write(last_Name);
+                    out.newLine();
+                    out.write(String.valueOf(ratingLength));
+                    out.newLine();
+           
+                    for (int i = 0; i < ratingLength; i++) {
+                        int[] ratings = ((User.Doctor)aDoctor[l]).getRatings();
+                        out.write(String.valueOf(ratings[i]));
+                        out.newLine();
+                    }
+                    
+                    for (int i = 0; i < ratingLength; i++) {
+                        String[] descriptions = ((User.Doctor)aDoctor[l]).getDescription();
+                        out.write(descriptions[i]);
+                        out.newLine();
+                    }
+                    
+           
+                    out.close();
+                }    
+                catch(Exception e) {
+                    e.printStackTrace();
+                }           
+           
+            }
+           
+           
+        }
+
     }//GEN-LAST:event_btnSubmitActionPerformed
 
-    /**
+    /** 
      * @param args the command line arguments
      */
     public static void main(String args[]) {

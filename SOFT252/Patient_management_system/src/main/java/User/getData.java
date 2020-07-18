@@ -117,7 +117,7 @@ public class getData {
             
             adddoctor(newdoctor, doctors);
             
-            doctors = new ArrayList<Users>();
+            //doctors = new ArrayList<Users>();
         } 
     }
     

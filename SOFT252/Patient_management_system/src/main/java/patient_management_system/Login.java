@@ -275,7 +275,7 @@ public class Login extends javax.swing.JFrame {
                 fileUsername = br.readLine();
                 filePassword = br.readLine();
                 firstName = br.readLine();
-                lastName = br.readLine();
+               
                 if (username.equals(fileUsername)){
                         userTrue = true;
                 }
