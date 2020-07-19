@@ -72,7 +72,7 @@ public class Doctor_GUI extends javax.swing.JFrame {
 
         btnConsultationNotes.setText("Consultation Notes");
 
-        btnCreatePerscription.setText("Create Perscription");
+        btnCreatePerscription.setText("Create Prescription");
         btnCreatePerscription.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreatePerscriptionActionPerformed(evt);
@@ -82,6 +82,11 @@ public class Doctor_GUI extends javax.swing.JFrame {
         btnPatientHistory.setText("Patient History");
 
         btnMedicineOrderRequest.setText("Medicine Order Request");
+        btnMedicineOrderRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMedicineOrderRequestActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -161,9 +166,16 @@ public class Doctor_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnViewAppointmentsActionPerformed
 
     private void btnCreatePerscriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePerscriptionActionPerformed
-        
+        CreatePrescription_GUI open = new CreatePrescription_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
         
     }//GEN-LAST:event_btnCreatePerscriptionActionPerformed
+
+    private void btnMedicineOrderRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicineOrderRequestActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMedicineOrderRequestActionPerformed
 
     /**
      * @param args the command line arguments

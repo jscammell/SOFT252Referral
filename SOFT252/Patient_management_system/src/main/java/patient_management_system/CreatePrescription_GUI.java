@@ -5,6 +5,8 @@
  */
 package patient_management_system;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 /**
  *
  * @author Josh
@@ -28,21 +30,37 @@ public class CreatePrescription_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        btnBack = new javax.swing.JButton();
-        btnSubmit = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        txtUserId = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        btnSubmit = new javax.swing.JButton();
+        txtDoctorId = new javax.swing.JTextField();
+        txtPatientId = new javax.swing.JTextField();
+        txtMedicine_Name = new javax.swing.JTextField();
+        txtNotes = new javax.swing.JTextField();
         txtQuantity = new javax.swing.JTextField();
-        txtMedicine = new javax.swing.JTextField();
         txtDosage = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Create Perscription");
+        jLabel1.setText("Create Prescription");
+
+        jLabel2.setText("Doctor ID");
+
+        jLabel3.setText("Patient ID");
+
+        jLabel4.setText("Medicine Name");
+
+        jLabel5.setText("Notes");
+
+        jLabel6.setText("Quantity");
+
+        jLabel7.setText("Dosage");
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -52,14 +70,11 @@ public class CreatePrescription_GUI extends javax.swing.JFrame {
         });
 
         btnSubmit.setText("Submit");
-
-        jLabel2.setText("User ID");
-
-        jLabel3.setText("Medicine");
-
-        jLabel4.setText("Quantity");
-
-        jLabel5.setText("Dosage");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,55 +83,67 @@ public class CreatePrescription_GUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(114, 114, 114)
+                        .addContainerGap()
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
+                        .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(112, 112, 112)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(txtUserId, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(txtMedicine, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(51, 51, 51)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDosage, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))
-                        .addContainerGap())))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtDoctorId)
+                                    .addComponent(txtMedicine_Name)
+                                    .addComponent(txtNotes)
+                                    .addComponent(txtQuantity)
+                                    .addComponent(txtDosage)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(25, 25, 25)
+                                .addComponent(jLabel3)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtPatientId)))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(33, 33, 33)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUserId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtDoctorId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(txtPatientId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtMedicine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtMedicine_Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(txtNotes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(txtQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
                     .addComponent(txtDosage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBack)
                     .addComponent(btnSubmit))
@@ -126,9 +153,108 @@ public class CreatePrescription_GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        
+        boolean isNotEmpty = false;
+        String doctor_Id;
+        String patient_Id;
+        String medicine_Name;
+        String notes;
+        String quantity;
+        String dosage;        
+        
+        if(txtDoctorId != null) {
+        doctor_Id = txtDoctorId.getText();
+        isNotEmpty = true;
+        txtDoctorId.setText("");
+        }
+        else{
+        doctor_Id = null;
+        isNotEmpty = false;
+        }
+        
+        if(txtPatientId != null) {
+        patient_Id = txtPatientId.getText();
+        isNotEmpty = true;
+        txtPatientId.setText("");
+        }
+        else{
+        patient_Id = null;
+        isNotEmpty = false;
+        }        
+        
+        if(txtMedicine_Name != null) {
+        medicine_Name = txtMedicine_Name.getText();
+        isNotEmpty = true;
+        txtMedicine_Name.setText("");
+        }
+        else{
+        medicine_Name = null;
+        isNotEmpty = false;
+        }
+        
+        if(txtNotes != null) {
+        notes = txtNotes.getText();
+        isNotEmpty = true;
+        txtNotes.setText("");
+        }
+        else{
+        notes = null;
+        isNotEmpty = false;
+        }
+        
+        if(txtQuantity != null) {
+        quantity = txtQuantity.getText();
+        isNotEmpty = true;
+        txtQuantity.setText("");
+        }
+        else{
+        quantity = null;
+        isNotEmpty = false;
+        }
+        
+        if(txtDosage != null) {
+        dosage = txtDosage.getText();
+        isNotEmpty = true;
+        txtDosage.setText("");
+        }
+        else{
+        dosage = null;
+        isNotEmpty = false;
+        }
+        
+        if (Boolean.TRUE.equals(isNotEmpty)){
+        try{
+        BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\CreatePrescription.txt",true));
+        out.newLine();
+        out.write(doctor_Id);
+        out.newLine();
+        out.write(patient_Id);
+        out.newLine();
+        out.write(medicine_Name);
+        out.newLine();
+        out.write(notes);
+        out.newLine();
+        out.write(quantity);
+        out.newLine();
+        out.write(dosage);
+        out.newLine();        
+        out.newLine();
+        
+        out.close();
+        }
+        catch(Exception e) {
+        e.printStackTrace();
+        }
+        }
+        
+    }//GEN-LAST:event_btnSubmitActionPerformed
+
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        
-        
+        Doctor_GUI open = new Doctor_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
 
     /**
@@ -175,9 +301,13 @@ public class CreatePrescription_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JTextField txtDoctorId;
     private javax.swing.JTextField txtDosage;
-    private javax.swing.JTextField txtMedicine;
+    private javax.swing.JTextField txtMedicine_Name;
+    private javax.swing.JTextField txtNotes;
+    private javax.swing.JTextField txtPatientId;
     private javax.swing.JTextField txtQuantity;
-    private javax.swing.JTextField txtUserId;
     // End of variables declaration//GEN-END:variables
 }
