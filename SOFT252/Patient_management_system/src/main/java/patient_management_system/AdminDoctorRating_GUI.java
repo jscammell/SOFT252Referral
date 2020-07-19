@@ -296,7 +296,8 @@ public class AdminDoctorRating_GUI extends javax.swing.JFrame {
         if(Boolean.TRUE.equals(isNotEmpty)){
             
             for (int i = 0; i < length+1; i++) {
-               if(cmbDoctorName.equals(((User.Doctor)aDoctor[i]).getFirst_Name())){ 
+                if(length != 0){
+               if(cmbDoctorName.equals(((User.Doctor)aDoctor[i]).getFirst_Name()) ){ 
                     int ratingLength = ((User.Doctor)aDoctor[i]).getRatingsLength();
                         while(cmbDoctorName.equals(((User.Doctor)aDoctor[i]).getFirst_Name())){
                 
@@ -364,7 +365,8 @@ public class AdminDoctorRating_GUI extends javax.swing.JFrame {
            
            
                     }
-                else if(i == length){
+                }
+                else if(length == 0){
                  
                     ArrayList<Users> doctors2 = new ArrayList<Users>();
                     try{
@@ -376,7 +378,7 @@ public class AdminDoctorRating_GUI extends javax.swing.JFrame {
                     Object[] aDoctor2 = doctors2.toArray();
                     int length2;
                     length2 = aDoctor2.length;
-                    for (int l = 0; l < length; l++) {
+                    for (int l = 0; l < length2; l++) {
                             if(cmbDoctorName.equals(((User.Doctor)aDoctor2[l]).getFirst_Name())){ 
                                 
                                 String[] newDoctor = new String[length+1];
@@ -441,7 +443,7 @@ public class AdminDoctorRating_GUI extends javax.swing.JFrame {
                     
                                 for (int k = 0; k < ratingLength; k++) {
                                     //String descriptions = txtDescription.getText();
-                                    out.write(descriptions);
+                                    out.write(descriptions[k]);
                                     out.newLine();
                                 }
                     
@@ -453,6 +455,8 @@ public class AdminDoctorRating_GUI extends javax.swing.JFrame {
                             }           
            
                         }
+                    }
+                }
                
                }
         }

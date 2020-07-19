@@ -41,9 +41,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnDoctorRatings" alignment="0" min="-2" pref="240" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="btnAddRemoveSecretary" pref="240" max="32767" attributes="0"/>
+                              <Component id="btnAdd" pref="240" max="32767" attributes="0"/>
                               <Component id="btnCreateAdministrator" max="32767" attributes="0"/>
-                              <Component id="btnAddRemoveDoctor" alignment="0" pref="240" max="32767" attributes="0"/>
+                              <Component id="btnRemove" alignment="0" pref="240" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -60,9 +60,9 @@
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Component id="btnCreateAdministrator" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnAddRemoveSecretary" min="-2" max="-2" attributes="0"/>
+              <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnAddRemoveDoctor" min="-2" max="-2" attributes="0"/>
+              <Component id="btnRemove" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnDoctorRatings" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="44" max="32767" attributes="0"/>
@@ -84,10 +84,13 @@
         <Property name="text" type="java.lang.String" value="Administrator"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAddRemoveSecretary">
+    <Component class="javax.swing.JButton" name="btnAdd">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Add / Remove Secretary"/>
+        <Property name="text" type="java.lang.String" value="Add Doctor and Secretary"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnDoctorRatings">
       <Properties>
@@ -121,10 +124,13 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLogOffActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAddRemoveDoctor">
+    <Component class="javax.swing.JButton" name="btnRemove">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Add / Remove Doctor"/>
+        <Property name="text" type="java.lang.String" value="Remove Doctor and Secretary"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRemoveActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

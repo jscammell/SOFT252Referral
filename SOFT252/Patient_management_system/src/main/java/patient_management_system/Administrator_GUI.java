@@ -28,19 +28,24 @@ public class Administrator_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        btnAddRemoveSecretary = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
         btnDoctorRatings = new javax.swing.JButton();
         btnCreateAdministrator = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         btnLogOff = new javax.swing.JButton();
-        btnAddRemoveDoctor = new javax.swing.JButton();
+        btnRemove = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Administrator");
 
-        btnAddRemoveSecretary.setText("Add / Remove Secretary");
+        btnAdd.setText("Add Doctor and Secretary");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
 
         btnDoctorRatings.setText("View Doctor Ratings");
         btnDoctorRatings.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +75,12 @@ public class Administrator_GUI extends javax.swing.JFrame {
             }
         });
 
-        btnAddRemoveDoctor.setText("Add / Remove Doctor");
+        btnRemove.setText("Remove Doctor and Secretary");
+        btnRemove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRemoveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,9 +102,9 @@ public class Administrator_GUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnDoctorRatings, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(btnAddRemoveSecretary, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                                .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
                                 .addComponent(btnCreateAdministrator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnAddRemoveDoctor, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)))))
+                                .addComponent(btnRemove, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)))))
                 .addGap(0, 99, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -105,9 +115,9 @@ public class Administrator_GUI extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addComponent(btnCreateAdministrator)
                 .addGap(18, 18, 18)
-                .addComponent(btnAddRemoveSecretary)
+                .addComponent(btnAdd)
                 .addGap(18, 18, 18)
-                .addComponent(btnAddRemoveDoctor)
+                .addComponent(btnRemove)
                 .addGap(18, 18, 18)
                 .addComponent(btnDoctorRatings)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
@@ -146,6 +156,26 @@ public class Administrator_GUI extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnDoctorRatingsActionPerformed
 
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        AddDoctorSecretary_GUI open = new AddDoctorSecretary_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+        
+        
+        
+    }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveActionPerformed
+        
+        RemoveDoctorSecretary_GUI open = new RemoveDoctorSecretary_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+        
+        
+    }//GEN-LAST:event_btnRemoveActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -183,12 +213,12 @@ public class Administrator_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddRemoveDoctor;
-    private javax.swing.JButton btnAddRemoveSecretary;
+    private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnCreateAdministrator;
     private javax.swing.JButton btnDoctorRatings;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnLogOff;
+    private javax.swing.JButton btnRemove;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

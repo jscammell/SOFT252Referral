@@ -190,18 +190,18 @@ public class getData {
             
             Users newAdministrator = new Administrator(userId, password, first_Name); 
             
-            addadministrator(newAdministrator);
+            addadministrator(newAdministrator, Administrators);
             
-            Administrators = new ArrayList<Users>();
+            //dministrators = new ArrayList<Users>();
         } 
     }
     
-    public void addadministrator(Users administrator)
+    public void addadministrator(Users administrator, ArrayList<Users> administrators)
         {
         administrators.add(administrator);
         }
        
-        public void removeAdministrator(Users administrator)
+        public void removeAdministrator(Users administrator,ArrayList<Users> administrators)
         {
         administrators.remove(administrator);
         }
@@ -228,18 +228,18 @@ public class getData {
             
             Users newSecretary = new Secretary(userId, password); 
             
-            addadministrator(newSecretary);
+            addSecretary(newSecretary, Secretarys);
             
-            Secretarys = new ArrayList<Users>();
+           // Secretarys = new ArrayList<Users>();
         } 
     }
     
-    public void addsecretary(Users secretary)
+    public void addSecretary(Users secretary, ArrayList<Users> secretarys)
         {
         secretarys.add(secretary);
         }
        
-        public void removeSecretary(Users secretary)
+        public void removeSecretary(Users secretary, ArrayList<Users> secretarys)
         {
         secretarys.remove(secretary);
         }

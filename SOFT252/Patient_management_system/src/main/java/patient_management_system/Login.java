@@ -310,9 +310,7 @@ public class Login extends javax.swing.JFrame {
                 BufferedReader br = new BufferedReader (new FileReader (file));
                 while ((br.readLine()) != null) {
                 fileUsername = br.readLine();
-                filePassword = br.readLine();
-                firstName = br.readLine();
-                lastName = br.readLine();
+                filePassword = br.readLine();                
                 if (username.equals(fileUsername)){
                         userTrue = true;
                 }

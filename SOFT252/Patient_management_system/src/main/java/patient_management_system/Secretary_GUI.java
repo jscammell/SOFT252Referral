@@ -48,6 +48,11 @@ public class Secretary_GUI extends javax.swing.JFrame {
         btnPatientAccountRequest.setText("Patient Account Request");
 
         btnPatientDeleteRequest.setText("Patient Delete Request");
+        btnPatientDeleteRequest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPatientDeleteRequestActionPerformed(evt);
+            }
+        });
 
         txtAccountRequestNotification.setText("1");
 
@@ -67,6 +72,11 @@ public class Secretary_GUI extends javax.swing.JFrame {
         btnApproveAppointment.setText("Approve Appointment");
 
         btnCreateAppointment.setText("Create Appointment");
+        btnCreateAppointment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateAppointmentActionPerformed(evt);
+            }
+        });
 
         btnExit.setText("Exit");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
@@ -165,6 +175,25 @@ public class Secretary_GUI extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();             //Logs the user off and takes the user back to the Login screen
     }//GEN-LAST:event_btnLogOffActionPerformed
+
+    private void btnCreateAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAppointmentActionPerformed
+        
+        AdminCreateAppointment_GUI open = new AdminCreateAppointment_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+        
+    }//GEN-LAST:event_btnCreateAppointmentActionPerformed
+
+    private void btnPatientDeleteRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientDeleteRequestActionPerformed
+        SecretaryRequestDeleteAccount_GUI open = new SecretaryRequestDeleteAccount_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+        
+        
+        
+    }//GEN-LAST:event_btnPatientDeleteRequestActionPerformed
 
     /**
      * @param args the command line arguments
