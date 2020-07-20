@@ -7,20 +7,57 @@ package patient_management_system;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-
+import User.getData;
+import User.Users;
+import java.util.ArrayList;
+import java.awt.event.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
  
 
 /**
  *
  * @author Josh
  */
-public class RequestAccount_GUI extends javax.swing.JFrame {
+public class ApprovePatientAccount_GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form RequestAccount_GUI
      */
-    public RequestAccount_GUI() {
+    public ApprovePatientAccount_GUI() {
         initComponents();
+        
+        ArrayList<Users> rePatients = new ArrayList<Users>();
+        getData data = new getData();
+        try{
+        data.readRePatients(rePatients);
+        }
+        catch(Exception e) {
+        e.printStackTrace();
+        }
+        
+        Object[] aPatients = rePatients.toArray();
+        int length = aPatients.length;
+        String username = ((User.Patient)aPatients[0]).getUserId();
+        txtUsername.setText(username);
+        String password = ((User.Patient)aPatients[0]).getPassword();
+        txtPassword.setText(password);
+        String First_Name = ((User.Patient)aPatients[0]).getFirst_Name();
+        txtFirstName.setText(First_Name);
+        String last_Name = ((User.Patient)aPatients[0]).getLast_Name();
+        txtLastName.setText(last_Name);
+        String mobilePhoneNumber = ((User.Patient)aPatients[0]).getPhone_Number();
+        txtMobilePhoneNumber.setText(mobilePhoneNumber);        
+        String addressLine = ((User.Patient)aPatients[0]).getAddress();
+        txtAddressLine.setText(addressLine);        
+        String postcode = ((User.Patient)aPatients[0]).getPostcode();
+        txtPostcode.setText(postcode);
+        String dateOfBirth = ((User.Patient)aPatients[0]).getDate_Of_Birth();
+        txtDateOfBirth.setText(dateOfBirth);
+        String gender = ((User.Patient)aPatients[0]).getSex();
+        txtGender.setText(gender);
+        
+        
     }
 
     /**
@@ -33,6 +70,7 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jTextField4 = new javax.swing.JTextField();
+        txtGender1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -54,13 +92,15 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
         txtPostcode = new javax.swing.JTextField();
         txtGender = new javax.swing.JTextField();
         txtDateOfBirth = new javax.swing.JTextField();
+        txtNHSNumber = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
 
         jTextField4.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Create Account");
+        jLabel1.setText("Approve Patient Account");
 
         jLabel2.setText("Username");
 
@@ -96,23 +136,21 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
 
         txtLastName.setToolTipText("");
 
+        jLabel13.setText("NHS Number");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
                         .addComponent(btnRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(jLabel1)
-                        .addGap(0, 128, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
@@ -122,9 +160,11 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
                             .addComponent(jLabel8)
                             .addComponent(jLabel10)
                             .addComponent(jLabel11)
-                            .addComponent(jLabel12))
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel13))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNHSNumber, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtUsername)
                             .addComponent(txtPassword, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtFirstName, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -133,7 +173,11 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
                             .addComponent(txtAddressLine, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtPostcode, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtGender, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtDateOfBirth))))
+                            .addComponent(txtDateOfBirth)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -177,7 +221,11 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNHSNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBack)
                     .addComponent(btnRequest))
@@ -188,7 +236,7 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        Patient_GUI open = new Patient_GUI();
+        Secretary_GUI open = new Secretary_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
@@ -200,11 +248,12 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
         String filePassword;
         String firstName;
         String lastName;
-        String mobileNumber;
-        String addressLine;
+        String mobileNumber;        
+        String addressLine;        
         String postcode;
         String dateOfBirth;
         String gender;
+        String NHSNumber;
         
         if(txtUsername != null) {
         fileUsername = txtUsername.getText();
@@ -259,7 +308,8 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
         mobileNumber = null;
         isNotEmpty = false;
         }               
-                
+        
+        
         
         if(txtAddressLine != null) {
         addressLine = txtAddressLine.getText();
@@ -269,9 +319,10 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
         else{
         addressLine = null;
         isNotEmpty = false;
-        }
-                
-                
+        }               
+        
+        
+        
         if(txtPostcode != null) {
         postcode = txtPostcode.getText();
         isNotEmpty = true;
@@ -303,11 +354,20 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
         gender = null;
         isNotEmpty = false;
         }
+        if(txtNHSNumber != null) {
+        NHSNumber = txtNHSNumber.getText();
+        isNotEmpty = true;
+        txtNHSNumber.setText("");
+        }
+        else{
+        NHSNumber = null;
+        isNotEmpty = false;
+        }
         
         
         if (Boolean.TRUE.equals(isNotEmpty)){
         try{
-        BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\PatientRequest.txt",true));
+        BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\Patient.txt",true));
         out.newLine();
         out.write(fileUsername);
         out.newLine();
@@ -327,6 +387,7 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(gender);
         out.newLine();
+        out.write(NHSNumber);
         out.newLine();
         
         out.close();
@@ -334,7 +395,78 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
         catch(Exception e) {
         e.printStackTrace();
         }
+        ArrayList<Users> rePatients = new ArrayList<Users>();
+        getData data = new getData();
+        try{
+        data.readRePatients(rePatients);
+        }
+        catch(Exception e) {
+        e.printStackTrace();
+        }
         
+        Object[] aPatients = rePatients.toArray();
+        
+        int length = aPatients.length;
+        data.removePatient (rePatients.get(0),rePatients);
+        aPatients = rePatients.toArray();
+        aPatients = rePatients.toArray();
+        int newLength = aPatients.length;
+        if(newLength > 0) {
+        
+            for (int l = 0; l < newLength; l++) {
+        
+                fileUsername = ((User.Patient)aPatients[l]).getUserId();
+                filePassword = ((User.Patient)aPatients[l]).getPassword();
+                firstName = ((User.Patient)aPatients[l]).getFirst_Name();
+                lastName = ((User.Patient)aPatients[l]).getLast_Name();
+                mobileNumber = ((User.Patient)aPatients[l]).getPhone_Number();
+                addressLine = ((User.Patient)aPatients[l]).getAddress();
+                postcode = ((User.Patient)aPatients[l]).getPostcode();
+                dateOfBirth = ((User.Patient)aPatients[l]).getDate_Of_Birth();
+                gender = ((User.Patient)aPatients[l]).getSex();
+                NHSNumber = ((User.Patient)aPatients[l]).getUserId();
+                
+                try{
+                BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\PatientRequest.txt", false));
+                out.newLine();
+                out.write(fileUsername);
+                out.newLine();
+                out.write(filePassword);
+                out.newLine();
+                out.write(firstName);
+                out.newLine();
+                out.write(lastName);
+                out.newLine();
+                out.write(mobileNumber);
+                out.newLine();                
+                out.write(addressLine);
+                out.newLine();                
+                out.write(postcode);
+                out.newLine();
+                out.write(dateOfBirth);
+                out.newLine();
+                out.write(gender);
+                out.newLine();
+                out.write(NHSNumber);
+                out.newLine();
+                
+                }
+                 catch(Exception e) {
+                    e.printStackTrace();
+                }
+                
+        }
+            
+        }
+        else{
+         try{
+                BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\PatientRequest.txt", false));
+                    out.newLine();
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                }   
+        }        
         }
         
     }//GEN-LAST:event_btnRequestActionPerformed
@@ -356,20 +488,21 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RequestAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ApprovePatientAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RequestAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ApprovePatientAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RequestAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ApprovePatientAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RequestAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ApprovePatientAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RequestAccount_GUI().setVisible(true);
+                new ApprovePatientAccount_GUI().setVisible(true);
             }
         });
     }
@@ -381,6 +514,7 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -392,8 +526,10 @@ public class RequestAccount_GUI extends javax.swing.JFrame {
     private javax.swing.JTextField txtDateOfBirth;
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtGender;
+    private javax.swing.JTextField txtGender1;
     private javax.swing.JTextField txtLastName;
     private javax.swing.JTextField txtMobilePhoneNumber;
+    private javax.swing.JTextField txtNHSNumber;
     private javax.swing.JTextField txtPassword;
     private javax.swing.JTextField txtPostcode;
     private javax.swing.JTextField txtUsername;

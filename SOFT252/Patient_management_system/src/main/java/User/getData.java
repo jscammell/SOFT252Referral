@@ -63,6 +63,44 @@ public class getData {
     }
     
     
+    public void readRePatients(ArrayList<Users>patients)throws Exception
+    {
+        File file = new File("./accounts\\PatientRequest.txt");
+        
+        BufferedReader br = new BufferedReader(new FileReader(file));
+          
+            String userId;
+            String password;
+            String first_Name;
+            String last_Name;
+            String phone_Number;
+            String address;
+            String postcode;
+            String date_Of_Birth;
+            int age;
+            String sex;
+            String nhs_Number;
+        
+        while ((br.readLine())!=null) {
+            userId = br.readLine();
+            password = br.readLine();
+            first_Name = br.readLine();
+            last_Name = br.readLine();
+            phone_Number = br.readLine();
+            address = br.readLine();
+            postcode = br.readLine();
+            date_Of_Birth = br.readLine();            
+            sex = br.readLine();
+            
+            Users newpatient = new Patient(userId, password, first_Name, last_Name, phone_Number, address, postcode, date_Of_Birth, sex); 
+            
+            addPatient(newpatient, patients);
+            
+            
+        } 
+    }
+    
+    
     public void readDeletePatients(ArrayList<Users>patients)throws Exception
     {
         File file = new File("./accounts\\PatientDelete.txt");
