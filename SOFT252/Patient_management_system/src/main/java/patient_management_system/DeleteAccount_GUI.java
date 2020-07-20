@@ -169,7 +169,7 @@ public class DeleteAccount_GUI extends javax.swing.JFrame {
         else{
         passTrue = false;
         }
-        
+        if(Boolean.TRUE.equals(passTrue) && Boolean.TRUE.equals(userTrue)){
         aPatients = patients.toArray();
         String userId = ((User.Patient)aPatients[k]).getUserId();
         String aPassword = ((User.Patient)aPatients[k]).getPassword();
@@ -212,10 +212,12 @@ public class DeleteAccount_GUI extends javax.swing.JFrame {
         catch(Exception e) {
         e.printStackTrace();
         }
+        
+
             k++;
         }
         
-    
+        }
         
                
         

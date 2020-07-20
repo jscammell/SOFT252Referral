@@ -66,6 +66,11 @@ public class Secretary_GUI extends javax.swing.JFrame {
         txtOrderMedicineNotification.setText("1");
 
         btnDeletePatient.setText("Delete Patient");
+        btnDeletePatient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeletePatientActionPerformed(evt);
+            }
+        });
 
         btnOrderMedicine.setText("Order Medicine");
 
@@ -194,6 +199,15 @@ public class Secretary_GUI extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnPatientDeleteRequestActionPerformed
+
+    private void btnDeletePatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletePatientActionPerformed
+        
+        SecretaryDeleteAccount_GUI open = new SecretaryDeleteAccount_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+        
+    }//GEN-LAST:event_btnDeletePatientActionPerformed
 
     /**
      * @param args the command line arguments

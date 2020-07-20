@@ -17,30 +17,13 @@ import User.getData;
  *
  * @author Josh
  */
-public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
+public class SecretaryDeleteAccount_GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form DeleteAccount_GUI
      */
-    public SecretaryRequestDeleteAccount_GUI() {
+    public SecretaryDeleteAccount_GUI() {
         initComponents();
-        
-        ArrayList<Users> rePatients = new ArrayList<Users>();
-        getData data = new getData();
-        try{
-        data.readDeletePatients(rePatients);
-        }
-        catch(Exception e){
-        e.printStackTrace();
-        }
-        
-        Object[] aPatients = rePatients.toArray();
-        int length = aPatients.length;
-        String userName = ((User.Users)aPatients[0]).getUserId();
-        txtUsername.setText(userName);
-        String password = ((User.Users)aPatients[0]).getPassword();
-        txtPassword.setText(password);
-        String firstName = ((User.Patient)aPatients[0]).getFirst_Name();
     }
 
     /**
@@ -64,7 +47,7 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Secretary Request Delete Account");
+        jLabel1.setText("Delete Patient Account");
 
         jLabel2.setText("Username");
 
@@ -98,25 +81,26 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnDeleteAccount))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(29, 29, 29)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
-                                    .addComponent(txtUsername))))
-                        .addGap(20, 121, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4)
-                        .addGap(50, 189, Short.MAX_VALUE)))
+                                .addGap(61, 61, 61)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addGap(29, 29, 29)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
+                                            .addComponent(txtUsername)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel4)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(77, 77, 77)
+                .addGap(143, 143, 143)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(151, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -190,13 +174,18 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         if(Boolean.TRUE.equals(passTrue) && Boolean.TRUE.equals(userTrue)){
            data.removePatient(patients.get(k), patients );
            
-
-           txtUsername.setText("");
-           txtPassword.setText("");
-           
+           try{
+           BufferedWriter clear = new BufferedWriter(new FileWriter("./accounts\\Patient.txt", false));
+           clear.newLine();
+           }
+           catch(Exception e){
+           e.printStackTrace();
+           }
            if(length != 1){
            length = length -1;
            }
+           txtUsername.setText("");
+           txtPassword.setText("");
            for (int l = 0; l < length; l++){
            
            
@@ -211,19 +200,8 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         String dateOfBirth = ((User.Patient)aPatients[l]).getDate_Of_Birth();
         String gender = ((User.Patient)aPatients[l]).getSex();
         String NHSNumber = ((User.Patient)aPatients[l]).getNhs_Number();
+        
         try{
-           BufferedWriter clear = new BufferedWriter(new FileWriter("./accounts\\Patient.txt", false));
-           clear.newLine();
-           }
-           catch(Exception e){
-           e.printStackTrace();
-           }
-           if(length != 1){
-           length = length -1;
-           }
-           
-           
-         try{
         BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\Patient.txt", true));
         out.newLine();
         out.write(userId);
@@ -253,88 +231,11 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         catch(Exception e) {
         e.printStackTrace();
         }
-         
-           }
-        try{
-        data.readDeletePatients(patients);
         }
-        catch(Exception e) {
-        e.printStackTrace();
-        }
-        
-        aPatients = patients.toArray();
-        length = aPatients.length;
-        
-        
-        try{
-           BufferedWriter clear = new BufferedWriter(new FileWriter("./accounts\\PatientDelete.txt", false));
-           clear.newLine();
-           }
-           catch(Exception e){
-           e.printStackTrace();
-           }
-           if(length != 1){
-           length = length -1;
-           }
-           
-           data.removePatient(patients.get(1), patients );
-           
-           for (int l = 0; l < length; l++){
-                aPatients = patients.toArray();
-        String userId = ((User.Patient)aPatients[l]).getUserId();
-        String aPassword = ((User.Patient)aPatients[l]).getPassword();
-        String first_Name = ((User.Patient)aPatients[l]).getFirst_Name();
-        String last_Name = ((User.Patient)aPatients[l]).getLast_Name();
-        String mobilePhoneNumber = ((User.Patient)aPatients[l]).getPhone_Number();        
-        String addressLine = ((User.Patient)aPatients[l]).getAddress();        
-        String postcode = ((User.Patient)aPatients[l]).getPostcode();
-        String dateOfBirth = ((User.Patient)aPatients[l]).getDate_Of_Birth();
-        String gender = ((User.Patient)aPatients[l]).getSex();
-        String NHSNumber = ((User.Patient)aPatients[l]).getNhs_Number();
-        try{
-        BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\PatientDelete.txt", true));
-        out.newLine();
-        out.write(userId);
-        out.newLine();
-        out.write(aPassword);
-        out.newLine();
-        out.write(first_Name);
-        out.newLine();
-        out.write(last_Name);
-        out.newLine();
-        out.write(mobilePhoneNumber);
-        out.newLine();        
-        out.write(addressLine);
-        out.newLine();       
-        out.write(postcode);
-        out.newLine();
-        out.write(dateOfBirth);
-        out.newLine();
-        out.write(gender);
-        out.newLine();
-        out.write(NHSNumber);
-        out.newLine();
-        
-        
-        out.close();
-        }
-        catch(Exception e) {
-        e.printStackTrace();
-        }
-        
-        
-        
-  
-        
-        }
-        }
-        
-        k++;
             
         }
-        
-    
-
+        k++;
+        }
         
                
         
@@ -359,14 +260,18 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SecretaryRequestDeleteAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecretaryDeleteAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SecretaryRequestDeleteAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecretaryDeleteAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SecretaryRequestDeleteAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecretaryDeleteAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SecretaryRequestDeleteAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecretaryDeleteAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -375,7 +280,7 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SecretaryRequestDeleteAccount_GUI().setVisible(true);
+                new SecretaryDeleteAccount_GUI().setVisible(true);
             }
         });
     }
