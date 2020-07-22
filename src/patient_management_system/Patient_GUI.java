@@ -72,6 +72,11 @@ public class Patient_GUI extends javax.swing.JFrame {
         });
 
         btnViewHistory.setText("View History");
+        btnViewHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewHistoryActionPerformed(evt);
+            }
+        });
 
         btnAppointmentRequest.setText("Appointment Request");
         btnAppointmentRequest.addActionListener(new java.awt.event.ActionListener() {
@@ -214,6 +219,13 @@ public class Patient_GUI extends javax.swing.JFrame {
     private void btnViewPerscriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPerscriptionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnViewPerscriptionActionPerformed
+
+    private void btnViewHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHistoryActionPerformed
+        ViewPatientHistory_GUI open = new ViewPatientHistory_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_btnViewHistoryActionPerformed
 
     /**
      * @param args the command line arguments

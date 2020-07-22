@@ -192,7 +192,7 @@ public class Doctor_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMedicineOrderRequestActionPerformed
 
     private void btnPatientHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientHistoryActionPerformed
-        DoctorsNote_GUI open = new DoctorsNote_GUI();
+        InspectHistory_GUI open = new InspectHistory_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
