@@ -77,7 +77,7 @@ public class DoctorAppointmentRequest_GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Doctor Appointment Request");
+        jLabel1.setText("Create Doctor Appointment");
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -110,9 +110,9 @@ public class DoctorAppointmentRequest_GUI extends javax.swing.JFrame {
 
         jLabel6.setText("Please Enter The Date You Want To Request An Appointment");
 
-        jLabel7.setText("Username");
+        jLabel7.setText("Patient Name");
 
-        jLabel8.setText("Please Enter Username to confirm");
+        jLabel8.setText("Please Enter Patient Name");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,12 +150,12 @@ public class DoctorAppointmentRequest_GUI extends javax.swing.JFrame {
                                 .addComponent(jLabel5))
                             .addComponent(jLabel6)
                             .addComponent(jLabel8))
-                        .addGap(0, 115, Short.MAX_VALUE)))
+                        .addGap(0, 102, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(65, 65, 65))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,7 +255,7 @@ public class DoctorAppointmentRequest_GUI extends javax.swing.JFrame {
         String doctor = cmbDoctor.getSelectedItem().toString();
         if (Boolean.TRUE.equals(isNotEmpty)){
         try{
-        BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\AppointmentRequest.txt",true));
+        BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\Appointment.txt",true));
         out.newLine();
         out.write(appointment_Day);
         out.newLine();

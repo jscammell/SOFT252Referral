@@ -17,12 +17,12 @@ import User.Users;
  *
  * @author Josh
  */
-public class AppointmentRequest_GUI extends javax.swing.JFrame {
+public class DoctorCreateAppointment_GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form AppointmentRequest
      */
-    public AppointmentRequest_GUI() {
+    public DoctorCreateAppointment_GUI() {
         initComponents();
         getData Data = new getData();
         ArrayList<Users> doctors = new ArrayList<Users>();
@@ -110,9 +110,9 @@ public class AppointmentRequest_GUI extends javax.swing.JFrame {
 
         jLabel6.setText("Please Enter The Date You Want To Request An Appointment");
 
-        jLabel7.setText("Your Name");
+        jLabel7.setText("Username");
 
-        jLabel8.setText("Please Enter Your Name");
+        jLabel8.setText("Please Enter Username to confirm");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -300,21 +300,23 @@ public class AppointmentRequest_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AppointmentRequest_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorCreateAppointment_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AppointmentRequest_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorCreateAppointment_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AppointmentRequest_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorCreateAppointment_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AppointmentRequest_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorCreateAppointment_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AppointmentRequest_GUI().setVisible(true);
+                new DoctorCreateAppointment_GUI().setVisible(true);
             }
         });
     }

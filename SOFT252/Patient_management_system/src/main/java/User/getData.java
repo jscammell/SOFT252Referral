@@ -333,7 +333,7 @@ public void readAppointment(ArrayList<Appointment>appointment)throws Exception
             String appointment_Year;
             String patient_Name;
             String doctor_Name;
-            String room_Number;
+            //String room_Number;
         
         while ((br.readLine())!=null) {
             appointment_Day = br.readLine();
@@ -341,10 +341,10 @@ public void readAppointment(ArrayList<Appointment>appointment)throws Exception
             appointment_Year = br.readLine();
             patient_Name = br.readLine();
             doctor_Name = br.readLine();
-            room_Number = br.readLine();
             
             
-            Processes.Appointment Appoint = new Appointment(appointment_Day, appointment_Month, appointment_Year, patient_Name, doctor_Name, room_Number); 
+            
+            Processes.Appointment Appoint = new Appointment(appointment_Day, appointment_Month, appointment_Year, patient_Name, doctor_Name); 
             
             addappointment(Appoint, appointment);
             

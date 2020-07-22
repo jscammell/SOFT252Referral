@@ -11,12 +11,12 @@ import java.util.ArrayList;
  *
  * @author Josh
  */
-public class ViewAppointment_GUI extends javax.swing.JFrame {
+public class DoctorViewAppointment_GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form ViewAppointment_GUI
      */
-    public ViewAppointment_GUI() {
+    public DoctorViewAppointment_GUI() {
         initComponents();
     }
 
@@ -132,7 +132,7 @@ public class ViewAppointment_GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        Patient_GUI open = new Patient_GUI();
+        Doctor_GUI open = new Doctor_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
@@ -223,20 +223,21 @@ public class ViewAppointment_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ViewAppointment_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorViewAppointment_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ViewAppointment_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorViewAppointment_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ViewAppointment_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorViewAppointment_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ViewAppointment_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorViewAppointment_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewAppointment_GUI().setVisible(true);
+                new DoctorViewAppointment_GUI().setVisible(true);
             }
         });
     }

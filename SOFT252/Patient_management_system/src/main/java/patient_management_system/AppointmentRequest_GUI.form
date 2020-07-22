@@ -190,14 +190,14 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Username"/>
+        <Property name="text" type="java.lang.String" value="Your Name"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtUsername">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Please Enter Username to confirm"/>
+        <Property name="text" type="java.lang.String" value="Please Enter Your Name"/>
       </Properties>
     </Component>
   </SubComponents>
