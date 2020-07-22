@@ -9,20 +9,21 @@ package Processes;
  *
  * @author Josh
  */
-public class Appointment {
+public class History {    
     private String appointment_Day;
     private String appointment_Month;
     private String appointment_Year;
     private String patient_Name;
     private String doctor_Name;
-   
-    
-    public Appointment(String appointment_Day, String appointment_Month, String appointment_Year, String patient_Name, String doctor_Name) {
+    private String doctors_Note;
+
+    public History(String appointment_Day, String appointment_Month, String appointment_Year, String patient_Name, String doctor_Name, String doctors_Note) {
         this.appointment_Day = appointment_Day;
         this.appointment_Month = appointment_Month;
         this.appointment_Year = appointment_Year;
         this.patient_Name = patient_Name;
-        this.doctor_Name = doctor_Name;        
+        this.doctor_Name = doctor_Name;
+        this.doctors_Note = doctors_Note;
     }
 
     public String getAppointment_Day() {
@@ -63,7 +64,18 @@ public class Appointment {
 
     public void setDoctor_Name(String doctor_Name) {
         this.doctor_Name = doctor_Name;
-    }   
+    }
+
+    public String getDoctors_Note() {
+        return doctors_Note;
+    }
+
+    public void setDoctors_Note(String doctors_Note) {
+        this.doctors_Note = doctors_Note;
+    }
+    
+    
+    
     
     
 }

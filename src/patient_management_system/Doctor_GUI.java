@@ -80,6 +80,11 @@ public class Doctor_GUI extends javax.swing.JFrame {
         });
 
         btnPatientHistory.setText("Patient History");
+        btnPatientHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPatientHistoryActionPerformed(evt);
+            }
+        });
 
         btnMedicineOrderRequest.setText("Medicine Order Request");
         btnMedicineOrderRequest.addActionListener(new java.awt.event.ActionListener() {
@@ -185,6 +190,13 @@ public class Doctor_GUI extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_btnMedicineOrderRequestActionPerformed
+
+    private void btnPatientHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientHistoryActionPerformed
+        DoctorsNote_GUI open = new DoctorsNote_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_btnPatientHistoryActionPerformed
 
     /**
      * @param args the command line arguments

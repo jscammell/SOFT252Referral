@@ -11,6 +11,7 @@ import java.io.FileReader;
 import Processes.Medication;
 import Processes.Appointment;
 import Processes.Prescription;
+import Processes.History;
 
 
 /**
@@ -513,7 +514,55 @@ public void readAppointment(ArrayList<Appointment>appointment)throws Exception
         
     }
     
+    
+     public void readHistory(ArrayList<History>history)throws Exception
+    {
+        File file = new File("./accounts\\History.txt");
+        
+        BufferedReader br = new BufferedReader(new FileReader(file));                     
+            
+            String appointment_Day;
+            String appointment_Month;
+            String appointment_Year;
+            String patient_Name;
+            String doctor_Name;
+            String doctors_Note;
+        
+        while ((br.readLine())!=null) {
+            appointment_Day = br.readLine();
+            appointment_Month = br.readLine();
+            appointment_Year = br.readLine();
+            patient_Name = br.readLine();
+            doctor_Name = br.readLine();
+            doctors_Note = br.readLine();
+            
+            
+            Processes.History Hist = new History(appointment_Day, appointment_Month, appointment_Year, patient_Name, doctor_Name, doctors_Note); 
+            
+            addHistory(Hist, history);
+            
+            
+        } 
+    }
+     
+     
+      public void addHistory(History f, ArrayList historys)
+    {
+       
+        historys.add(f);
+       
+    }
+
+    public void removeHistory(History f, ArrayList historys)
+    {
+       
+        historys.remove(f);
+        
+    }
+    
 }
+
+
 
 
 
