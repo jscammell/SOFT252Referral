@@ -1,0 +1,12 @@
+
+Pain Killers
+40
+100mg
+
+Peniciline
+12
+75mg
+
+Drugs
+13
+20mg
