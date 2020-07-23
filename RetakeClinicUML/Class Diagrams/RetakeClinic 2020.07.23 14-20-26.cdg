@@ -1,0 +1,1497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="RetakeClinic">
+  <ClassDiagramComponents>
+    <Class name="AdminAddDoctorSecretary_GUI" package="patient_management_system" visibility="public" xPosition="-52.0" yPosition="20.0">
+      <Fields>
+        <Field name="btnAddDoctor" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnAddSecretary" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtFirst_Name" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtLast_Name" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPassword" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPasswordS" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUser_Id" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUser_IdS" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddDoctorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddSecretaryActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdminCreateAdministrator_GUI" package="patient_management_system" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtAdministratorID" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtFirstName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPassword" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Administrator_GUI" package="patient_management_system" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="btnAdd" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnCreateAdministrator" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnDoctorRatings" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnExit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnLogOff" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnRemove" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnExitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnLogOffActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnCreateAdministratorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDoctorRatingsActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnRemoveActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdminRemoveDoctorSecretary_GUI" package="patient_management_system" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbUser_Type" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtUserId" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdminViewDoctorRatingAndProvideFeedBack_GUI" package="patient_management_system" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbRateDoctor" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="cmbViewDoctor" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="txtDescription" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPatientFeedback" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="txtViewRating" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DoctorCreateAppointment_GUI" package="patient_management_system" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbDoctor" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtDay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMonth" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtYear" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="cmbDoctorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DoctorCreatePatientAppointmentRequest_GUI" package="patient_management_system" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbDoctor" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtDay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMonth" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtYear" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="cmbDoctorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DoctorCreatePrescription_GUI" package="patient_management_system" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtDoctorId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtDosage" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMedicine_Name" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtNotes" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPatientId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtQuantity" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DoctorInspectPatientHistory_GUI" package="patient_management_system" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="txtDay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtDoctor" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtDoctorNote" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="txtMonth" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtYear" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DoctorRequestMedicine_GUI" package="patient_management_system" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtDosage" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMedicine_Name" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtQuantity" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DoctorsNote_GUI" package="patient_management_system" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmitHistory" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbDoctor" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="txtDay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtDoctorNote" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="txtMonth" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtYear" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitHistoryActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="cmbDoctorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DoctorViewAppointment_GUI" package="patient_management_system" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtViewAppointment" type="javax.swing.JTextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DoctorViewHistory_GUI" package="patient_management_system" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmitHistory" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbDoctor" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="txtDay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtDoctorNote" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="txtMonth" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtYear" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitHistoryActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="cmbDoctorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Doctor_GUI" package="patient_management_system" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnAppointmentRequest" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnConsultationNotes" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnCreatePerscription" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnExit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnLogOff" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnMedicineOrderRequest" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnPatientHistory" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnViewAppointments" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnExitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnLogOffActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAppointmentRequestActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnViewAppointmentsActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnCreatePerscriptionActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnMedicineOrderRequestActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnPatientHistoryActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnConsultationNotesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Login" package="patient_management_system" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnExit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbUserType" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtPassword" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="txtUsernameActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtPasswordActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnExitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PatientAppointmentRequest_GUI" package="patient_management_system" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbDoctor" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtDay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMonth" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtYear" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="cmbDoctorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PatientDoctorRating_GUI" package="patient_management_system" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbRateDoctor" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="cmbViewDoctor" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtDescription" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtRateDoctor" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtViewRating" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PatientRequestAccount_GUI" package="patient_management_system" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnRequest" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jTextField4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtAddressLine" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtDateOfBirth" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtFirstName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtGender" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtLastName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMobilePhoneNumber" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPassword" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPostcode" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnRequestActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PatientRequestTerminateAccount_GUI" package="patient_management_system" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnDeleteAccount" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtPassword" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeleteAccountActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PatientViewAppointment_GUI" package="patient_management_system" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtViewAppointment" type="javax.swing.JTextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PatientViewHistory_GUI" package="patient_management_system" visibility="public" xPosition="1220.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="txtDay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtDoctor" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtDoctorNote" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="txtMonth" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtYear" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Patient_GUI" package="patient_management_system" visibility="public" xPosition="1520.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnAppointmentRequest" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnCreateAccount" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnDeleteAccount" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnDoctorRating" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnExit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnLogOff" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnViewAppointment" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnViewHistory" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnViewPerscription" type="javax.swing.JButton" visibility="private"/>
+        <Field name="lbl_patient" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnExitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnLogOffActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnCreateAccountActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeleteAccountActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDoctorRatingActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAppointmentRequestActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnViewAppointmentActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnViewPerscriptionActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnViewHistoryActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RemoveDoctorSecretary2_GUI" package="patient_management_system" visibility="public" xPosition="1820.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbUser_Type" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtUserId" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SecretaryApprovePatientAccount_GUI" package="patient_management_system" visibility="public" xPosition="2120.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnRequest" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jTextField4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtAddressLine" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtDateOfBirth" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtFirstName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtGender" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtGender1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtLastName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMobilePhoneNumber" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtNHSNumber" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPassword" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPostcode" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnRequestActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SecretaryApproveRequestedAppointment_GUI" package="patient_management_system" visibility="public" xPosition="20.0" yPosition="1220.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtDay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtDoctor" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMonth" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtRoomNumber" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtYear" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SecretaryCreateAppointment_GUI" package="patient_management_system" visibility="public" xPosition="320.0" yPosition="1220.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbDoctor" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="cmbPatient" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtDay" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMonth" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtYear" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="cmbDoctorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SecretaryDeletePatientAccount_GUI" package="patient_management_system" visibility="public" xPosition="620.0" yPosition="1220.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnDeleteAccount" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtPassword" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeleteAccountActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SecretaryOrderMedicine_GUI" package="patient_management_system" visibility="public" xPosition="920.0" yPosition="1220.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSubmit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtDosage" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMedicine_Name" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtQuantity" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSubmitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SecretaryRequestDeleteAccount_GUI" package="patient_management_system" visibility="public" xPosition="1220.0" yPosition="1220.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnDeleteAccount" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtPassword" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeleteAccountActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Secretary_GUI" package="patient_management_system" visibility="public" xPosition="1520.0" yPosition="1220.0">
+      <Fields>
+        <Field name="btnApproveAppointment" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnCreateAppointment" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnDeletePatient" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnExit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnLogOff" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnOrderMedicine" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnPatientAccountRequest" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnPatientDeleteRequest" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnExitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnLogOffActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnCreateAppointmentActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnPatientDeleteRequestActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeletePatientActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnPatientAccountRequestActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnApproveAppointmentActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnOrderMedicineActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Appointment" package="Processes" visibility="public" xPosition="2889.0" yPosition="1192.0">
+      <Fields>
+        <Field name="appointment_Day" type="String" visibility="private"/>
+        <Field name="appointment_Month" type="String" visibility="private"/>
+        <Field name="appointment_Year" type="String" visibility="private"/>
+        <Field name="patient_Name" type="String" visibility="private"/>
+        <Field name="doctor_Name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="appointment_Day"/>
+          <Argument type="String" name="appointment_Month"/>
+          <Argument type="String" name="appointment_Year"/>
+          <Argument type="String" name="patient_Name"/>
+          <Argument type="String" name="doctor_Name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAppointment_Day" returnType="String" visibility="public"/>
+        <Method name="setAppointment_Day" returnType="void" visibility="public">
+          <Argument type="String" name="appointment_Day"/>
+        </Method>
+        <Method name="getAppointment_Month" returnType="String" visibility="public"/>
+        <Method name="setAppointment_Month" returnType="void" visibility="public">
+          <Argument type="String" name="appointment_Month"/>
+        </Method>
+        <Method name="getAppointment_Year" returnType="String" visibility="public"/>
+        <Method name="setAppointment_Year" returnType="void" visibility="public">
+          <Argument type="String" name="appointment_Year"/>
+        </Method>
+        <Method name="getPatient_Name" returnType="String" visibility="public"/>
+        <Method name="setPatient_Name" returnType="void" visibility="public">
+          <Argument type="String" name="patient_Name"/>
+        </Method>
+        <Method name="getDoctor_Name" returnType="String" visibility="public"/>
+        <Method name="setDoctor_Name" returnType="void" visibility="public">
+          <Argument type="String" name="doctor_Name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="History" package="Processes" visibility="public" xPosition="2906.0" yPosition="2363.0">
+      <Fields>
+        <Field name="appointment_Day" type="String" visibility="private"/>
+        <Field name="appointment_Month" type="String" visibility="private"/>
+        <Field name="appointment_Year" type="String" visibility="private"/>
+        <Field name="patient_Name" type="String" visibility="private"/>
+        <Field name="doctor_Name" type="String" visibility="private"/>
+        <Field name="doctors_Note" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="appointment_Day"/>
+          <Argument type="String" name="appointment_Month"/>
+          <Argument type="String" name="appointment_Year"/>
+          <Argument type="String" name="patient_Name"/>
+          <Argument type="String" name="doctor_Name"/>
+          <Argument type="String" name="doctors_Note"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAppointment_Day" returnType="String" visibility="public"/>
+        <Method name="setAppointment_Day" returnType="void" visibility="public">
+          <Argument type="String" name="appointment_Day"/>
+        </Method>
+        <Method name="getAppointment_Month" returnType="String" visibility="public"/>
+        <Method name="setAppointment_Month" returnType="void" visibility="public">
+          <Argument type="String" name="appointment_Month"/>
+        </Method>
+        <Method name="getAppointment_Year" returnType="String" visibility="public"/>
+        <Method name="setAppointment_Year" returnType="void" visibility="public">
+          <Argument type="String" name="appointment_Year"/>
+        </Method>
+        <Method name="getPatient_Name" returnType="String" visibility="public"/>
+        <Method name="setPatient_Name" returnType="void" visibility="public">
+          <Argument type="String" name="patient_Name"/>
+        </Method>
+        <Method name="getDoctor_Name" returnType="String" visibility="public"/>
+        <Method name="setDoctor_Name" returnType="void" visibility="public">
+          <Argument type="String" name="doctor_Name"/>
+        </Method>
+        <Method name="getDoctors_Note" returnType="String" visibility="public"/>
+        <Method name="setDoctors_Note" returnType="void" visibility="public">
+          <Argument type="String" name="doctors_Note"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Medication" package="Processes" visibility="public" xPosition="20.0" yPosition="1620.0">
+      <Fields>
+        <Field name="medicine_Name" type="String" visibility="private"/>
+        <Field name="dosage" type="String" visibility="private"/>
+        <Field name="quantity" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="medicine_Name"/>
+          <Argument type="String" name="dosage"/>
+          <Argument type="int" name="quantity"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMedicine_Name" returnType="String" visibility="public"/>
+        <Method name="setMedicine_Name" returnType="void" visibility="public">
+          <Argument type="String" name="medicine_Name"/>
+        </Method>
+        <Method name="getDosage" returnType="String" visibility="public"/>
+        <Method name="setDosage" returnType="void" visibility="public">
+          <Argument type="String" name="dosage"/>
+        </Method>
+        <Method name="getQuantity" returnType="int" visibility="public"/>
+        <Method name="setQuantity" returnType="void" visibility="public">
+          <Argument type="int" name="quantity"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Prescription" package="Processes" visibility="public" xPosition="1423.0" yPosition="1914.0">
+      <Fields>
+        <Field name="doctor_Id" type="String" visibility="private"/>
+        <Field name="patient_Id" type="String" visibility="private"/>
+        <Field name="doctor_Notes" type="String" visibility="private"/>
+        <Field name="medicine" type="String" visibility="private"/>
+        <Field name="quantity" type="int" visibility="private"/>
+        <Field name="dosage" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="doctor_Id"/>
+          <Argument type="String" name="patient_Id"/>
+          <Argument type="String" name="doctor_Notes"/>
+          <Argument type="String" name="medicine"/>
+          <Argument type="int" name="quantity"/>
+          <Argument type="String" name="dosage"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDoctor_Id" returnType="String" visibility="public"/>
+        <Method name="setDoctor_Id" returnType="void" visibility="public">
+          <Argument type="String" name="doctor_Id"/>
+        </Method>
+        <Method name="getPatient_Id" returnType="String" visibility="public"/>
+        <Method name="setPatient_Id" returnType="void" visibility="public">
+          <Argument type="String" name="patient_Id"/>
+        </Method>
+        <Method name="getDoctor_Notes" returnType="String" visibility="public"/>
+        <Method name="setDoctor_Notes" returnType="void" visibility="public">
+          <Argument type="String" name="doctor_Notes"/>
+        </Method>
+        <Method name="getMedicine" returnType="String" visibility="public"/>
+        <Method name="setMedicine" returnType="void" visibility="public">
+          <Argument type="String" name="medicine"/>
+        </Method>
+        <Method name="getQuantity" returnType="int" visibility="public"/>
+        <Method name="setQuantity" returnType="void" visibility="public">
+          <Argument type="int" name="quantity"/>
+        </Method>
+        <Method name="getDosage" returnType="String" visibility="public"/>
+        <Method name="setDosage" returnType="void" visibility="public">
+          <Argument type="String" name="dosage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RetakeClinic" package="retakeclinic" visibility="public" xPosition="620.0" yPosition="1620.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Administrator" package="User" visibility="public" xPosition="857.0" yPosition="2328.0">
+      <Fields>
+        <Field name="first_Name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="userId"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="first_Name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getFirst_Name" returnType="String" visibility="public"/>
+        <Method name="setFirst_Name" returnType="void" visibility="public">
+          <Argument type="String" name="first_Name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Appointment" package="User" visibility="public" xPosition="2077.0" yPosition="1638.0">
+      <Fields>
+        <Field name="appointment_Date" type="String" visibility="public"/>
+        <Field name="patient_Name" type="String" visibility="public"/>
+        <Field name="doctor_Name" type="String" visibility="public"/>
+        <Field name="room_Number" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="appointment_Date"/>
+          <Argument type="String" name="patient_Name"/>
+          <Argument type="String" name="doctor_Name"/>
+          <Argument type="String" name="room_Number"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAppointment_Date" returnType="String" visibility="public"/>
+        <Method name="setAppointment_Date" returnType="void" visibility="public">
+          <Argument type="String" name="appointment_Date"/>
+        </Method>
+        <Method name="getPatient_Name" returnType="String" visibility="public"/>
+        <Method name="setPatient_Name" returnType="void" visibility="public">
+          <Argument type="String" name="patient_Name"/>
+        </Method>
+        <Method name="getDoctor_Name" returnType="String" visibility="public"/>
+        <Method name="setDoctor_Name" returnType="void" visibility="public">
+          <Argument type="String" name="doctor_Name"/>
+        </Method>
+        <Method name="getRoom_Number" returnType="String" visibility="public"/>
+        <Method name="setRoom_Number" returnType="void" visibility="public">
+          <Argument type="String" name="room_Number"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Doctor" package="User" visibility="public" xPosition="296.0" yPosition="1826.0">
+      <Fields>
+        <Field name="first_Name" type="String" visibility="private"/>
+        <Field name="last_Name" type="String" visibility="private"/>
+        <Field name="ratingsLength" type="int" visibility="private"/>
+        <Field name="ratings" type="int[]" visibility="private"/>
+        <Field name="description" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="userId"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="first_Name"/>
+          <Argument type="String" name="last_Name"/>
+          <Argument type="int" name="ratingsLength"/>
+          <Argument type="int[]" name="ratings"/>
+          <Argument type="String[]" name="description"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="userId"/>
+          <Argument type="String" name="first_Name"/>
+          <Argument type="int" name="ratingsLength"/>
+          <Argument type="String[]" name="description"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getFirst_Name" returnType="String" visibility="public"/>
+        <Method name="setFirst_Name" returnType="void" visibility="public">
+          <Argument type="String" name="first_Name"/>
+        </Method>
+        <Method name="getLast_Name" returnType="String" visibility="public"/>
+        <Method name="setLast_Name" returnType="void" visibility="public">
+          <Argument type="String" name="last_Name"/>
+        </Method>
+        <Method name="getRatingsLength" returnType="int" visibility="public"/>
+        <Method name="setRatingsLength" returnType="void" visibility="public">
+          <Argument type="int" name="ratingsLength"/>
+        </Method>
+        <Method name="getRatings" returnType="int[]" visibility="public"/>
+        <Method name="setRatings" returnType="void" visibility="public">
+          <Argument type="int[]" name="ratings"/>
+        </Method>
+        <Method name="getDescription" returnType="String[]" visibility="public"/>
+        <Method name="setDescription" returnType="void" visibility="public">
+          <Argument type="String[]" name="description"/>
+        </Method>
+        <Method name="getUserId" returnType="String" visibility="public"/>
+        <Method name="setUserId" returnType="void" visibility="public">
+          <Argument type="String" name="userId"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="getData" package="User" visibility="public" xPosition="2317.0" yPosition="2196.0">
+      <Fields>
+        <Field name="patients" type="ArrayList&lt;Users&gt;" visibility="private"/>
+        <Field name="administrators" type="ArrayList&lt;Users&gt;" visibility="private"/>
+        <Field name="secretarys" type="ArrayList&lt;Users&gt;" visibility="private"/>
+        <Field name="doctors" type="ArrayList&lt;Users&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="readPatients" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Users&gt;" name="patients"/>
+        </Method>
+        <Method name="readRePatients" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Users&gt;" name="patients"/>
+        </Method>
+        <Method name="readDeletePatients" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Users&gt;" name="patients"/>
+        </Method>
+        <Method name="addPatient" returnType="void" visibility="public">
+          <Argument type="Users" name="f"/>
+          <Argument type="ArrayList" name="patients"/>
+        </Method>
+        <Method name="removePatient" returnType="void" visibility="public">
+          <Argument type="Users" name="f"/>
+          <Argument type="ArrayList" name="patients"/>
+        </Method>
+        <Method name="readDoctors" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Users&gt;" name="doctors"/>
+        </Method>
+        <Method name="readDoctorFeedback" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Users&gt;" name="doctors"/>
+        </Method>
+        <Method name="adddoctor" returnType="void" visibility="public">
+          <Argument type="Users" name="doctor"/>
+          <Argument type="ArrayList&lt;Users&gt;" name="doctors"/>
+        </Method>
+        <Method name="removeDoctor" returnType="void" visibility="public">
+          <Argument type="Users" name="doctor"/>
+          <Argument type="ArrayList&lt;Users&gt;" name="doctors"/>
+        </Method>
+        <Method name="readAdministrator" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Users&gt;" name="Administrators"/>
+        </Method>
+        <Method name="addadministrator" returnType="void" visibility="public">
+          <Argument type="Users" name="administrator"/>
+          <Argument type="ArrayList&lt;Users&gt;" name="administrators"/>
+        </Method>
+        <Method name="removeAdministrator" returnType="void" visibility="public">
+          <Argument type="Users" name="administrator"/>
+          <Argument type="ArrayList&lt;Users&gt;" name="administrators"/>
+        </Method>
+        <Method name="readSecretary" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Users&gt;" name="Secretarys"/>
+        </Method>
+        <Method name="addSecretary" returnType="void" visibility="public">
+          <Argument type="Users" name="secretary"/>
+          <Argument type="ArrayList&lt;Users&gt;" name="secretarys"/>
+        </Method>
+        <Method name="removeSecretary" returnType="void" visibility="public">
+          <Argument type="Users" name="secretary"/>
+          <Argument type="ArrayList&lt;Users&gt;" name="secretarys"/>
+        </Method>
+        <Method name="readAppointment" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Appointment&gt;" name="appointment"/>
+        </Method>
+        <Method name="readAppointmentRequest" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Appointment&gt;" name="appointment"/>
+        </Method>
+        <Method name="addappointment" returnType="void" visibility="public">
+          <Argument type="Appointment" name="f"/>
+          <Argument type="ArrayList" name="appointments"/>
+        </Method>
+        <Method name="removeAppointment" returnType="void" visibility="public">
+          <Argument type="Appointment" name="f"/>
+          <Argument type="ArrayList" name="appointments"/>
+        </Method>
+        <Method name="readMedication" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Medication&gt;" name="medications"/>
+        </Method>
+        <Method name="readMedicationRequest" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Medication&gt;" name="medications"/>
+        </Method>
+        <Method name="addmedications" returnType="void" visibility="public">
+          <Argument type="Medication" name="f"/>
+          <Argument type="ArrayList" name="medications"/>
+        </Method>
+        <Method name="removeMedication" returnType="void" visibility="public">
+          <Argument type="Medication" name="f"/>
+          <Argument type="ArrayList" name="medications"/>
+        </Method>
+        <Method name="readPrescription" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Prescription&gt;" name="prescription"/>
+        </Method>
+        <Method name="addprescription" returnType="void" visibility="public">
+          <Argument type="Prescription" name="f"/>
+          <Argument type="ArrayList" name="prescriptions"/>
+        </Method>
+        <Method name="removePrescription" returnType="void" visibility="public">
+          <Argument type="Prescription" name="f"/>
+          <Argument type="ArrayList" name="prescriptions"/>
+        </Method>
+        <Method name="readHistory" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;History&gt;" name="history"/>
+        </Method>
+        <Method name="addHistory" returnType="void" visibility="public">
+          <Argument type="History" name="f"/>
+          <Argument type="ArrayList" name="historys"/>
+        </Method>
+        <Method name="removeHistory" returnType="void" visibility="public">
+          <Argument type="History" name="f"/>
+          <Argument type="ArrayList" name="historys"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Medication" package="User" visibility="public" xPosition="2559.0" yPosition="2016.0">
+      <Fields>
+        <Field name="medicine" type="String" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Patient" package="User" visibility="public" xPosition="66.0" yPosition="2652.0">
+      <Fields>
+        <Field name="first_Name" type="String" visibility="public"/>
+        <Field name="last_Name" type="String" visibility="public"/>
+        <Field name="phone_Number" type="String" visibility="public"/>
+        <Field name="address" type="String" visibility="public"/>
+        <Field name="postcode" type="String" visibility="public"/>
+        <Field name="date_Of_Birth" type="String" visibility="public"/>
+        <Field name="sex" type="String" visibility="public"/>
+        <Field name="nhs_Number" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="userId"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="first_Name"/>
+          <Argument type="String" name="last_Name"/>
+          <Argument type="String" name="phone_Number"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="postcode"/>
+          <Argument type="String" name="date_Of_Birth"/>
+          <Argument type="String" name="sex"/>
+          <Argument type="String" name="nhs_Number"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="userId"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="first_Name"/>
+          <Argument type="String" name="last_Name"/>
+          <Argument type="String" name="phone_Number"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="postcode"/>
+          <Argument type="String" name="date_Of_Birth"/>
+          <Argument type="String" name="sex"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getFirst_Name" returnType="String" visibility="public"/>
+        <Method name="setFirst_Name" returnType="void" visibility="public">
+          <Argument type="String" name="first_Name"/>
+        </Method>
+        <Method name="getLast_Name" returnType="String" visibility="public"/>
+        <Method name="setLast_Name" returnType="void" visibility="public">
+          <Argument type="String" name="last_Name"/>
+        </Method>
+        <Method name="getPhone_Number" returnType="String" visibility="public"/>
+        <Method name="setPhone_Number" returnType="void" visibility="public">
+          <Argument type="String" name="phone_Number"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="getPostcode" returnType="String" visibility="public"/>
+        <Method name="setPostcode" returnType="void" visibility="public">
+          <Argument type="String" name="postcode"/>
+        </Method>
+        <Method name="getDate_Of_Birth" returnType="String" visibility="public"/>
+        <Method name="setDate_Of_Birth" returnType="void" visibility="public">
+          <Argument type="String" name="setDate_Of_Birth"/>
+        </Method>
+        <Method name="getSex" returnType="String" visibility="public"/>
+        <Method name="setSex" returnType="void" visibility="public">
+          <Argument type="String" name="sex"/>
+        </Method>
+        <Method name="getNhs_Number" returnType="String" visibility="public"/>
+        <Method name="setNhs_Number" returnType="void" visibility="public">
+          <Argument type="String" name="nhs_Number"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Secretary" package="User" visibility="public" xPosition="839.0" yPosition="2534.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="userId"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Users" package="User" visibility="public" xPosition="1502.0" yPosition="2487.0">
+      <Fields>
+        <Field name="userId" type="String" visibility="public"/>
+        <Field name="password" type="String" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getUserId" returnType="String" visibility="public"/>
+        <Method name="setUserId" returnType="void" visibility="public">
+          <Argument type="String" name="userId"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="User.getData" target="User.Users" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="User.Doctor" target="User.Users"/>
+    <IsRelation name="is" source="User.Secretary" target="User.Users"/>
+    <UseRelation source="User.getData" target="User.Medication" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="administrators" source="User.getData" target="User.Users" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Users&gt;"/>
+    <UseRelation source="User.getData" target="Processes.Prescription" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="User.getData" target="Processes.History" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="User.Administrator" target="User.Users"/>
+    <HasRelation name="secretarys" source="User.getData" target="User.Users" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Users&gt;"/>
+    <UseRelation source="User.getData" target="User.Appointment" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="User.Patient" target="User.Users"/>
+    <HasRelation name="doctors" source="User.getData" target="User.Users" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Users&gt;"/>
+    <HasRelation name="patients" source="User.getData" target="User.Users" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Users&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
