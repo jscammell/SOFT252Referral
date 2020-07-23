@@ -144,12 +144,12 @@ public class PatientRequestTerminateAccount_GUI extends javax.swing.JFrame {
         e.printStackTrace();
         }
         
-        Object[] aPatients = patients.toArray();
-        int length = aPatients.length;
+        Object[] arrayPatients = patients.toArray();
+        int length = arrayPatients.length;
         String[] username = new String[length], password = new String[length];
         for (int i = 0; i < length; i++) {
-        String name = ((User.Patient)aPatients[i]).getUserId();
-        String pass = ((User.Patient)aPatients[i]).getPassword();
+        String name = ((User.Patient)arrayPatients[i]).getUserId();
+        String pass = ((User.Patient)arrayPatients[i]).getPassword();
         username[i] = name;
         password[i] = pass;        
         }
@@ -173,17 +173,17 @@ public class PatientRequestTerminateAccount_GUI extends javax.swing.JFrame {
         passTrue = false;
         }
         if(Boolean.TRUE.equals(passTrue) && Boolean.TRUE.equals(userTrue)){
-        aPatients = patients.toArray();
-        String userId = ((User.Patient)aPatients[k]).getUserId();
-        String aPassword = ((User.Patient)aPatients[k]).getPassword();
-        String first_Name = ((User.Patient)aPatients[k]).getFirst_Name();
-        String last_Name = ((User.Patient)aPatients[k]).getLast_Name();
-        String mobilePhoneNumber = ((User.Patient)aPatients[k]).getPhone_Number();        
-        String addressLine = ((User.Patient)aPatients[k]).getAddress();        
-        String postcode = ((User.Patient)aPatients[k]).getPostcode();
-        String dateOfBirth = ((User.Patient)aPatients[k]).getDate_Of_Birth();
-        String gender = ((User.Patient)aPatients[k]).getSex();
-        String NHSNumber = ((User.Patient)aPatients[k]).getNhs_Number();
+        arrayPatients = patients.toArray();
+        String userId = ((User.Patient)arrayPatients[k]).getUserId();
+        String aPassword = ((User.Patient)arrayPatients[k]).getPassword();
+        String first_Name = ((User.Patient)arrayPatients[k]).getFirst_Name();
+        String last_Name = ((User.Patient)arrayPatients[k]).getLast_Name();
+        String mobilePhoneNumber = ((User.Patient)arrayPatients[k]).getPhone_Number();        
+        String addressLine = ((User.Patient)arrayPatients[k]).getAddress();        
+        String postcode = ((User.Patient)arrayPatients[k]).getPostcode();
+        String dateOfBirth = ((User.Patient)arrayPatients[k]).getDate_Of_Birth();
+        String gender = ((User.Patient)arrayPatients[k]).getSex();
+        String NHSNumber = ((User.Patient)arrayPatients[k]).getNhs_Number();
         
             //Gets data from array list
         

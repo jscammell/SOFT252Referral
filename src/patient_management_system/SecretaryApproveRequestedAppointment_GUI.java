@@ -27,26 +27,26 @@ public class SecretaryApproveRequestedAppointment_GUI extends javax.swing.JFrame
         initComponents();
         
         
-        ArrayList<Users> reAppointments = new ArrayList<Users>();
+        ArrayList<Appointment> reAppointments = new ArrayList<Appointment>();
         getData data = new getData();
         try{
-        data.readRePatients(reAppointments);
+        data.readAppointmentRequest(reAppointments);
         }
         catch(Exception e) {
         e.printStackTrace();
         }
         
-        Object[] aAppointments = reAppointments.toArray();
+        Object[] arrayAppointments = reAppointments.toArray();
         
-        String patient_Name = ((Processes.Appointment)aAppointments[0]).getPatient_Name();
+        String patient_Name = ((Processes.Appointment)arrayAppointments[0]).getPatient_Name();
         txtUsername.setText(patient_Name);
-        String day = ((Processes.Appointment)aAppointments[0]).getAppointment_Day();
+        String day = ((Processes.Appointment)arrayAppointments[0]).getAppointment_Day();
         txtDay.setText(day);
-        String month = ((Processes.Appointment)aAppointments[0]).getAppointment_Month();
+        String month = ((Processes.Appointment)arrayAppointments[0]).getAppointment_Month();
         txtMonth.setText(month);
-        String year = ((Processes.Appointment)aAppointments[0]).getAppointment_Year();
-        txtDoctor.setText(year);
-        String doctor_Names = ((User.Appointment)aAppointments[0]).getDoctor_Name();
+        String year = ((Processes.Appointment)arrayAppointments[0]).getAppointment_Year();
+        txtYear.setText(year);
+        String doctor_Names = ((Processes.Appointment)arrayAppointments[0]).getDoctor_Name();
         txtDoctor.setText(doctor_Names);
        
             //Sets all text boxes to match the requested appointment

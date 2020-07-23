@@ -170,11 +170,12 @@ public class DoctorRequestMedicine_GUI extends javax.swing.JFrame {
         BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\RequestMedicine.txt",true));
         out.newLine();        
         out.write(medicine_Name);
-        out.newLine();        
-        out.write(quantity);
         out.newLine();
         out.write(dosage);
-        out.newLine();       
+        out.newLine();         
+        out.write(quantity);
+        out.newLine();
+              
             //Prints data to text file
         
         out.close();

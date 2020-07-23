@@ -148,12 +148,12 @@ public class DoctorViewAppointment_GUI extends javax.swing.JFrame {
         catch(Exception e){
         e.printStackTrace();
         }
-        Object[] aAppointment = Appointment.toArray();
-        int length = aAppointment.length;
+        Object[] arrayAppointment = Appointment.toArray();
+        int length = arrayAppointment.length;
         
         String[] username = new String[length];
         for (int i = 0; i < length; i++) {
-        String name = ((Processes.Appointment)aAppointment[i]).getPatient_Name();
+        String name = ((Processes.Appointment)arrayAppointment[i]).getPatient_Name();
         username[i] = name;
             //Reading the data from the appointments text file
         }
@@ -173,25 +173,25 @@ public class DoctorViewAppointment_GUI extends javax.swing.JFrame {
         if(Boolean.TRUE.equals(userTrue)){
         for (int i = 0; i < length; i++) {
         while(username[i].equals(input)){
-        String day = ((Processes.Appointment)aAppointment[0]).getAppointment_Day();
+        String day = ((Processes.Appointment)arrayAppointment[0]).getAppointment_Day();
         txtViewAppointment.append("Date: ");
         txtViewAppointment.append(day);
         txtViewAppointment.append("/");
         
-        String month = ((Processes.Appointment)aAppointment[0]).getAppointment_Month();
+        String month = ((Processes.Appointment)arrayAppointment[0]).getAppointment_Month();
         txtViewAppointment.append(month);
         txtViewAppointment.append("/");;
         
-        String year = ((Processes.Appointment)aAppointment[0]).getAppointment_Year();
+        String year = ((Processes.Appointment)arrayAppointment[0]).getAppointment_Year();
         txtViewAppointment.append(year);
         txtViewAppointment.append("\n");
         
-        String patientId = ((Processes.Appointment)aAppointment[0]).getPatient_Name();
+        String patientId = ((Processes.Appointment)arrayAppointment[0]).getPatient_Name();
         txtViewAppointment.append("patientId: ");
         txtViewAppointment.append(patientId);
         txtViewAppointment.append("\n");
         
-        String doctor = ((Processes.Appointment)aAppointment[0]).getDoctor_Name();
+        String doctor = ((Processes.Appointment)arrayAppointment[0]).getDoctor_Name();
         txtViewAppointment.append("DR: ");
         txtViewAppointment.append(doctor);
         txtViewAppointment.append("\n");

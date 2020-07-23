@@ -39,14 +39,14 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
         }
             //Gets data from doctor text file
         
-        Object[] aDoctors = doctors.toArray();
+        Object[] arrayDoctors = doctors.toArray();
         int length;
-        length = aDoctors.length;
+        length = arrayDoctors.length;
         String[] doctor_Name = new String[length+1];
         doctor_Name[0] = "Select";
         java.util.List<String> list = new java.util.ArrayList<String>();
         for (int i=0; i < length; i++) {
-        String name = ((User.Doctor)aDoctors[i]).getFirst_Name();
+        String name = ((User.Doctor)arrayDoctors[i]).getFirst_Name();
         doctor_Name[i+1] = name;
         }
             //Seperates the doctors names into its own array
@@ -68,11 +68,11 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                     boolean docTrue = false;
                     txtPatientFeedback.setText("");
                     for (int i = 0; i < length; i++) {
-                        int ratingLength = ((User.Doctor)aDoctors[i]).getRatingsLength();
+                        int ratingLength = ((User.Doctor)arrayDoctors[i]).getRatingsLength();
                         int[] rating = new int[ratingLength];
-                        rating = ((User.Doctor)aDoctors[i]).getRatings();
+                        rating = ((User.Doctor)arrayDoctors[i]).getRatings();
         
-                        while(cmbDoctors_Name.equals(((User.Doctor)aDoctors[i]).getFirst_Name())){
+                        while(cmbDoctors_Name.equals(((User.Doctor)arrayDoctors[i]).getFirst_Name())){
                             int meanRating = 0;
                             for (int k = 0; k < ratingLength; k++) {
                                 int ratings = rating[k];
@@ -83,7 +83,7 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                             txtViewRating.setText(String.valueOf(meanRating));
                             
                             String[] description = new String[ratingLength];
-                            description = ((User.Doctor)aDoctors[i]).getDescription();
+                            description = ((User.Doctor)arrayDoctors[i]).getDescription();
                            
                             
                             
@@ -278,16 +278,16 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
         getData Data = new getData();
         ArrayList<Users> doctors = new ArrayList<Users>();
         try{
-            Data.readDoctors(doctors);       
+            Data.readDoctorFeedback(doctors);       
         }
         catch(Exception e){
             e.printStackTrace();
         }
             //Gets doctors details from text file
         
-        Object[] aDoctor = doctors.toArray();
+        Object[] arrayDoctor = doctors.toArray();
         int length;
-        length = aDoctor.length;
+        length = arrayDoctor.length;
        
         String description;
         int rating;
@@ -310,21 +310,21 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
             
             for (int i = 0; i < length+1; i++) {
                 if(length != 0){
-               if(cmbDoctorName.equals(((User.Doctor)aDoctor[i]).getFirst_Name()) ){ 
-                    int ratingLength = ((User.Doctor)aDoctor[i]).getRatingsLength();
-                        while(cmbDoctorName.equals(((User.Doctor)aDoctor[i]).getFirst_Name())){
+               if(cmbDoctorName.equals(((User.Doctor)arrayDoctor[i]).getFirst_Name()) ){ 
+                    int ratingLength = ((User.Doctor)arrayDoctor[i]).getRatingsLength();
+                        while(cmbDoctorName.equals(((User.Doctor)arrayDoctor[i]).getFirst_Name())){
                 
                 
-                        String[] descriptions = ((User.Doctor)aDoctor[i]).getDescription();
+                        String[] descriptions = ((User.Doctor)arrayDoctor[i]).getDescription();
                         String[] newDescriptions = new String[ratingLength + 1];                
            
                         for (int j = 0; j < ratingLength; j++) {
                             newDescriptions[j] = descriptions[j];
                         }
                         newDescriptions[ratingLength] = description;
-                        ((User.Doctor)aDoctor[i]).setDescription(newDescriptions);                
+                        ((User.Doctor)arrayDoctor[i]).setDescription(newDescriptions);                
                         ratingLength = ratingLength + 1;
-                        ((User.Doctor)aDoctor[i]).setRatingsLength(ratingLength);
+                        ((User.Doctor)arrayDoctor[i]).setRatingsLength(ratingLength);
                         break;           
                         }
             
@@ -338,11 +338,11 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                             //Clears the file
            
                         for (int l = 0; l < length; l++) {
-                            aDoctor = doctors.toArray();
-                            String userId = ((User.Doctor)aDoctor[l]).getUserId();
-                            String aPassword = ((User.Doctor)aDoctor[l]).getPassword();
-                            String first_Name = ((User.Doctor)aDoctor[l]).getFirst_Name();
-                            String last_Name = ((User.Doctor)aDoctor[l]).getLast_Name();                            
+                            arrayDoctor = doctors.toArray();
+                            String userId = ((User.Doctor)arrayDoctor[l]).getUserId();
+                            String aPassword = ((User.Doctor)arrayDoctor[l]).getPassword();
+                            String first_Name = ((User.Doctor)arrayDoctor[l]).getFirst_Name();
+                            String last_Name = ((User.Doctor)arrayDoctor[l]).getLast_Name();                            
                             String feedback = txtDescription.getText();
                                 //Gets data from list array
                             try{
@@ -357,7 +357,7 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                                     //Prints out to text file
                     
                                 for (int k = 0; k < ratingLength; k++) {
-                                    String[] descriptions = ((User.Doctor)aDoctor[k]).getDescription();
+                                    String[] descriptions = ((User.Doctor)arrayDoctor[k]).getDescription();
                                     out.write(descriptions[k]);
                                     out.newLine();
                                 }
@@ -392,7 +392,7 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                                 
                                 String[] newDoctor = new String[length+1];
                                 
-                                aDoctor = doctors.toArray();
+                                arrayDoctor = doctors.toArray();
                                 String userId = ((User.Doctor)aDoctor2[l]).getUserId();
                                 String aPassword = ((User.Doctor)aDoctor2[l]).getPassword();
                                 String first_Name = ((User.Doctor)aDoctor2[l]).getFirst_Name();

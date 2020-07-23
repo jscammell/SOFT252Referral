@@ -160,11 +160,11 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
         e.printStackTrace();
         }
         
-        Object[] aDoctors = doctors.toArray();
-        int length = aDoctors.length;
+        Object[] arrayDoctors = doctors.toArray();
+        int length = arrayDoctors.length;
         String[] username = new String[length];
         for (int i = 0; i < length; i++) {
-        String name = ((User.Doctor)aDoctors[i]).getUserId();
+        String name = ((User.Doctor)arrayDoctors[i]).getUserId();
         
         username[i] = name;
               
@@ -183,7 +183,7 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
         if(Boolean.TRUE.equals(userTrue)){
         data.removeDoctor(doctors.get(k), doctors);
             //Removes the selected doctor from the array list
-        aDoctors = doctors.toArray();
+        arrayDoctors = doctors.toArray();
         try{
         BufferedWriter clear = new BufferedWriter (new FileWriter("./accounts\\Doctor.txt",false));
         clear.newLine();
@@ -203,11 +203,11 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
         
             
             
-        String userId = ((User.Doctor)aDoctors[k]).getUserId();
-        String aPassword = ((User.Doctor)aDoctors[k]).getPassword();
-        String first_Name = ((User.Doctor)aDoctors[k]).getFirst_Name();
-        String last_Name = ((User.Doctor)aDoctors[k]).getLast_Name();
-        int ratingsLength = ((User.Doctor)aDoctors[k]).getRatingsLength();
+        String userId = ((User.Doctor)arrayDoctors[i]).getUserId();
+        String aPassword = ((User.Doctor)arrayDoctors[i]).getPassword();
+        String first_Name = ((User.Doctor)arrayDoctors[i]).getFirst_Name();
+        String last_Name = ((User.Doctor)arrayDoctors[i]).getLast_Name();
+        int ratingsLength = ((User.Doctor)arrayDoctors[i]).getRatingsLength();
             //Gets all of the doctors details from objects.
                         
         try{
@@ -226,14 +226,14 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
             //Prints all of the doctors details to the text file
         
         for (int p = 0; p < ratingsLength; p++) {
-        int[] ratings = ((User.Doctor)aDoctors[p]).getRatings();
-        out.write(String.valueOf(ratings[1]));
+        int[] ratings = ((User.Doctor)arrayDoctors[i]).getRatings();
+        out.write(String.valueOf(ratings[p]));
         out.newLine();
         }
         
         for (int p = 0; p < ratingsLength; p++) {
-        String[] description = ((User.Doctor)aDoctors[p]).getDescription();        
-        out.write(description[i]);
+        String[] description = ((User.Doctor)arrayDoctors[i]).getDescription();        
+        out.write(description[p]);
         out.newLine();
         }
         
@@ -268,11 +268,11 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
         e.printStackTrace();
         }
         
-        Object[] aSecretarys = secretarys.toArray();
-        int length = aSecretarys.length;
+        Object[] arraySecretarys = secretarys.toArray();
+        int length = arraySecretarys.length;
         String[] username = new String[length];
         for (int i = 0; i < length; i++) {
-        String name = ((User.Secretary)aSecretarys[i]).getUserId();
+        String name = ((User.Secretary)arraySecretarys[i]).getUserId();
         
         username[i] = name;
               
@@ -290,7 +290,7 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
         
         if(Boolean.TRUE.equals(userTrue)){
         data.removeDoctor(secretarys.get(k), secretarys);
-        aSecretarys = secretarys.toArray();
+        arraySecretarys = secretarys.toArray();
         try{
         BufferedWriter clear = new BufferedWriter (new FileWriter("./accounts\\Secretary.txt",false));
         clear.newLine();
@@ -307,8 +307,8 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
                 
         for (int i = 0; i < length; i++) {
         
-        String userId = ((User.Secretary)aSecretarys[k]).getUserId();
-        String aPassword = ((User.Secretary)aSecretarys[k]).getPassword();
+        String userId = ((User.Secretary)arraySecretarys[i]).getUserId();
+        String aPassword = ((User.Secretary)arraySecretarys[i]).getPassword();
         
         
                         

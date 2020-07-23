@@ -37,14 +37,14 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
         catch(Exception e) {
         e.printStackTrace();
         }
-        Object[] aDoctors = doctors.toArray();
+        Object[] arayDoctors = doctors.toArray();
         int length;
-        length = aDoctors.length;
+        length = arayDoctors.length;
         String[] doctor_Name = new String[length+1];
         doctor_Name[0] = "Select";
         java.util.List<String> list = new java.util.ArrayList<String>();
         for (int i=0; i < length; i++) {
-        String name = ((User.Doctor)aDoctors[i]).getFirst_Name();
+        String name = ((User.Doctor)arayDoctors[i]).getFirst_Name();
         doctor_Name[i+1] = name;
         }
         final DefaultComboBoxModel model = new DefaultComboBoxModel (doctor_Name);
@@ -62,11 +62,11 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
                 try{
                     boolean docTrue = false;
                     for (int i = 0; i < length; i++) {
-                        int ratingLength = ((User.Doctor)aDoctors[i]).getRatingsLength();
+                        int ratingLength = ((User.Doctor)arayDoctors[i]).getRatingsLength();
                         int[] rating = new int[ratingLength];
-                        rating = ((User.Doctor)aDoctors[i]).getRatings();
+                        rating = ((User.Doctor)arayDoctors[i]).getRatings();
         
-                        while(cmbDoctors_Name.equals(((User.Doctor)aDoctors[i]).getFirst_Name())){
+                        while(cmbDoctors_Name.equals(((User.Doctor)arayDoctors[i]).getFirst_Name())){
                             int meanRating = 0;
                             for (int k = 0; k < ratingLength; k++) {
                                 int ratings = rating[k];
@@ -256,9 +256,9 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
         catch(Exception e){
             e.printStackTrace();
         }
-        Object[] aDoctor = doctors.toArray();
+        Object[] arayDoctors = doctors.toArray();
         int length;
-        length = aDoctor.length;
+        length = arayDoctors.length;
             //Reads doctors data from text file
        
         String description;
@@ -290,26 +290,26 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
         if(Boolean.TRUE.equals(isNotEmpty)){
        
             for (int i = 0; i < length; i++) {
-            int ratingLength = ((User.Doctor)aDoctor[i]).getRatingsLength();
-            while(cmbDoctorName.equals(((User.Doctor)aDoctor[i]).getFirst_Name())){
-                int[] ratings = ((User.Doctor)aDoctor[i]).getRatings();
+            int ratingLength = ((User.Doctor)arayDoctors[i]).getRatingsLength();
+            while(cmbDoctorName.equals(((User.Doctor)arayDoctors[i]).getFirst_Name())){
+                int[] ratings = ((User.Doctor)arayDoctors[i]).getRatings();
                 int[] newRatings = new int[ratingLength + 1];
-                String[] descriptions = ((User.Doctor)aDoctor[i]).getDescription();
+                String[] descriptions = ((User.Doctor)arayDoctors[i]).getDescription();
                 String[] newDescriptions = new String[ratingLength + 1];
                 for (int k = 0; k < ratingLength; k++) {
                     newRatings[k] = ratings[k];
                 }
                 newRatings[ratingLength] = rating;
-                ((User.Doctor)aDoctor[i]).setRatings(newRatings);
+                ((User.Doctor)arayDoctors[i]).setRatings(newRatings);
            
                 for (int j = 0; j < ratingLength; j++) {
                     newDescriptions[j] = descriptions[j];
                 }
                 newDescriptions[ratingLength] = description;
-                ((User.Doctor)aDoctor[i]).setDescription(newDescriptions);
+                ((User.Doctor)arayDoctors[i]).setDescription(newDescriptions);
                 newRatings[ratingLength] = rating;
                 ratingLength = ratingLength + 1;
-                ((User.Doctor)aDoctor[i]).setRatingsLength(ratingLength);
+                ((User.Doctor)arayDoctors[i]).setRatingsLength(ratingLength);
                 break;     
                     //Reads all ratings and descriptions 
                 }
@@ -323,12 +323,12 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
             }
            
             for (int l = 0; l < length; l++) {
-                aDoctor = doctors.toArray();
-                String userId = ((User.Doctor)aDoctor[l]).getUserId();
-                String aPassword = ((User.Doctor)aDoctor[l]).getPassword();
-                String first_Name = ((User.Doctor)aDoctor[l]).getFirst_Name();
-                String last_Name = ((User.Doctor)aDoctor[l]).getLast_Name();
-                int ratingLength = ((User.Doctor)aDoctor[l]).getRatingsLength();
+                arayDoctors = doctors.toArray();
+                String userId = ((User.Doctor)arayDoctors[l]).getUserId();
+                String aPassword = ((User.Doctor)arayDoctors[l]).getPassword();
+                String first_Name = ((User.Doctor)arayDoctors[l]).getFirst_Name();
+                String last_Name = ((User.Doctor)arayDoctors[l]).getLast_Name();
+                int ratingLength = ((User.Doctor)arayDoctors[l]).getRatingsLength();
            
            
                 try{
@@ -348,13 +348,13 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
                         //Prints all data including new rating a description to text file
            
                     for (int i = 0; i < ratingLength; i++) {
-                        int[] ratings = ((User.Doctor)aDoctor[l]).getRatings();
+                        int[] ratings = ((User.Doctor)arayDoctors[l]).getRatings();
                         out.write(String.valueOf(ratings[i]));
                         out.newLine();
                     }
                     
                     for (int i = 0; i < ratingLength; i++) {
-                        String[] descriptions = ((User.Doctor)aDoctor[l]).getDescription();
+                        String[] descriptions = ((User.Doctor)arayDoctors[l]).getDescription();
                         out.write(descriptions[i]);
                         out.newLine();
                     }

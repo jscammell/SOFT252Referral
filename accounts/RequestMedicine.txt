@@ -1,16 +1,17 @@
 
 Pain Killers
-40
 100mg
+40
 
 Peniciline
-12
 75mg
+12
 
 Drugs
-13
 20mg
+13
 
 Anti depresents
-54
 20mg
+54
+

@@ -36,25 +36,25 @@ public class SecretaryApprovePatientAccount_GUI extends javax.swing.JFrame {
         e.printStackTrace();
         }
         
-        Object[] aPatients = rePatients.toArray();
-        int length = aPatients.length;
-        String username = ((User.Patient)aPatients[0]).getUserId();
+        Object[] arrayPatients = rePatients.toArray();
+        int length = arrayPatients.length;
+        String username = ((User.Patient)arrayPatients[0]).getUserId();
         txtUsername.setText(username);
-        String password = ((User.Patient)aPatients[0]).getPassword();
+        String password = ((User.Patient)arrayPatients[0]).getPassword();
         txtPassword.setText(password);
-        String First_Name = ((User.Patient)aPatients[0]).getFirst_Name();
+        String First_Name = ((User.Patient)arrayPatients[0]).getFirst_Name();
         txtFirstName.setText(First_Name);
-        String last_Name = ((User.Patient)aPatients[0]).getLast_Name();
+        String last_Name = ((User.Patient)arrayPatients[0]).getLast_Name();
         txtLastName.setText(last_Name);
-        String mobilePhoneNumber = ((User.Patient)aPatients[0]).getPhone_Number();
+        String mobilePhoneNumber = ((User.Patient)arrayPatients[0]).getPhone_Number();
         txtMobilePhoneNumber.setText(mobilePhoneNumber);        
-        String addressLine = ((User.Patient)aPatients[0]).getAddress();
+        String addressLine = ((User.Patient)arrayPatients[0]).getAddress();
         txtAddressLine.setText(addressLine);        
-        String postcode = ((User.Patient)aPatients[0]).getPostcode();
+        String postcode = ((User.Patient)arrayPatients[0]).getPostcode();
         txtPostcode.setText(postcode);
-        String dateOfBirth = ((User.Patient)aPatients[0]).getDate_Of_Birth();
+        String dateOfBirth = ((User.Patient)arrayPatients[0]).getDate_Of_Birth();
         txtDateOfBirth.setText(dateOfBirth);
-        String gender = ((User.Patient)aPatients[0]).getSex();
+        String gender = ((User.Patient)arrayPatients[0]).getSex();
         txtGender.setText(gender);
             //Sets all text fields to the first requested account
         

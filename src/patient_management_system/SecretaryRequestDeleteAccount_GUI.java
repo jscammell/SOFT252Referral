@@ -34,13 +34,13 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         e.printStackTrace();
         }
         
-        Object[] aPatients = rePatients.toArray();
-        int length = aPatients.length;
-        String userName = ((User.Users)aPatients[0]).getUserId();
+        Object[] arrayPatients = rePatients.toArray();
+        int length = arrayPatients.length;
+        String userName = ((User.Users)arrayPatients[0]).getUserId();
         txtUsername.setText(userName);
-        String password = ((User.Users)aPatients[0]).getPassword();
+        String password = ((User.Users)arrayPatients[0]).getPassword();
         txtPassword.setText(password);
-        String firstName = ((User.Patient)aPatients[0]).getFirst_Name();
+        String firstName = ((User.Patient)arrayPatients[0]).getFirst_Name();
             //Reading from patients and puts patient data into text field
     }
 
@@ -163,12 +163,12 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         e.printStackTrace();
         }
         
-        Object[] aPatients = patients.toArray();
-        int length = aPatients.length;
+        Object[] arrayPatients = patients.toArray();
+        int length = arrayPatients.length;
         String[] username = new String[length], password = new String[length];
         for (int i = 0; i < length; i++) {
-        String name = ((User.Patient)aPatients[i]).getUserId();
-        String pass = ((User.Patient)aPatients[i]).getPassword();
+        String name = ((User.Patient)arrayPatients[i]).getUserId();
+        String pass = ((User.Patient)arrayPatients[i]).getPassword();
         username[i] = name;
         password[i] = pass;        
         }
@@ -212,17 +212,17 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
            for (int l = 0; l < length; l++){
            
            
-        aPatients = patients.toArray();
-        String userId = ((User.Patient)aPatients[l]).getUserId();
-        String aPassword = ((User.Patient)aPatients[l]).getPassword();
-        String first_Name = ((User.Patient)aPatients[l]).getFirst_Name();
-        String last_Name = ((User.Patient)aPatients[l]).getLast_Name();
-        String mobilePhoneNumber = ((User.Patient)aPatients[l]).getPhone_Number();        
-        String addressLine = ((User.Patient)aPatients[l]).getAddress();        
-        String postcode = ((User.Patient)aPatients[l]).getPostcode();
-        String dateOfBirth = ((User.Patient)aPatients[l]).getDate_Of_Birth();
-        String gender = ((User.Patient)aPatients[l]).getSex();
-        String NHSNumber = ((User.Patient)aPatients[l]).getNhs_Number();
+        arrayPatients = patients.toArray();
+        String userId = ((User.Patient)arrayPatients[l]).getUserId();
+        String aPassword = ((User.Patient)arrayPatients[l]).getPassword();
+        String first_Name = ((User.Patient)arrayPatients[l]).getFirst_Name();
+        String last_Name = ((User.Patient)arrayPatients[l]).getLast_Name();
+        String mobilePhoneNumber = ((User.Patient)arrayPatients[l]).getPhone_Number();        
+        String addressLine = ((User.Patient)arrayPatients[l]).getAddress();        
+        String postcode = ((User.Patient)arrayPatients[l]).getPostcode();
+        String dateOfBirth = ((User.Patient)arrayPatients[l]).getDate_Of_Birth();
+        String gender = ((User.Patient)arrayPatients[l]).getSex();
+        String NHSNumber = ((User.Patient)arrayPatients[l]).getNhs_Number();
         
           //Gets all patient data
            
@@ -267,8 +267,8 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         e.printStackTrace();
         }
         
-        aPatients = patients2.toArray();
-        length = aPatients.length;
+        arrayPatients = patients2.toArray();
+        length = arrayPatients.length;
             //Reads data from patients delete file
         
         try{
@@ -287,17 +287,17 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
            data.removePatient(patients2.get(1), patients );
            
            for (int l = 0; l < length; l++){
-                aPatients = patients2.toArray();
-        String userId = ((User.Patient)aPatients[l]).getUserId();
-        String aPassword = ((User.Patient)aPatients[l]).getPassword();
-        String first_Name = ((User.Patient)aPatients[l]).getFirst_Name();
-        String last_Name = ((User.Patient)aPatients[l]).getLast_Name();
-        String mobilePhoneNumber = ((User.Patient)aPatients[l]).getPhone_Number();        
-        String addressLine = ((User.Patient)aPatients[l]).getAddress();        
-        String postcode = ((User.Patient)aPatients[l]).getPostcode();
-        String dateOfBirth = ((User.Patient)aPatients[l]).getDate_Of_Birth();
-        String gender = ((User.Patient)aPatients[l]).getSex();
-        String NHSNumber = ((User.Patient)aPatients[l]).getNhs_Number();
+                arrayPatients = patients2.toArray();
+        String userId = ((User.Patient)arrayPatients[l]).getUserId();
+        String aPassword = ((User.Patient)arrayPatients[l]).getPassword();
+        String first_Name = ((User.Patient)arrayPatients[l]).getFirst_Name();
+        String last_Name = ((User.Patient)arrayPatients[l]).getLast_Name();
+        String mobilePhoneNumber = ((User.Patient)arrayPatients[l]).getPhone_Number();        
+        String addressLine = ((User.Patient)arrayPatients[l]).getAddress();        
+        String postcode = ((User.Patient)arrayPatients[l]).getPostcode();
+        String dateOfBirth = ((User.Patient)arrayPatients[l]).getDate_Of_Birth();
+        String gender = ((User.Patient)arrayPatients[l]).getSex();
+        String NHSNumber = ((User.Patient)arrayPatients[l]).getNhs_Number();
             //Gets all patient data
         
         

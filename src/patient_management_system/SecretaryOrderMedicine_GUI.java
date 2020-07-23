@@ -36,15 +36,16 @@ public class SecretaryOrderMedicine_GUI extends javax.swing.JFrame {
         e.printStackTrace();
         }
         
-        Object[] aMedicines = reMedicines.toArray();
+        Object[] arrayMedicines = reMedicines.toArray();
         
-        String medicine_Name = ((Processes.Medication)aMedicines[0]).getMedicine_Name();
+        String medicine_Name = ((Processes.Medication)arrayMedicines[0]).getMedicine_Name();
         txtMedicine_Name.setText(medicine_Name);
-        int quantity = ((Processes.Medication)aMedicines[0]).getQuantity();
+        
+        String dosage = ((Processes.Medication)arrayMedicines[0]).getDosage();
+        txtDosage.setText(dosage); 
+        
+        int quantity = ((Processes.Medication)arrayMedicines[0]).getQuantity();
         txtQuantity.setText(String.valueOf(quantity));
-        String dosage = ((Processes.Medication)aMedicines[0]).getDosage();
-        txtDosage.setText(dosage);       
-       
             //Gets medicine data and puts data into text fields
         
        

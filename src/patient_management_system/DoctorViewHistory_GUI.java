@@ -31,14 +31,14 @@ public class DoctorViewHistory_GUI extends javax.swing.JFrame {
         catch(Exception e) {
         e.printStackTrace();
         }
-        Object[] aDoctors = doctors.toArray();
+        Object[] arrayDoctors = doctors.toArray();
         int length;
-        length = aDoctors.length;
+        length = arrayDoctors.length;
         String[] doctor_Name = new String[length+1];
         doctor_Name[0] = "Select";
         java.util.List<String> list = new java.util.ArrayList<String>();
         for (int i=0; i < length; i++) {
-        String name = ((User.Doctor)aDoctors[i]).getFirst_Name();
+        String name = ((User.Doctor)arrayDoctors[i]).getFirst_Name();
         doctor_Name[i+1] = name;
         }
         final DefaultComboBoxModel model = new DefaultComboBoxModel (doctor_Name);
@@ -264,12 +264,12 @@ public class DoctorViewHistory_GUI extends javax.swing.JFrame {
         catch(Exception e){
         e.printStackTrace();
         }
-        Object[] aAppointment = Appointment.toArray();
-        int length = aAppointment.length;
+        Object[] arrayAppointment = Appointment.toArray();
+        int length = arrayAppointment.length;
         
         String[] username = new String[length];
         for (int i = 0; i < length; i++) {
-        String name = ((Processes.Appointment)aAppointment[i]).getPatient_Name();
+        String name = ((Processes.Appointment)arrayAppointment[i]).getPatient_Name();
         username[i] = name;
             //Reads from appointments text file
         }
@@ -288,13 +288,13 @@ public class DoctorViewHistory_GUI extends javax.swing.JFrame {
         if(Boolean.TRUE.equals(userTrue)){
         for (int i = 0; i < length; i++) {
         while(username[i].equals(input)){
-        String day = ((Processes.Appointment)aAppointment[0]).getAppointment_Day();
+        String day = ((Processes.Appointment)arrayAppointment[0]).getAppointment_Day();
         txtDay.setText(day);
         
-        String month = ((Processes.Appointment)aAppointment[0]).getAppointment_Month();
+        String month = ((Processes.Appointment)arrayAppointment[0]).getAppointment_Month();
         txtMonth.setText(month);
         
-        String year = ((Processes.Appointment)aAppointment[0]).getAppointment_Year();
+        String year = ((Processes.Appointment)arrayAppointment[0]).getAppointment_Year();
         txtYear.setText(year);      
         
                 

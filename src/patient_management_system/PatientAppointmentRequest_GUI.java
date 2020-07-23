@@ -32,14 +32,14 @@ public class PatientAppointmentRequest_GUI extends javax.swing.JFrame {
         catch(Exception e) {
         e.printStackTrace();
         }
-        Object[] aDoctors = doctors.toArray();
+        Object[] arrayDoctors = doctors.toArray();
         int length;
-        length = aDoctors.length;
+        length = arrayDoctors.length;
         String[] doctor_Name = new String[length+1];
         doctor_Name[0] = "Select";
         java.util.List<String> list = new java.util.ArrayList<String>();
         for (int i=0; i < length; i++) {
-        String name = ((User.Doctor)aDoctors[i]).getFirst_Name();
+        String name = ((User.Doctor)arrayDoctors[i]).getFirst_Name();
         doctor_Name[i+1] = name;
         }
         final DefaultComboBoxModel model = new DefaultComboBoxModel (doctor_Name);
