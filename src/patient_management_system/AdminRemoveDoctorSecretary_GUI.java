@@ -223,6 +223,8 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(String.valueOf(ratingsLength));
         out.newLine();        
+        
+        txtUserId.setText("");
             //Prints all of the doctors details to the text file
         
         for (int p = 0; p < ratingsLength; p++) {
@@ -320,7 +322,7 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
         out.write(aPassword);
         out.newLine();      
                 
-        
+        txtUserId.setText("");
         
         out.close();
         }
