@@ -9,12 +9,12 @@ package patient_management_system;
  *
  * @author Josh
  */
-public class DoctorFeedback_GUI extends javax.swing.JFrame {
+public class AdminDoctorFeedback_GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form DoctorFeedback_GUI
      */
-    public DoctorFeedback_GUI() {
+    public AdminDoctorFeedback_GUI() {
         initComponents();
     }
 
@@ -44,6 +44,11 @@ public class DoctorFeedback_GUI extends javax.swing.JFrame {
         });
 
         btnSubmit.setText("Submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,6 +90,10 @@ public class DoctorFeedback_GUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnBackActionPerformed
 
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSubmitActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -102,20 +111,21 @@ public class DoctorFeedback_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DoctorFeedback_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminDoctorFeedback_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DoctorFeedback_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminDoctorFeedback_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DoctorFeedback_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminDoctorFeedback_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DoctorFeedback_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminDoctorFeedback_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DoctorFeedback_GUI().setVisible(true);
+                new AdminDoctorFeedback_GUI().setVisible(true);
             }
         });
     }

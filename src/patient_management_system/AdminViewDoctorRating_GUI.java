@@ -22,12 +22,12 @@ import java.io.FileWriter;
  *
  * @author Josh
  */
-public class AdminDoctorRating_GUI extends javax.swing.JFrame {
+public class AdminViewDoctorRating_GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form DoctorRating_GUI
      */
-    public AdminDoctorRating_GUI() {
+    public AdminViewDoctorRating_GUI() {
         initComponents();
         getData Data = new getData();
         ArrayList<Users> doctors = new ArrayList<Users>();
@@ -479,21 +479,23 @@ public class AdminDoctorRating_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdminDoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminViewDoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdminDoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminViewDoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdminDoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminViewDoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdminDoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminViewDoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AdminDoctorRating_GUI().setVisible(true);
+                new AdminViewDoctorRating_GUI().setVisible(true);
             }
         });
     }

@@ -17,12 +17,12 @@ import User.Users;
  *
  * @author Josh
  */
-public class DoctorAppointmentRequest_GUI extends javax.swing.JFrame {
+public class DoctorCreatePatientAppointmentRequest_GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form AppointmentRequest
      */
-    public DoctorAppointmentRequest_GUI() {
+    public DoctorCreatePatientAppointmentRequest_GUI() {
         initComponents();
         getData Data = new getData();
         ArrayList<Users> doctors = new ArrayList<Users>();
@@ -300,14 +300,18 @@ public class DoctorAppointmentRequest_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DoctorAppointmentRequest_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorCreatePatientAppointmentRequest_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DoctorAppointmentRequest_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorCreatePatientAppointmentRequest_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DoctorAppointmentRequest_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorCreatePatientAppointmentRequest_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DoctorAppointmentRequest_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorCreatePatientAppointmentRequest_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -316,7 +320,7 @@ public class DoctorAppointmentRequest_GUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DoctorAppointmentRequest_GUI().setVisible(true);
+                new DoctorCreatePatientAppointmentRequest_GUI().setVisible(true);
             }
         });
     }

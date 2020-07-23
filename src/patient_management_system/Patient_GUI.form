@@ -27,41 +27,33 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnExit" min="-2" pref="80" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btnLogOff" min="-2" pref="80" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="btnExit" min="-2" pref="80" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="btnLogOff" min="-2" pref="80" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                              <Component id="lbl_patient" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="btnDeleteAccount" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <Component id="btnCreateAccount" min="-2" pref="150" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="110" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btnAppointmentRequest" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <Component id="btnDoctorRating" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="btnCreateAccount" max="32767" attributes="0"/>
+                                  <Component id="btnDoctorRating" max="32767" attributes="0"/>
+                                  <Component id="btnAppointmentRequest" alignment="0" pref="289" max="32767" attributes="0"/>
+                                  <Component id="btnViewHistory" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="btnViewAppointment" alignment="0" pref="289" max="32767" attributes="0"/>
+                                  <Component id="btnViewPerscription" alignment="0" pref="289" max="32767" attributes="0"/>
+                                  <Component id="btnDeleteAccount" alignment="0" pref="289" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
-                      <Component id="lbl_patient" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="btnViewHistory" alignment="0" max="32767" attributes="0"/>
-                  <Component id="btnViewPerscription" alignment="0" max="32767" attributes="0"/>
-                  <Component id="btnViewAppointment" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -70,23 +62,21 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lbl_patient" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="40" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnCreateAccount" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnDoctorRating" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnAppointmentRequest" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnDeleteAccount" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="35" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnCreateAccount" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnDoctorRating" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnAppointmentRequest" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnViewHistory" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnViewPerscription" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnViewAppointment" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnViewPerscription" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnDeleteAccount" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="50" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnLogOff" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnExit" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -131,7 +121,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnDoctorRating">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Doctor Rating"/>
+        <Property name="text" type="java.lang.String" value="Doctor Rating and Feedback"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDoctorRatingActionPerformed"/>

@@ -22,12 +22,12 @@ import java.io.FileWriter;
  *
  * @author Josh
  */
-public class DoctorRating_GUI extends javax.swing.JFrame {
+public class PatientDoctorRating_GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form DoctorRating_GUI
      */
-    public DoctorRating_GUI() {
+    public PatientDoctorRating_GUI() {
         initComponents();
         getData Data = new getData();
         ArrayList<Users> doctors = new ArrayList<Users>();
@@ -380,20 +380,21 @@ public class DoctorRating_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PatientDoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PatientDoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PatientDoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PatientDoctorRating_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DoctorRating_GUI().setVisible(true);
+                new PatientDoctorRating_GUI().setVisible(true);
             }
         });
     }

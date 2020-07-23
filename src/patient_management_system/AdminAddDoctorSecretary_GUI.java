@@ -12,12 +12,12 @@ import java.io.FileWriter;
  *
  * @author Josh
  */
-public class AddDoctorSecretary_GUI extends javax.swing.JFrame {
+public class AdminAddDoctorSecretary_GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form AddDoctorSecretary
      */
-    public AddDoctorSecretary_GUI() {
+    public AdminAddDoctorSecretary_GUI() {
         initComponents();
     }
 

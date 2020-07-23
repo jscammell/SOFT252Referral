@@ -16,12 +16,12 @@ import java.util.ArrayList;
  *
  * @author Josh
  */
-public class RemoveDoctorSecretary_GUI extends javax.swing.JFrame {
+public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form RemoveDoctorSecretary_GUI
      */
-    public RemoveDoctorSecretary_GUI() {
+    public AdminRemoveDoctorSecretary_GUI() {
         initComponents();
     }
 
@@ -352,20 +352,21 @@ public class RemoveDoctorSecretary_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RemoveDoctorSecretary_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminRemoveDoctorSecretary_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RemoveDoctorSecretary_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminRemoveDoctorSecretary_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RemoveDoctorSecretary_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminRemoveDoctorSecretary_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RemoveDoctorSecretary_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminRemoveDoctorSecretary_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RemoveDoctorSecretary_GUI().setVisible(true);
+                new AdminRemoveDoctorSecretary_GUI().setVisible(true);
             }
         });
     }

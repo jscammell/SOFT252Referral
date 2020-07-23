@@ -11,12 +11,12 @@ import java.io.FileWriter;
  *
  * @author Josh
  */
-public class CreateAdministrator_GUI extends javax.swing.JFrame {
+public class AdminCreateAdministrator_GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form CreateAdmin_GUI
      */
-    public CreateAdministrator_GUI() {
+    public AdminCreateAdministrator_GUI() {
         initComponents();
     }
 
@@ -200,21 +200,23 @@ public class CreateAdministrator_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CreateAdministrator_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminCreateAdministrator_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CreateAdministrator_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminCreateAdministrator_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CreateAdministrator_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminCreateAdministrator_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CreateAdministrator_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminCreateAdministrator_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CreateAdministrator_GUI().setVisible(true);
+                new AdminCreateAdministrator_GUI().setVisible(true);
             }
         });
     }

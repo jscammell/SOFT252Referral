@@ -5,7 +5,7 @@
  */
 package retakeclinic;
 
-import patient_management_system.AdminCreateAppointment_GUI;
+import patient_management_system.SecretaryCreateAppointment_GUI;
 
 /**
  *

@@ -30,9 +30,6 @@ public class Secretary_GUI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnPatientAccountRequest = new javax.swing.JButton();
         btnPatientDeleteRequest = new javax.swing.JButton();
-        txtAccountRequestNotification = new javax.swing.JTextField();
-        txtDeleteRequestNotification = new javax.swing.JTextField();
-        txtOrderMedicineNotification = new javax.swing.JTextField();
         btnDeletePatient = new javax.swing.JButton();
         btnOrderMedicine = new javax.swing.JButton();
         btnCreateAppointment = new javax.swing.JButton();
@@ -58,17 +55,6 @@ public class Secretary_GUI extends javax.swing.JFrame {
                 btnPatientDeleteRequestActionPerformed(evt);
             }
         });
-
-        txtAccountRequestNotification.setText("1");
-
-        txtDeleteRequestNotification.setText("1");
-        txtDeleteRequestNotification.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDeleteRequestNotificationActionPerformed(evt);
-            }
-        });
-
-        txtOrderMedicineNotification.setText("1");
 
         btnDeletePatient.setText("Delete Patient");
         btnDeletePatient.addActionListener(new java.awt.event.ActionListener() {
@@ -117,30 +103,28 @@ public class Secretary_GUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(161, 161, 161)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 108, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnApproveAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnOrderMedicine, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDeletePatient, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnPatientDeleteRequest, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnPatientAccountRequest, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                            .addComponent(btnCreateAppointment, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtAccountRequestNotification, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDeleteRequestNotification, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtOrderMedicineNotification, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLogOff, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
+                        .addComponent(btnLogOff, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnApproveAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(161, 161, 161)
+                                    .addComponent(jLabel1))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(79, 79, 79)
+                                    .addComponent(btnPatientAccountRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(btnPatientDeleteRequest, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                .addComponent(btnOrderMedicine, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnCreateAppointment, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnDeletePatient, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -148,29 +132,19 @@ public class Secretary_GUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(txtAccountRequestNotification, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtDeleteRequestNotification, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(btnPatientAccountRequest)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnPatientDeleteRequest)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnDeletePatient)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                        .addComponent(btnCreateAppointment)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnApproveAppointment)
-                        .addGap(13, 13, 13)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnOrderMedicine)
-                            .addComponent(txtOrderMedicineNotification, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGap(18, 18, 18)
+                .addComponent(btnPatientAccountRequest)
+                .addGap(18, 18, 18)
+                .addComponent(btnApproveAppointment)
+                .addGap(18, 18, 18)
+                .addComponent(btnCreateAppointment)
+                .addGap(18, 18, 18)
+                .addComponent(btnOrderMedicine)
+                .addGap(18, 18, 18)
+                .addComponent(btnDeletePatient)
+                .addGap(18, 18, 18)
+                .addComponent(btnPatientDeleteRequest)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExit)
                     .addComponent(btnLogOff))
@@ -179,10 +153,6 @@ public class Secretary_GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtDeleteRequestNotificationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDeleteRequestNotificationActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDeleteRequestNotificationActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         this.setVisible(false);
@@ -198,7 +168,7 @@ public class Secretary_GUI extends javax.swing.JFrame {
 
     private void btnCreateAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAppointmentActionPerformed
         
-        AdminCreateAppointment_GUI open = new AdminCreateAppointment_GUI();
+        SecretaryCreateAppointment_GUI open = new SecretaryCreateAppointment_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
@@ -217,7 +187,7 @@ public class Secretary_GUI extends javax.swing.JFrame {
 
     private void btnDeletePatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletePatientActionPerformed
         
-        SecretaryDeleteAccount_GUI open = new SecretaryDeleteAccount_GUI();
+        SecretaryDeletePatientAccount_GUI open = new SecretaryDeletePatientAccount_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
@@ -225,7 +195,7 @@ public class Secretary_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDeletePatientActionPerformed
 
     private void btnPatientAccountRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientAccountRequestActionPerformed
-        ApprovePatientAccount_GUI open = new ApprovePatientAccount_GUI();
+        SecretaryApprovePatientAccount_GUI open = new SecretaryApprovePatientAccount_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
@@ -237,7 +207,7 @@ public class Secretary_GUI extends javax.swing.JFrame {
 
     private void btnApproveAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveAppointmentActionPerformed
         
-        ApproveAppointment_GUI open = new ApproveAppointment_GUI();
+        SecretaryApproveRequestedAppointment_GUI open = new SecretaryApproveRequestedAppointment_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
@@ -247,7 +217,7 @@ public class Secretary_GUI extends javax.swing.JFrame {
 
     private void btnOrderMedicineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderMedicineActionPerformed
         
-        SubmitMedicine_GUI open = new SubmitMedicine_GUI();
+        SecretaryOrderMedicine_GUI open = new SecretaryOrderMedicine_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
@@ -300,8 +270,5 @@ public class Secretary_GUI extends javax.swing.JFrame {
     private javax.swing.JButton btnPatientAccountRequest;
     private javax.swing.JButton btnPatientDeleteRequest;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField txtAccountRequestNotification;
-    private javax.swing.JTextField txtDeleteRequestNotification;
-    private javax.swing.JTextField txtOrderMedicineNotification;
     // End of variables declaration//GEN-END:variables
 }

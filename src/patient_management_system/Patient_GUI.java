@@ -64,7 +64,7 @@ public class Patient_GUI extends javax.swing.JFrame {
             }
         });
 
-        btnDoctorRating.setText("Doctor Rating");
+        btnDoctorRating.setText("Doctor Rating and Feedback");
         btnDoctorRating.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDoctorRatingActionPerformed(evt);
@@ -114,52 +114,47 @@ public class Patient_GUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
+                        .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnLogOff, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnLogOff, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(162, 162, 162)
+                                .addComponent(lbl_patient))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btnDeleteAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnCreateAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnAppointmentRequest, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnDoctorRating, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addComponent(lbl_patient)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(54, 54, 54)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnCreateAccount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnDoctorRating, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnAppointmentRequest, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
+                                    .addComponent(btnViewHistory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnViewAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
+                                    .addComponent(btnViewPerscription, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
+                                    .addComponent(btnDeleteAccount, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE))))
+                        .addGap(0, 47, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnViewHistory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnViewPerscription, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnViewAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(138, 138, 138))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbl_patient)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCreateAccount)
-                    .addComponent(btnDoctorRating))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAppointmentRequest)
-                    .addComponent(btnDeleteAccount))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnCreateAccount)
+                .addGap(18, 18, 18)
+                .addComponent(btnDoctorRating)
+                .addGap(18, 18, 18)
+                .addComponent(btnAppointmentRequest)
+                .addGap(18, 18, 18)
                 .addComponent(btnViewHistory)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnViewPerscription)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnViewAppointment)
                 .addGap(18, 18, 18)
+                .addComponent(btnViewPerscription)
+                .addGap(18, 18, 18)
+                .addComponent(btnDeleteAccount)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLogOff)
                     .addComponent(btnExit))
@@ -182,35 +177,35 @@ public class Patient_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLogOffActionPerformed
 
     private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAccountActionPerformed
-        RequestAccount_GUI open = new RequestAccount_GUI();
+        PatientRequestAccount_GUI open = new PatientRequestAccount_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose(); 
     }//GEN-LAST:event_btnCreateAccountActionPerformed
 
     private void btnDeleteAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteAccountActionPerformed
-        DeleteAccount_GUI open = new DeleteAccount_GUI();
+        PatientRequestTerminateAccount_GUI open = new PatientRequestTerminateAccount_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_btnDeleteAccountActionPerformed
 
     private void btnDoctorRatingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoctorRatingActionPerformed
-        DoctorRating_GUI open = new DoctorRating_GUI();
+        PatientDoctorRating_GUI open = new PatientDoctorRating_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_btnDoctorRatingActionPerformed
 
     private void btnAppointmentRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAppointmentRequestActionPerformed
-        AppointmentRequest_GUI open = new AppointmentRequest_GUI();
+        PatientAppointmentRequest_GUI open = new PatientAppointmentRequest_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_btnAppointmentRequestActionPerformed
 
     private void btnViewAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAppointmentActionPerformed
-        ViewAppointment_GUI open = new ViewAppointment_GUI();
+        PatientViewAppointment_GUI open = new PatientViewAppointment_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
@@ -218,10 +213,13 @@ public class Patient_GUI extends javax.swing.JFrame {
 
     private void btnViewPerscriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPerscriptionActionPerformed
         // TODO add your handling code here:
+        
+        
+        
     }//GEN-LAST:event_btnViewPerscriptionActionPerformed
 
     private void btnViewHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHistoryActionPerformed
-        ViewPatientHistory_GUI open = new ViewPatientHistory_GUI();
+        PatientViewHistory_GUI open = new PatientViewHistory_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();

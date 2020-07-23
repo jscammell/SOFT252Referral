@@ -71,6 +71,11 @@ public class Doctor_GUI extends javax.swing.JFrame {
         });
 
         btnConsultationNotes.setText("Consultation Notes");
+        btnConsultationNotes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultationNotesActionPerformed(evt);
+            }
+        });
 
         btnCreatePerscription.setText("Create Prescription");
         btnCreatePerscription.addActionListener(new java.awt.event.ActionListener() {
@@ -126,19 +131,19 @@ public class Doctor_GUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGap(31, 31, 31)
                 .addComponent(btnViewAppointments)
                 .addGap(18, 18, 18)
-                .addComponent(btnAppointmentRequest)
+                .addComponent(btnConsultationNotes)
                 .addGap(18, 18, 18)
                 .addComponent(btnPatientHistory)
                 .addGap(18, 18, 18)
-                .addComponent(btnConsultationNotes)
+                .addComponent(btnAppointmentRequest)
                 .addGap(18, 18, 18)
                 .addComponent(btnCreatePerscription)
                 .addGap(18, 18, 18)
                 .addComponent(btnMedicineOrderRequest)
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExit)
                     .addComponent(btnLogOff))
@@ -161,7 +166,7 @@ public class Doctor_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLogOffActionPerformed
 
     private void btnAppointmentRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAppointmentRequestActionPerformed
-        DoctorAppointmentRequest_GUI open = new DoctorAppointmentRequest_GUI();
+        DoctorCreatePatientAppointmentRequest_GUI open = new DoctorCreatePatientAppointmentRequest_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
@@ -177,7 +182,7 @@ public class Doctor_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnViewAppointmentsActionPerformed
 
     private void btnCreatePerscriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePerscriptionActionPerformed
-        CreatePrescription_GUI open = new CreatePrescription_GUI();
+        DoctorCreatePrescription_GUI open = new DoctorCreatePrescription_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
@@ -185,18 +190,25 @@ public class Doctor_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCreatePerscriptionActionPerformed
 
     private void btnMedicineOrderRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicineOrderRequestActionPerformed
-        ApproveMedicine_GUI open = new ApproveMedicine_GUI();
+        DoctorRequestMedicine_GUI open = new DoctorRequestMedicine_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_btnMedicineOrderRequestActionPerformed
 
     private void btnPatientHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientHistoryActionPerformed
-        InspectHistory_GUI open = new InspectHistory_GUI();
+        DoctorInspectPatientHistory_GUI open = new DoctorInspectPatientHistory_GUI();
         open.setVisible(true);
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_btnPatientHistoryActionPerformed
+
+    private void btnConsultationNotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultationNotesActionPerformed
+        DoctorsNote_GUI open = new DoctorsNote_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_btnConsultationNotesActionPerformed
 
     /**
      * @param args the command line arguments

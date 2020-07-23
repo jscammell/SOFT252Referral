@@ -19,12 +19,12 @@ import java.io.FileWriter;
  *
  * @author Josh
  */
-public class ApprovePatientAccount_GUI extends javax.swing.JFrame {
+public class SecretaryApprovePatientAccount_GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form RequestAccount_GUI
      */
-    public ApprovePatientAccount_GUI() {
+    public SecretaryApprovePatientAccount_GUI() {
         initComponents();
         
         ArrayList<Users> rePatients = new ArrayList<Users>();
@@ -488,21 +488,23 @@ public class ApprovePatientAccount_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ApprovePatientAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecretaryApprovePatientAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ApprovePatientAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecretaryApprovePatientAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ApprovePatientAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecretaryApprovePatientAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ApprovePatientAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecretaryApprovePatientAccount_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ApprovePatientAccount_GUI().setVisible(true);
+                new SecretaryApprovePatientAccount_GUI().setVisible(true);
             }
         });
     }
