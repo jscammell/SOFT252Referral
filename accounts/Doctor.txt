@@ -3,4 +3,38 @@ D
 Hello1
 Jonny
 Green
-0
+2
+5
+8
+Okay
+Very nice man
+
+D2
+Hello2
+Linda
+Brown
+2
+7
+4
+Nice woman
+Not a great experience
+
+D3
+Hello3
+Jack
+House
+3
+9
+8
+8
+Best doctor ever
+Got what I needed
+Really nice man
+
+D4
+Hello4
+Bart
+Cage
+1
+7
+Was an okay experience

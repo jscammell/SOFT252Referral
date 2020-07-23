@@ -50,9 +50,9 @@ public class DoctorCreatePrescription_GUI extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Create Prescription");
 
-        jLabel2.setText("Doctor ID");
+        jLabel2.setText("Doctor Name");
 
-        jLabel3.setText("Patient ID");
+        jLabel3.setText("Patient Name");
 
         jLabel4.setText("Medicine Name");
 
@@ -91,20 +91,15 @@ public class DoctorCreatePrescription_GUI extends javax.swing.JFrame {
                         .addGap(112, 112, 112)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel2)
-                                        .addComponent(jLabel5)
-                                        .addComponent(jLabel6)
-                                        .addComponent(jLabel7))
-                                    .addComponent(jLabel3)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel4)))
-                        .addGap(18, 18, 18)
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtPatientId)
                             .addComponent(txtDoctorId)
@@ -226,7 +221,7 @@ public class DoctorCreatePrescription_GUI extends javax.swing.JFrame {
         if (Boolean.TRUE.equals(isNotEmpty)){
         try{
         BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\CreatePrescription.txt",true));
-        out.newLine();
+        out.newLine();      
         out.write(doctor_Id);
         out.newLine();
         out.write(patient_Id);
@@ -239,7 +234,7 @@ public class DoctorCreatePrescription_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(dosage);
         out.newLine();        
-        out.newLine();
+        
         
         out.close();
         }

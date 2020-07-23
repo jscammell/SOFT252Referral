@@ -176,9 +176,7 @@ public class Login extends javax.swing.JFrame {
                 String firstName;
                 String lastName;                
                 String mobilePhoneNumber;                
-                String houseNumberName;
-                String addressLine;
-                String city;
+                String addressLine;                
                 String postcode;
                 String dateOfBirth;                
                 String gender;
@@ -192,9 +190,7 @@ public class Login extends javax.swing.JFrame {
                 firstName = br.readLine();
                 lastName = br.readLine();                
                 mobilePhoneNumber = br.readLine();               
-                houseNumberName = br.readLine();
-                addressLine = br.readLine();
-                city = br.readLine();
+                addressLine = br.readLine();                
                 postcode = br.readLine();
                 dateOfBirth = br.readLine();                
                 gender = br.readLine();
@@ -237,6 +233,11 @@ public class Login extends javax.swing.JFrame {
                     firstName = br.readLine();
                     lastName = br.readLine();
                     int ratingLength = Integer.parseInt(br.readLine());
+                    
+                    for (int i = 0; i < ratingLength; i++) {
+                        String rating = br.readLine();                    
+                    }
+                    
                     
                     for (int i = 0; i < ratingLength; i++) {
                         String description = br.readLine();                    

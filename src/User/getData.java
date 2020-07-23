@@ -215,7 +215,6 @@ public class getData {
             userId = br.readLine();            
             first_Name = br.readLine();            
             ratingsLength = Integer.parseInt(br.readLine());
-            int[] ratings = new int[ratingsLength];
             String[] description = new String[ratingsLength];          
             
             for (int i = 0; i < ratingsLength; i++) {

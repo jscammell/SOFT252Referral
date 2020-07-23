@@ -328,9 +328,8 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                             String userId = ((User.Doctor)aDoctor[l]).getUserId();
                             String aPassword = ((User.Doctor)aDoctor[l]).getPassword();
                             String first_Name = ((User.Doctor)aDoctor[l]).getFirst_Name();
-                            String last_Name = ((User.Doctor)aDoctor[l]).getLast_Name();
-                            //int ratingLength = ((User.Doctor)aDoctor[l]).getRatingsLength();
-           
+                            String last_Name = ((User.Doctor)aDoctor[l]).getLast_Name();                            
+                            String feedback = txtDescription.getText();
            
                             try{
                                 BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\DoctorFeedback.txt",true));
@@ -341,12 +340,8 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                                 out.newLine();                    
                                 out.write(String.valueOf(ratingLength));
                                 out.newLine();
-           
-                                //for (int k = 0; k < ratingLength; k++) {
-                                //    int[] ratings = ((User.Doctor)aDoctor[k]).getRatings();
-                                //    out.write(String.valueOf(ratings[k]));
-                                //    out.newLine();
-                                //}
+                                
+                                
                     
                                 for (int k = 0; k < ratingLength; k++) {
                                     String[] descriptions = ((User.Doctor)aDoctor[k]).getDescription();
@@ -392,26 +387,9 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                                 String[] descriptions = new String[1];
                                 descriptions[0] =  txtDescription.getText();
                                 
-                                ((User.Doctor)aDoctor[length+1]).setUserId(userId);        
-                                ((User.Doctor)aDoctor[length+1]).setPassword(aPassword);
-                                ((User.Doctor)aDoctor[length+1]).setFirst_Name(first_Name);
-                                ((User.Doctor)aDoctor[length+1]).setRatingsLength(ratingLength);
-                                ((User.Doctor)aDoctor[length+1]).setDescription(descriptions);
+                                String feedback = txtDescription.getText();
                                 
-                        //int ratingLength = ((User.Doctor)aDoctor[i]).getRatingsLength();
-                        //while(cmbDoctorName.equals(((User.Doctor)aDoctor[i]).getFirst_Name())){
-                
-                
-                        //String[] descriptions = ((User.Doctor)aDoctor[i]).getDescription();
-                        //String[] newDescriptions = new String[ratingLength + 1];                
-           
-                        //for (int j = 0; j < ratingLength; j++) {
-                        //    newDescriptions[j] = descriptions[j];
-                        //}
-                        //newDescriptions[ratingLength] = description;
-                        //((User.Doctor)aDoctor[i]).setDescription(newDescriptions);                
-                        //ratingLength = ratingLength + 1;
-                        //((User.Doctor)aDoctor[i]).setRatingsLength(ratingLength);
+                        
                         
             
                         try{
@@ -434,15 +412,12 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                                 out.newLine();                    
                                 out.write(String.valueOf(ratingLength));
                                 out.newLine();
+                                
            
-                                //for (int k = 0; k < ratingLength; k++) {
-                                //    int[] ratings = ((User.Doctor)aDoctor[k]).getRatings();
-                                //    out.write(String.valueOf(ratings[k]));
-                                //    out.newLine();
-                                //}
+                                
                     
                                 for (int k = 0; k < ratingLength; k++) {
-                                    //String descriptions = txtDescription.getText();
+                                    
                                     out.write(descriptions[k]);
                                     out.newLine();
                                 }

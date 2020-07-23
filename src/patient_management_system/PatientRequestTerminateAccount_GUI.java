@@ -158,13 +158,16 @@ public class PatientRequestTerminateAccount_GUI extends javax.swing.JFrame {
         boolean passTrue;
         while(k < length) {
         if(username[k].equals(txtUsername.getText())){
-            userTrue = true;        
+            userTrue = true;
+            
         }
         else{
                 userTrue = false;
             }
         if(password[k].equals(txtPassword.getText())){
         passTrue = true;
+        
+
         }
         else{
         passTrue = false;
@@ -208,15 +211,17 @@ public class PatientRequestTerminateAccount_GUI extends javax.swing.JFrame {
         
         
         out.close();
+        txtUsername.setText("");
+        txtPassword.setText("");
         }
         catch(Exception e) {
         e.printStackTrace();
         }
         
 
-            k++;
+           
         }
-        
+         k++;
         }
         
                

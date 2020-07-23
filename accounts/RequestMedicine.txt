@@ -10,3 +10,7 @@ Peniciline
 Drugs
 13
 20mg
+
+Anti depresents
+54
+20mg

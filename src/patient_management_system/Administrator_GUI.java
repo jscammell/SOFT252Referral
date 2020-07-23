@@ -34,7 +34,6 @@ public class Administrator_GUI extends javax.swing.JFrame {
         btnExit = new javax.swing.JButton();
         btnLogOff = new javax.swing.JButton();
         btnRemove = new javax.swing.JButton();
-        btnDoctorFeedback = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,8 +82,6 @@ public class Administrator_GUI extends javax.swing.JFrame {
             }
         });
 
-        btnDoctorFeedback.setText("Doctor Feedback");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -106,8 +103,7 @@ public class Administrator_GUI extends javax.swing.JFrame {
                             .addComponent(btnDoctorRatings, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
                             .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
                             .addComponent(btnCreateAdministrator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnRemove, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
-                            .addComponent(btnDoctorFeedback, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btnRemove, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE))))
                 .addGap(0, 99, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -123,9 +119,7 @@ public class Administrator_GUI extends javax.swing.JFrame {
                 .addComponent(btnRemove)
                 .addGap(18, 18, 18)
                 .addComponent(btnDoctorRatings)
-                .addGap(18, 18, 18)
-                .addComponent(btnDoctorFeedback)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExit)
                     .addComponent(btnLogOff))
@@ -186,7 +180,6 @@ public class Administrator_GUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnCreateAdministrator;
-    private javax.swing.JButton btnDoctorFeedback;
     private javax.swing.JButton btnDoctorRatings;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnLogOff;

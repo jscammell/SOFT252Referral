@@ -197,6 +197,14 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
            if(length != 1){
            length = length -1;
            }
+           try{
+           BufferedWriter clear = new BufferedWriter(new FileWriter("./accounts\\Patient.txt", false));
+           clear.newLine();
+           }
+           catch(Exception e){
+           e.printStackTrace();
+           }
+           
            for (int l = 0; l < length; l++){
            
            
@@ -211,17 +219,8 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         String dateOfBirth = ((User.Patient)aPatients[l]).getDate_Of_Birth();
         String gender = ((User.Patient)aPatients[l]).getSex();
         String NHSNumber = ((User.Patient)aPatients[l]).getNhs_Number();
-        try{
-           BufferedWriter clear = new BufferedWriter(new FileWriter("./accounts\\Patient.txt", false));
-           clear.newLine();
-           }
-           catch(Exception e){
-           e.printStackTrace();
-           }
-           if(length != 1){
-           length = length -1;
-           }
-           
+        
+          
            
          try{
         BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\Patient.txt", true));
@@ -255,14 +254,16 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         }
          
            }
+           ArrayList<Users> patients2 = new ArrayList<Users>();
+           
         try{
-        data.readDeletePatients(patients);
+        data.readDeletePatients(patients2);
         }
         catch(Exception e) {
         e.printStackTrace();
         }
         
-        aPatients = patients.toArray();
+        aPatients = patients2.toArray();
         length = aPatients.length;
         
         
@@ -277,10 +278,10 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
            length = length -1;
            }
            
-           data.removePatient(patients.get(1), patients );
+           data.removePatient(patients2.get(1), patients );
            
            for (int l = 0; l < length; l++){
-                aPatients = patients.toArray();
+                aPatients = patients2.toArray();
         String userId = ((User.Patient)aPatients[l]).getUserId();
         String aPassword = ((User.Patient)aPatients[l]).getPassword();
         String first_Name = ((User.Patient)aPatients[l]).getFirst_Name();

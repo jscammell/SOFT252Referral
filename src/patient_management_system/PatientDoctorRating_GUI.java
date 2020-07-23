@@ -265,6 +265,7 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
         if(txtRateDoctor != null){
             rating = Integer.parseInt(txtRateDoctor.getText());
             isNotEmpty = true;
+            txtRateDoctor.setText("");
         }
         else{
             isNotEmpty = false;
@@ -273,6 +274,7 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
         if(txtDescription != null){
             description = txtDescription.getText();
             isNotEmpty = true;
+            txtDescription.setText("");
         }
         else{
             description = null;

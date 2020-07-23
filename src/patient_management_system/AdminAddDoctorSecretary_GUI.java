@@ -257,7 +257,7 @@ public class AdminAddDoctorSecretary_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(last_Name);
         out.newLine();
-        out.write(0);
+        out.write("0");
         out.newLine();
         
         
