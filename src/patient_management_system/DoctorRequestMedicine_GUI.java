@@ -161,6 +161,9 @@ public class DoctorRequestMedicine_GUI extends javax.swing.JFrame {
         dosage = null;
         isNotEmpty = false;
         }
+            //Reads data from the text fields
+        
+        
         
         if (Boolean.TRUE.equals(isNotEmpty)){
         try{
@@ -172,7 +175,7 @@ public class DoctorRequestMedicine_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(dosage);
         out.newLine();       
-        
+            //Prints data to text file
         
         out.close();
         }

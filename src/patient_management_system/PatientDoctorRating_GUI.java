@@ -53,7 +53,7 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
 
         cmbViewDoctor.setModel(model);
         cmbRateDoctor.setModel(model);
-        
+            //Reads data from doctors and puts it into comboboxes
         
         cmbViewDoctor.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent event) {
@@ -86,6 +86,8 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
                 catch(Exception e) {
                 e.printStackTrace();
                 }
+                    //Sets observer to watch combobox when a doctor is selcted
+                    //Prints data relating to the doctor into text fields and areas
             }
         });
     }
@@ -257,6 +259,7 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
         Object[] aDoctor = doctors.toArray();
         int length;
         length = aDoctor.length;
+            //Reads doctors data from text file
        
         String description;
         int rating;
@@ -281,6 +284,8 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
             isNotEmpty = false;
             rating = 0;
         }
+                //Gets data from text fields
+        
         String cmbDoctorName = cmbRateDoctor.getSelectedItem().toString();
         if(Boolean.TRUE.equals(isNotEmpty)){
        
@@ -305,7 +310,8 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
                 newRatings[ratingLength] = rating;
                 ratingLength = ratingLength + 1;
                 ((User.Doctor)aDoctor[i]).setRatingsLength(ratingLength);
-                break;           
+                break;     
+                    //Reads all ratings and descriptions 
                 }
             }
             try{
@@ -338,6 +344,8 @@ public class PatientDoctorRating_GUI extends javax.swing.JFrame {
                     out.newLine();
                     out.write(String.valueOf(ratingLength));
                     out.newLine();
+                    
+                        //Prints all data including new rating a description to text file
            
                     for (int i = 0; i < ratingLength; i++) {
                         int[] ratings = ((User.Doctor)aDoctor[l]).getRatings();

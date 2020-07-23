@@ -47,7 +47,7 @@ public class SecretaryCreateAppointment_GUI extends javax.swing.JFrame {
         JPanel panel = new JPanel();
 
         cmbDoctor.setModel(model);
-        
+            //Puts doctor names into combobox
         
         ArrayList<Users> patients = new ArrayList<Users>();
         try{
@@ -71,6 +71,7 @@ public class SecretaryCreateAppointment_GUI extends javax.swing.JFrame {
         JPanel pane2 = new JPanel();
 
         cmbPatient.setModel(model2);
+                //Puts patient name into text box
     }
 
     /**
@@ -260,7 +261,7 @@ public class SecretaryCreateAppointment_GUI extends javax.swing.JFrame {
         appointment_Year = null;
         isNotEmpty = false;
         }
-        
+                //Reads from text fields
            
         String patient = cmbPatient.getSelectedItem().toString();
               
@@ -279,7 +280,7 @@ public class SecretaryCreateAppointment_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(doctor);
         out.newLine();       
-        
+            //Prints to appointments text file
         
         out.close();
         }

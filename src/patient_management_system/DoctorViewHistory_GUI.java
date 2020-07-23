@@ -46,7 +46,7 @@ public class DoctorViewHistory_GUI extends javax.swing.JFrame {
         JPanel panel = new JPanel();
 
         cmbDoctor.setModel(model);
-    
+            //Reads from doctors text file and puts the names into the combo box
         
     }
 
@@ -271,7 +271,7 @@ public class DoctorViewHistory_GUI extends javax.swing.JFrame {
         for (int i = 0; i < length; i++) {
         String name = ((Processes.Appointment)aAppointment[i]).getPatient_Name();
         username[i] = name;
-        
+            //Reads from appointments text file
         }
         
         Boolean userTrue;
@@ -284,7 +284,7 @@ public class DoctorViewHistory_GUI extends javax.swing.JFrame {
         userTrue = false;
         input = null;
         }
-        
+            //Gets username
         if(Boolean.TRUE.equals(userTrue)){
         for (int i = 0; i < length; i++) {
         while(username[i].equals(input)){
@@ -300,7 +300,7 @@ public class DoctorViewHistory_GUI extends javax.swing.JFrame {
                 
         
         break;
-        
+            //Prints data relating to the username
                 
         }
         }

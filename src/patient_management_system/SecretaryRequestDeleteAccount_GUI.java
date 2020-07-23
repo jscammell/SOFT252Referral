@@ -41,6 +41,7 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         String password = ((User.Users)aPatients[0]).getPassword();
         txtPassword.setText(password);
         String firstName = ((User.Patient)aPatients[0]).getFirst_Name();
+            //Reading from patients and puts patient data into text field
     }
 
     /**
@@ -189,6 +190,8 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         }
         if(Boolean.TRUE.equals(passTrue) && Boolean.TRUE.equals(userTrue)){
            data.removePatient(patients.get(k), patients );
+            //Gets the patient username and password 
+            //and checks against the stored username and password
            
 
            txtUsername.setText("");
@@ -204,6 +207,7 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
            catch(Exception e){
            e.printStackTrace();
            }
+            //Clears patient file
            
            for (int l = 0; l < length; l++){
            
@@ -220,7 +224,7 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         String gender = ((User.Patient)aPatients[l]).getSex();
         String NHSNumber = ((User.Patient)aPatients[l]).getNhs_Number();
         
-          
+          //Gets all patient data
            
          try{
         BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\Patient.txt", true));
@@ -246,7 +250,7 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         out.write(NHSNumber);
         out.newLine();
         
-        
+            //Replaces all patients into file
         out.close();
         }
         catch(Exception e) {
@@ -265,7 +269,7 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         
         aPatients = patients2.toArray();
         length = aPatients.length;
-        
+            //Reads data from patients delete file
         
         try{
            BufferedWriter clear = new BufferedWriter(new FileWriter("./accounts\\PatientDelete.txt", false));
@@ -274,6 +278,8 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
            catch(Exception e){
            e.printStackTrace();
            }
+                //clears patient file
+        
            if(length != 1){
            length = length -1;
            }
@@ -292,6 +298,9 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         String dateOfBirth = ((User.Patient)aPatients[l]).getDate_Of_Birth();
         String gender = ((User.Patient)aPatients[l]).getSex();
         String NHSNumber = ((User.Patient)aPatients[l]).getNhs_Number();
+            //Gets all patient data
+        
+        
         try{
         BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\PatientDelete.txt", true));
         out.newLine();
@@ -316,7 +325,7 @@ public class SecretaryRequestDeleteAccount_GUI extends javax.swing.JFrame {
         out.write(NHSNumber);
         out.newLine();
         
-        
+            //Replaces all patient data into patient delete text file
         out.close();
         }
         catch(Exception e) {

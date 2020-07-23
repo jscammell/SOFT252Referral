@@ -218,7 +218,8 @@ public class Login extends javax.swing.JFrame {
                 catch(Exception e) {
                 e.printStackTrace();
                 }
-                
+                    //Reads from patient text file and checks the 
+                    //username and passwords match the userdata
                 
                 
                 break;
@@ -263,7 +264,8 @@ public class Login extends javax.swing.JFrame {
                 catch(Exception e) {
                 e.printStackTrace();
                 }
-                
+                //Reads from doctor text file and checks the 
+                    //username and passwords match the userdata
                 
                 
                 break;
@@ -301,7 +303,8 @@ public class Login extends javax.swing.JFrame {
                 e.printStackTrace();
                 }
                 
-                
+                //Reads from Administrator text file and checks the 
+                    //username and passwords match the userdata
                 
                 break;
                 
@@ -335,6 +338,8 @@ public class Login extends javax.swing.JFrame {
                 catch(Exception e) {
                 e.printStackTrace();
                 }
+                //Reads from secretary text file and checks the 
+                    //username and passwords match the userdata
                 
         }         
     }//GEN-LAST:event_btnSubmitActionPerformed

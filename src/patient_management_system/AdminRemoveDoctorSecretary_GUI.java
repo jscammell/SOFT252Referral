@@ -147,10 +147,12 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
             String userType = cmbUser_Type.getSelectedItem().toString();
             switch(userType) {
                 case "Doctor" :
+                    //when the user selects doctor from the drop down list, it does case doctor 
+                    //and if they click scretary in the drop down box it does the secreatary part of the code
                     
                     ArrayList<Users> doctors = new ArrayList<Users>();
         getData data = new getData();
-        
+                //Reads the data from the Doctors text file
         try{
         data.readDoctors(doctors);
         }
@@ -177,22 +179,24 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
                 userTrue = false;
             }
         
-        
+            //If the Doctors name matches the doctors name in the text file then a boolean will be set to true
         if(Boolean.TRUE.equals(userTrue)){
         data.removeDoctor(doctors.get(k), doctors);
+            //Removes the selected doctor from the array list
         aDoctors = doctors.toArray();
         try{
         BufferedWriter clear = new BufferedWriter (new FileWriter("./accounts\\Doctor.txt",false));
         clear.newLine();
         clear.close();
         }        
-        
+            //Clears the text file
         catch(Exception e) {
         e.printStackTrace();
         }
         if(length != 1){
         length = length - 1;
         }
+            //Changes the length variable to match the lenth of the array
         
                 
         for (int i = 0; i < length; i++) {
@@ -204,7 +208,7 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
         String first_Name = ((User.Doctor)aDoctors[k]).getFirst_Name();
         String last_Name = ((User.Doctor)aDoctors[k]).getLast_Name();
         int ratingsLength = ((User.Doctor)aDoctors[k]).getRatingsLength();
-        
+            //Gets all of the doctors details from objects.
                         
         try{
         BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\Doctor.txt", true));
@@ -219,6 +223,7 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(String.valueOf(ratingsLength));
         out.newLine();        
+            //Prints all of the doctors details to the text file
         
         for (int p = 0; p < ratingsLength; p++) {
         int[] ratings = ((User.Doctor)aDoctors[p]).getRatings();
@@ -249,7 +254,8 @@ public class AdminRemoveDoctorSecretary_GUI extends javax.swing.JFrame {
         break;
         case "Secretary" :
         }
-            
+          //Repeat of the code above used for doctors but variables 
+          //changed to match secreatarys instead of doctors  
             
             
             ArrayList<Users> secretarys = new ArrayList<Users>();

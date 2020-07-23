@@ -215,7 +215,7 @@ public class PatientViewHistory_GUI extends javax.swing.JFrame {
         for (int i = 0; i < length; i++) {
         String name = ((Processes.History)arrayHistory[i]).getPatient_Name();
         username[i] = name;
-        
+            //Reads from history text file
         }
         
         Boolean userTrue;
@@ -228,6 +228,7 @@ public class PatientViewHistory_GUI extends javax.swing.JFrame {
         userTrue = false;
         input = null;
         }
+            //Gets username
         
         if(Boolean.TRUE.equals(userTrue)){
         for (int i = 0; i < length; i++) {
@@ -249,7 +250,7 @@ public class PatientViewHistory_GUI extends javax.swing.JFrame {
         txtDoctor.setText(doctor);
         
         break;
-        
+            //Prints the history of the user
                 
         }
         }

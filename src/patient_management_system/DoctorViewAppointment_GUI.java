@@ -155,7 +155,7 @@ public class DoctorViewAppointment_GUI extends javax.swing.JFrame {
         for (int i = 0; i < length; i++) {
         String name = ((Processes.Appointment)aAppointment[i]).getPatient_Name();
         username[i] = name;
-        
+            //Reading the data from the appointments text file
         }
         
         Boolean userTrue;
@@ -168,6 +168,7 @@ public class DoctorViewAppointment_GUI extends javax.swing.JFrame {
         userTrue = false;
         input = null;
         }
+            //Reads the username 
         
         if(Boolean.TRUE.equals(userTrue)){
         for (int i = 0; i < length; i++) {
@@ -197,7 +198,7 @@ public class DoctorViewAppointment_GUI extends javax.swing.JFrame {
         
         
         break;
-        
+            //Prints data ralting to the username
                 
         }
         }

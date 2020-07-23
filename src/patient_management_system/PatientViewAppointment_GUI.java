@@ -155,7 +155,7 @@ public class PatientViewAppointment_GUI extends javax.swing.JFrame {
         for (int i = 0; i < length; i++) {
         String name = ((Processes.Appointment)aAppointment[i]).getPatient_Name();
         username[i] = name;
-        
+            //Reads appointment data
         }
         
         Boolean userTrue;
@@ -168,7 +168,8 @@ public class PatientViewAppointment_GUI extends javax.swing.JFrame {
         userTrue = false;
         input = null;
         }
-        
+            //Gets username
+            
         if(Boolean.TRUE.equals(userTrue)){
         for (int i = 0; i < length; i++) {
         while(username[i].equals(input)){
@@ -197,7 +198,7 @@ public class PatientViewAppointment_GUI extends javax.swing.JFrame {
         
         
         break;
-        
+            //Prints data relating to above username
                 
         }
         }

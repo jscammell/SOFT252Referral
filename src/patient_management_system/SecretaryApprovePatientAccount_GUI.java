@@ -56,7 +56,7 @@ public class SecretaryApprovePatientAccount_GUI extends javax.swing.JFrame {
         txtDateOfBirth.setText(dateOfBirth);
         String gender = ((User.Patient)aPatients[0]).getSex();
         txtGender.setText(gender);
-        
+            //Sets all text fields to the first requested account
         
     }
 
@@ -363,7 +363,7 @@ public class SecretaryApprovePatientAccount_GUI extends javax.swing.JFrame {
         NHSNumber = null;
         isNotEmpty = false;
         }
-        
+            //Reads from all the text fields
         
         if (Boolean.TRUE.equals(isNotEmpty)){
         try{
@@ -389,7 +389,8 @@ public class SecretaryApprovePatientAccount_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(NHSNumber);
         out.newLine();
-        
+            //Prints new patient to patient text file
+            
         out.close();
         }
         catch(Exception e) {
@@ -411,6 +412,7 @@ public class SecretaryApprovePatientAccount_GUI extends javax.swing.JFrame {
         aPatients = rePatients.toArray();
         aPatients = rePatients.toArray();
         int newLength = aPatients.length;
+            //Gets all of the requested patients
         if(newLength > 0) {
         
             for (int l = 0; l < newLength; l++) {
@@ -425,6 +427,7 @@ public class SecretaryApprovePatientAccount_GUI extends javax.swing.JFrame {
                 dateOfBirth = ((User.Patient)aPatients[l]).getDate_Of_Birth();
                 gender = ((User.Patient)aPatients[l]).getSex();
                 NHSNumber = ((User.Patient)aPatients[l]).getUserId();
+                    //Sets all variables for requested patients data
                 
                 try{
                 BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\PatientRequest.txt", false));
@@ -449,7 +452,7 @@ public class SecretaryApprovePatientAccount_GUI extends javax.swing.JFrame {
                 out.newLine();
                 out.write(NHSNumber);
                 out.newLine();
-                
+                    //Print all requested accounts except the account created with this button press
                 }
                  catch(Exception e) {
                     e.printStackTrace();

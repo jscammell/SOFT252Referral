@@ -217,6 +217,7 @@ public class DoctorCreatePrescription_GUI extends javax.swing.JFrame {
         dosage = null;
         isNotEmpty = false;
         }
+            //Reads the data from text fields
         
         if (Boolean.TRUE.equals(isNotEmpty)){
         try{
@@ -234,7 +235,7 @@ public class DoctorCreatePrescription_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(dosage);
         out.newLine();        
-        
+            //Prints data to text file
         
         out.close();
         }

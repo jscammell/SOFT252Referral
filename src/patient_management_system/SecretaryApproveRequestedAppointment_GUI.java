@@ -49,7 +49,7 @@ public class SecretaryApproveRequestedAppointment_GUI extends javax.swing.JFrame
         String doctor_Names = ((User.Appointment)aAppointments[0]).getDoctor_Name();
         txtDoctor.setText(doctor_Names);
        
-        
+            //Sets all text boxes to match the requested appointment
         
        
     }
@@ -280,6 +280,7 @@ public class SecretaryApproveRequestedAppointment_GUI extends javax.swing.JFrame
          RoomNumber = null;
         isNotEmpty = false;
         }
+            //Reads in data from text boxes
        
         if (Boolean.TRUE.equals(isNotEmpty)){
         try{
@@ -297,7 +298,7 @@ public class SecretaryApproveRequestedAppointment_GUI extends javax.swing.JFrame
         out.newLine();       
         out.write(RoomNumber);
         out.newLine();       
-        
+            //Prints to text file
         out.close();
         }
         catch(Exception e) {
@@ -317,7 +318,7 @@ public class SecretaryApproveRequestedAppointment_GUI extends javax.swing.JFrame
         int length = aAppointments.length;
         data.removeAppointment (reAppointments.get(0),reAppointments);
         aAppointments = reAppointments.toArray();
-        aAppointments = reAppointments.toArray();
+            //Removes the requested appointment
         int newLength = aAppointments.length;
         if(newLength > 0) {
         
@@ -343,7 +344,7 @@ public class SecretaryApproveRequestedAppointment_GUI extends javax.swing.JFrame
                 out.newLine();
                 out.write(doctor_Name);
                 out.newLine();                
-                
+                    //Prints to text file
                 
                 }
                  catch(Exception e) {

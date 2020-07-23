@@ -166,7 +166,7 @@ public class PatientRequestTerminateAccount_GUI extends javax.swing.JFrame {
             }
         if(password[k].equals(txtPassword.getText())){
         passTrue = true;
-        
+            //Gets data from text fields
 
         }
         else{
@@ -184,6 +184,8 @@ public class PatientRequestTerminateAccount_GUI extends javax.swing.JFrame {
         String dateOfBirth = ((User.Patient)aPatients[k]).getDate_Of_Birth();
         String gender = ((User.Patient)aPatients[k]).getSex();
         String NHSNumber = ((User.Patient)aPatients[k]).getNhs_Number();
+        
+            //Gets data from array list
         
         try{
         BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\PatientDelete.txt", true));
@@ -208,7 +210,7 @@ public class PatientRequestTerminateAccount_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(NHSNumber);
         out.newLine();
-        
+            //Prints to text file
         
         out.close();
         txtUsername.setText("");

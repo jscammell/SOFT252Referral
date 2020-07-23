@@ -47,6 +47,7 @@ public class PatientAppointmentRequest_GUI extends javax.swing.JFrame {
         JPanel panel = new JPanel();
 
         cmbDoctor.setModel(model);
+            //Gets doctors data from text file and puts the data into the combobox
     }
 
     /**
@@ -250,7 +251,7 @@ public class PatientAppointmentRequest_GUI extends javax.swing.JFrame {
         patient_Name = null;
         isNotEmpty = false;
         }     
-      
+            //Gets all the data from the text files
               
         String doctor = cmbDoctor.getSelectedItem().toString();
         if (Boolean.TRUE.equals(isNotEmpty)){
@@ -274,7 +275,7 @@ public class PatientAppointmentRequest_GUI extends javax.swing.JFrame {
         catch(Exception e) {
         e.printStackTrace();
         }
-        
+            //Prints out the data to the a text file
         }
         
     }//GEN-LAST:event_btnSubmitActionPerformed

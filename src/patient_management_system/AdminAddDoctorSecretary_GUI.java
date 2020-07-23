@@ -242,7 +242,7 @@ public class AdminAddDoctorSecretary_GUI extends javax.swing.JFrame {
         last_Name = null;
         isNotEmpty = false;
         }
-                
+           //Takes the value from the text box     
         
         
         if(Boolean.TRUE.equals(isNotEmpty)){
@@ -259,7 +259,7 @@ public class AdminAddDoctorSecretary_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write("0");
         out.newLine();
-        
+            //Writes whats in the content of the textboxes to a file
         
         out.close();      
 
@@ -300,7 +300,8 @@ public class AdminAddDoctorSecretary_GUI extends javax.swing.JFrame {
         passwordS = null;
         isNotEmpty = false;
         }        
-         
+            //Takes the value from the text box     
+
         
         
         
@@ -312,7 +313,8 @@ public class AdminAddDoctorSecretary_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(passwordS);
         out.newLine();
-                       
+            //Writes whats in the content of the textboxes to a file
+            
         
         out.close();      
 

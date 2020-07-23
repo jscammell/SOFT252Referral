@@ -45,7 +45,7 @@ public class SecretaryOrderMedicine_GUI extends javax.swing.JFrame {
         String dosage = ((Processes.Medication)aMedicines[0]).getDosage();
         txtDosage.setText(dosage);       
        
-        
+            //Gets medicine data and puts data into text fields
         
        
     }
@@ -192,7 +192,7 @@ public class SecretaryOrderMedicine_GUI extends javax.swing.JFrame {
         dosage = null;
         isNotEmpty = false;
         }
-        
+            //Reads data from text fields
         
        
         if (Boolean.TRUE.equals(isNotEmpty)){
@@ -205,7 +205,7 @@ public class SecretaryOrderMedicine_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(dosage);
         out.newLine();            
-        
+            //Prints to text file
         out.close();
         }
         catch(Exception e) {
@@ -228,6 +228,7 @@ public class SecretaryOrderMedicine_GUI extends javax.swing.JFrame {
         aMedications = reMedications.toArray();
         int newLength = aMedications.length;
         if(newLength > 0) {
+            //Reads from requested medicine
         
             for (int l = 0; l < newLength; l++) {
         
@@ -235,7 +236,7 @@ public class SecretaryOrderMedicine_GUI extends javax.swing.JFrame {
                 quantity = ((Processes.Medication)aMedications[l]).getQuantity();
                 dosage = ((Processes.Medication)aMedications[l]).getDosage();
                 
-                
+                    //Gets data from medicine
                 
                 try{
                 BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\MedicineRequest.txt", false));
@@ -246,7 +247,7 @@ public class SecretaryOrderMedicine_GUI extends javax.swing.JFrame {
                 out.newLine();
                 out.write(dosage);
                 out.newLine();
-                             
+                    //Prints data to medicine requests
                 
                 
                 }

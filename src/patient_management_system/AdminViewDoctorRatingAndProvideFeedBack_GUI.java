@@ -37,6 +37,8 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
         catch(Exception e) {
         e.printStackTrace();
         }
+            //Gets data from doctor text file
+        
         Object[] aDoctors = doctors.toArray();
         int length;
         length = aDoctors.length;
@@ -47,9 +49,12 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
         String name = ((User.Doctor)aDoctors[i]).getFirst_Name();
         doctor_Name[i+1] = name;
         }
+            //Seperates the doctors names into its own array
+        
         final DefaultComboBoxModel model = new DefaultComboBoxModel (doctor_Name);
         final  DefaultComboBoxModel modela = new DefaultComboBoxModel (doctor_Name);
         JPanel panel = new JPanel();
+            //Doctors names put into combobox
 
         cmbViewDoctor.setModel(model);
         cmbRateDoctor.setModel(model);
@@ -92,6 +97,10 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                             }
                             
                             break;
+                                //Code above works by monitoring the text boxes 
+                                //and when a doctor is selected from the combobox 
+                                //their details are pinted into the text areas
+                            
                         }
                         if(Boolean.TRUE.equals(docTrue)){
                             break;
@@ -269,11 +278,13 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
         getData Data = new getData();
         ArrayList<Users> doctors = new ArrayList<Users>();
         try{
-            Data.readDoctorFeedback(doctors);       
+            Data.readDoctors(doctors);       
         }
         catch(Exception e){
             e.printStackTrace();
         }
+            //Gets doctors details from text file
+        
         Object[] aDoctor = doctors.toArray();
         int length;
         length = aDoctor.length;
@@ -292,6 +303,8 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
             isNotEmpty = false;
             rating = 0;
         }
+            //Checks the description is not null and gets data from them
+        
         String cmbDoctorName = cmbRateDoctor.getSelectedItem().toString();
         if(Boolean.TRUE.equals(isNotEmpty)){
             
@@ -322,6 +335,7 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                         catch(Exception e){
                             e.printStackTrace();
                         }
+                            //Clears the file
            
                         for (int l = 0; l < length; l++) {
                             aDoctor = doctors.toArray();
@@ -330,7 +344,7 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                             String first_Name = ((User.Doctor)aDoctor[l]).getFirst_Name();
                             String last_Name = ((User.Doctor)aDoctor[l]).getLast_Name();                            
                             String feedback = txtDescription.getText();
-           
+                                //Gets data from list array
                             try{
                                 BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\DoctorFeedback.txt",true));
                                 out.newLine();
@@ -339,9 +353,8 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                                 out.write(first_Name);
                                 out.newLine();                    
                                 out.write(String.valueOf(ratingLength));
-                                out.newLine();
-                                
-                                
+                                out.newLine();                                
+                                    //Prints out to text file
                     
                                 for (int k = 0; k < ratingLength; k++) {
                                     String[] descriptions = ((User.Doctor)aDoctor[k]).getDescription();
@@ -362,7 +375,8 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                     }
                 }
                 else if(length == 0){
-                 
+                    //If doctor doesnt alreay exist it runs this next part of code
+                    
                     ArrayList<Users> doctors2 = new ArrayList<Users>();
                     try{
                         Data.readDoctors(doctors2);       

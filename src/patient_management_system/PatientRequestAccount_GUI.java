@@ -251,7 +251,7 @@ public class PatientRequestAccount_GUI extends javax.swing.JFrame {
         lastName = null;
         isNotEmpty = false;
         }
-        
+            
         
         if(txtMobilePhoneNumber != null) {
         mobileNumber = txtMobilePhoneNumber.getText();
@@ -306,7 +306,7 @@ public class PatientRequestAccount_GUI extends javax.swing.JFrame {
         gender = null;
         isNotEmpty = false;
         }
-        
+            //Gets data from text fields
         
         if (Boolean.TRUE.equals(isNotEmpty)){
         try{
@@ -330,7 +330,7 @@ public class PatientRequestAccount_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(gender);
         out.newLine();
-        
+            //Prints to text file
         
         out.close();
         }

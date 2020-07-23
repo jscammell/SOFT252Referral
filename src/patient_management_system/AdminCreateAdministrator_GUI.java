@@ -159,6 +159,10 @@ public class AdminCreateAdministrator_GUI extends javax.swing.JFrame {
         first_Name = null;
         isNotEmpty = false;
         }
+           //Takes the value from the text box     
+
+        
+        
         if(Boolean.TRUE.equals(isNotEmpty)){
         try{
         BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\Administrator.txt",true));
@@ -169,7 +173,7 @@ public class AdminCreateAdministrator_GUI extends javax.swing.JFrame {
         out.newLine();
         out.write(first_Name);
         out.newLine();
-        
+            //Writes whats in the content of the textboxes to a file
         
         out.close();      
 

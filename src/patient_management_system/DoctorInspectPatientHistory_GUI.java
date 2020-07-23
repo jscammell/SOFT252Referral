@@ -229,7 +229,7 @@ public class DoctorInspectPatientHistory_GUI extends javax.swing.JFrame {
         for (int i = 0; i < length; i++) {
         String name = ((Processes.History)arrayHistory[i]).getPatient_Name();
         username[i] = name;
-        
+            //Gets data from Hisory text file
         }
         
         Boolean userTrue;
@@ -242,6 +242,8 @@ public class DoctorInspectPatientHistory_GUI extends javax.swing.JFrame {
         userTrue = false;
         input = null;
         }
+            //Gets the patient name 
+            
         
         if(Boolean.TRUE.equals(userTrue)){
         for (int i = 0; i < length; i++) {
@@ -264,7 +266,7 @@ public class DoctorInspectPatientHistory_GUI extends javax.swing.JFrame {
             
         
         break;
-        
+            //Gets data relating to the patient name from above
                 
         }
         }
