@@ -303,13 +303,23 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
             isNotEmpty = false;
             rating = 0;
         }
-            //Checks the description is not null and gets data from them
-        
         String cmbDoctorName = cmbRateDoctor.getSelectedItem().toString();
+        boolean doctorFound = false;        
+        for (int j = 0; j < length; j++) {
+            if(cmbDoctorName.equals(((User.Doctor)arrayDoctor[j]).getFirst_Name())){
+                doctorFound = true;
+                break;
+            }
+            if(cmbDoctorName.equals(((User.Doctor)arrayDoctor[j]).getFirst_Name())){
+                doctorFound = false;
+            }
+        }            
+        
+        
         if(Boolean.TRUE.equals(isNotEmpty)){
             
             for (int i = 0; i < length+1; i++) {
-                if(length != 0){
+                if(Boolean.TRUE.equals(doctorFound)){
                if(cmbDoctorName.equals(((User.Doctor)arrayDoctor[i]).getFirst_Name()) ){ 
                     int ratingLength = ((User.Doctor)arrayDoctor[i]).getRatingsLength();
                         while(cmbDoctorName.equals(((User.Doctor)arrayDoctor[i]).getFirst_Name())){
@@ -343,7 +353,7 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                             String aPassword = ((User.Doctor)arrayDoctor[l]).getPassword();
                             String first_Name = ((User.Doctor)arrayDoctor[l]).getFirst_Name();
                             String last_Name = ((User.Doctor)arrayDoctor[l]).getLast_Name();                            
-                            String feedback = txtDescription.getText();
+                            String[] descriptions = ((User.Doctor)arrayDoctor[l]).getDescription();
                                 //Gets data from list array
                             try{
                                 BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\DoctorFeedback.txt",true));
@@ -355,9 +365,9 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                                 out.write(String.valueOf(ratingLength));
                                 out.newLine();                                
                                     //Prints out to text file
-                    
+                                    
                                 for (int k = 0; k < ratingLength; k++) {
-                                    String[] descriptions = ((User.Doctor)arrayDoctor[k]).getDescription();
+                                    
                                     out.write(descriptions[k]);
                                     out.newLine();
                                 }
@@ -384,19 +394,19 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
                     catch(Exception e){
                         e.printStackTrace();
                     }
-                    Object[] aDoctor2 = doctors2.toArray();
+                    Object[] arrayDoctor2 = doctors2.toArray();
                     int length2;
-                    length2 = aDoctor2.length;
+                    length2 = arrayDoctor2.length;
                     for (int l = 0; l < length2; l++) {
-                            if(cmbDoctorName.equals(((User.Doctor)aDoctor2[l]).getFirst_Name())){ 
+                            if(cmbDoctorName.equals(((User.Doctor)arrayDoctor2[l]).getFirst_Name())){ 
                                 
                                 String[] newDoctor = new String[length+1];
                                 
                                 arrayDoctor = doctors.toArray();
-                                String userId = ((User.Doctor)aDoctor2[l]).getUserId();
-                                String aPassword = ((User.Doctor)aDoctor2[l]).getPassword();
-                                String first_Name = ((User.Doctor)aDoctor2[l]).getFirst_Name();
-                                String last_Name = ((User.Doctor)aDoctor2[l]).getLast_Name();
+                                String userId = ((User.Doctor)arrayDoctor2[l]).getUserId();
+                                String aPassword = ((User.Doctor)arrayDoctor2[l]).getPassword();
+                                String first_Name = ((User.Doctor)arrayDoctor2[l]).getFirst_Name();
+                                String last_Name = ((User.Doctor)arrayDoctor2[l]).getLast_Name();
                                 int ratingLength = 1;
                                 String[] descriptions = new String[1];
                                 descriptions[0] =  txtDescription.getText();
@@ -445,6 +455,95 @@ public class AdminViewDoctorRatingAndProvideFeedBack_GUI extends javax.swing.JFr
            
                         }
                     }
+                }
+                else{
+                    ArrayList<Users> doctors2 = new ArrayList<Users>();
+                    try{
+                        Data.readDoctors(doctors2);       
+                    }
+                    catch(Exception e){
+                        e.printStackTrace();
+                    }
+                    Object[] arrayDoctor2 = doctors2.toArray();
+                    int length2;
+                    length2 = arrayDoctor2.length;
+                    
+                    try{
+                            BufferedWriter clear = new BufferedWriter(new FileWriter("./accounts\\DoctorFeedback.txt",false));
+                            clear.newLine();
+                        }
+                        catch(Exception e){
+                            e.printStackTrace();
+                        }
+                    
+                    for(int l = 0; l < length2; l++){
+                        if(cmbDoctorName.equals(((User.Doctor)arrayDoctor2[l]).getFirst_Name()) ){
+                            String userId = ((User.Doctor)arrayDoctor2[l]).getUserId();
+                            String aPassword = ((User.Doctor)arrayDoctor2[l]).getPassword();
+                            String first_Name = ((User.Doctor)arrayDoctor2[l]).getFirst_Name();
+                            String last_Name = ((User.Doctor)arrayDoctor2[l]).getLast_Name();                            
+                            String feedback = txtDescription.getText();
+
+                            
+                            try{
+                                BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\DoctorFeedback.txt",true));
+                                out.newLine();
+                                out.write(userId);
+                                out.newLine();                    
+                                out.write(first_Name);
+                                out.newLine();                    
+                                out.write("1");
+                                out.newLine();  
+                                out.write(feedback);
+                                out.newLine();  
+                                    //Prints out to text file
+                                    
+                                
+                    
+           
+                            out.close();
+                            }    
+                            catch(Exception e) {
+                                e.printStackTrace();
+                            }           
+                        }
+                    }
+                    
+                    for (int l = 0; l < length; l++) {
+                            arrayDoctor = doctors.toArray();
+                            String userId = ((User.Doctor)arrayDoctor[l]).getUserId();
+                            String aPassword = ((User.Doctor)arrayDoctor[l]).getPassword();
+                            String first_Name = ((User.Doctor)arrayDoctor[l]).getFirst_Name();
+                            String last_Name = ((User.Doctor)arrayDoctor[l]).getLast_Name();                            
+                            String[] descriptions = ((User.Doctor)arrayDoctor[l]).getDescription();
+                            int ratingLength = descriptions.length;
+                                //Gets data from list array
+                            try{
+                                BufferedWriter out = new BufferedWriter(new FileWriter("./accounts\\DoctorFeedback.txt",true));
+                                out.newLine();
+                                out.write(userId);
+                                out.newLine();                    
+                                out.write(first_Name);
+                                out.newLine();                    
+                                out.write(String.valueOf(ratingLength));
+                                out.newLine();                                
+                                    //Prints out to text file
+                                    
+                                for (int k = 0; k < ratingLength; k++) {
+                                    
+                                    out.write(descriptions[k]);
+                                    out.newLine();
+                                }
+                    
+           
+                            out.close();
+                            }    
+                            catch(Exception e) {
+                                e.printStackTrace();
+                            }           
+           
+                        }
+                    
                 }
                
                }
