@@ -468,7 +468,7 @@ public void readAppointment(ArrayList<Appointment>appointment)throws Exception
     
     public void readPrescription(ArrayList<Prescription>prescription)throws Exception
     {
-        File file = new File("./accounts\\Prescription.txt");
+        File file = new File("./accounts\\CreatePrescription.txt");
         
         BufferedReader br = new BufferedReader(new FileReader(file));                     
                        

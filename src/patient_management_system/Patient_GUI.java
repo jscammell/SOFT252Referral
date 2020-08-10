@@ -212,7 +212,10 @@ public class Patient_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnViewAppointmentActionPerformed
 
     private void btnViewPerscriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPerscriptionActionPerformed
-        // TODO add your handling code here:
+        PatientViewPrescription_GUI open = new PatientViewPrescription_GUI();
+        open.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
         
         
         
